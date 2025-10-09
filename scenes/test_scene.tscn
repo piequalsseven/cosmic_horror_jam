@@ -81,7 +81,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19900179, 8.435533)
 metadata/teleportable_root = NodePath("..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ProtoController/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 0.9993071, 0.037219275, 0, -0.037219275, 0.9993071, 0, 1.1498297, -0.09325886)
+transform = Transform3D(1, 0, 0, 0, 0.9993071, 0.037219275, 0, -0.037219275, 0.9993071, 0, 1.5, 0)
 shape = SubResource("SphereShape3D_nd71p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
@@ -150,7 +150,6 @@ monitorable = false
 script = ExtResource("3_7ddre")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="Area1/CorridorPortalA/Teleport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.62367225)
 shape = SubResource("BoxShape3D_7ddre")
 
 [node name="Area2" type="Node3D" parent="."]
