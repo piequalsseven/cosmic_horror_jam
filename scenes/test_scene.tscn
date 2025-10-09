@@ -81,7 +81,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19900179, 8.435533)
 metadata/teleportable_root = NodePath("..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ProtoController/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 0.9993071, 0.037219275, 0, -0.037219275, 0.9993071, 0, 1.5, 0)
+
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
 shape = SubResource("SphereShape3D_nd71p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
