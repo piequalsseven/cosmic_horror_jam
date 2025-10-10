@@ -61,6 +61,7 @@ var _seconds_until_resize:float
 
 ###Custom###
 @export var possible_exit_portals : Array[Portal]
+@export var portal_name : String
 
 ####
 func _ready() -> void:

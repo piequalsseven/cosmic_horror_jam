@@ -1,10 +1,12 @@
-[gd_scene load_steps=19 format=4 uid="uid://1rf18yojjhnh"]
+[gd_scene load_steps=21 format=4 uid="uid://1rf18yojjhnh"]
 
 [ext_resource type="PackedScene" uid="uid://dncmgippnngs6" path="res://addons/proto_controller.tscn" id="1_g7g4h"]
 [ext_resource type="Script" uid="uid://si3lhqrnsi07" path="res://addons/portal/scripts/portal.gd" id="2_nd71p"]
-[ext_resource type="PackedScene" uid="uid://0fuwhlm68lwu" path="res://scenes/portal_quad.tscn" id="2_qjeyg"]
+[ext_resource type="PackedScene" uid="uid://0fuwhlm68lwu" path="res://scenes/portal.tscn" id="2_qjeyg"]
 [ext_resource type="Script" uid="uid://dti2pifecwdx8" path="res://addons/portal/scripts/portal_teleport.gd" id="3_7ddre"]
 [ext_resource type="Script" uid="uid://brdm6ajo3tm5u" path="res://scripts/tilted_area.gd" id="4_7ddre"]
+[ext_resource type="Script" uid="uid://bx8jo2goua5oc" path="res://scripts/portal_monager_ui.gd" id="6_3qnke"]
+[ext_resource type="PackedScene" uid="uid://3c24apiqx6e4" path="res://scenes/no_teleport_portal.tscn" id="6_wtsjf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g7g4h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -137,8 +139,9 @@ material = SubResource("StandardMaterial3D_g7g4h")
 
 [node name="CorridorPortalA" parent="Area1" node_paths=PackedStringArray("exit_portal", "possible_exit_portals") instance=ExtResource("2_qjeyg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000144124, 1.3, 2.2902026)
-exit_portal = NodePath("../../Area2/CorridorPortalB")
+exit_portal = NodePath("../../Node3D2/ExitOnlyPortal")
 possible_exit_portals = [NodePath("../../Area4/CorridorPortalD"), NodePath("../../Area2/CorridorPortalB"), NodePath("../../Area3/CorridorPortalC")]
+portal_name = "White"
 
 [node name="Area2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 19.920275, 54.596592)
@@ -195,6 +198,7 @@ fade_out_distance_min = 10.0
 fade_out_color = Color(0, 0, 0, 1)
 exit_portal = NodePath("../../Area4/CorridorPortalD")
 possible_exit_portals = [NodePath("../../Area4/CorridorPortalD"), NodePath("../../Area1/CorridorPortalA"), NodePath("../../Area3/CorridorPortalC")]
+portal_name = "Blue"
 
 [node name="Teleport" type="Area3D" parent="Area2/CorridorPortalB"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -268,6 +272,7 @@ fade_out_distance_min = 10.0
 fade_out_color = Color(0, 0, 0, 1)
 exit_portal = NodePath("../../Area4/CorridorPortalD")
 possible_exit_portals = [NodePath("../../Area4/CorridorPortalD"), NodePath("../../Area2/CorridorPortalB"), NodePath("../../Area1/CorridorPortalA")]
+portal_name = "Orange"
 
 [node name="Teleport" type="Area3D" parent="Area3/CorridorPortalC"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -341,6 +346,7 @@ fade_out_distance_min = 10.0
 fade_out_color = Color(0, 0, 0, 1)
 exit_portal = NodePath("../../Area3/CorridorPortalC")
 possible_exit_portals = [NodePath("../../Area2/CorridorPortalB"), NodePath("../../Area1/CorridorPortalA"), NodePath("../../Area3/CorridorPortalC")]
+portal_name = "Pink"
 
 [node name="Teleport" type="Area3D" parent="Area4/CorridorPortalD"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -358,3 +364,38 @@ script = ExtResource("4_7ddre")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area4/TiltedArea"]
 shape = SubResource("BoxShape3D_nd71p")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -24.244963, 6.0161304, 23.470419)
+metadata/_edit_group_ = true
+
+[node name="CorridorPortalT" parent="Node3D" node_paths=PackedStringArray("exit_portal") instance=ExtResource("2_qjeyg")]
+exit_portal = NodePath("../../Area2/CorridorPortalB")
+portal_name = "tilted"
+
+[node name="Node3D2" type="Node3D" parent="."]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -24.244963, 6.0161304, -23.415283)
+metadata/_edit_group_ = true
+
+[node name="ExitOnlyPortal" parent="Node3D2" instance=ExtResource("6_wtsjf")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PortalMonagerUI" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("container")]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+script = ExtResource("6_3qnke")
+container = NodePath("FoldableContainer/VBoxContainer")
+
+[node name="FoldableContainer" type="FoldableContainer" parent="CanvasLayer/PortalMonagerUI"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 32.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PortalMonagerUI/FoldableContainer"]
+layout_mode = 2

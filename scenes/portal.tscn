@@ -40,7 +40,7 @@ shadow_mesh = SubResource("ArrayMesh_4457b")
 [sub_resource type="BoxShape3D" id="BoxShape3D_7ddre"]
 size = Vector3(2, 2.6, 2)
 
-[node name="CorridorPortalA" type="MeshInstance3D"]
+[node name="Portal" type="MeshInstance3D"]
 mesh = SubResource("ArrayMesh_nd71p")
 skeleton = NodePath("")
 script = ExtResource("1_na7eq")

@@ -12,6 +12,10 @@ var current_key : KEYS :
 		
 signal KeyChanged
 
+func _ready() -> void:
+	for portal : Portal in get_tree().get_nodes_in_group('portals'):
+		print(portal.color_code)
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("change_key"):
 		current_key = current_key + 1 as KEYS

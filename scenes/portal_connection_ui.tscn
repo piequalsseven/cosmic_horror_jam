@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0kdgpe5ypx5v"]
+
+[ext_resource type="Script" uid="uid://ftgj3pmrci0f" path="res://scripts/portal_connection_ui.gd" id="1_uldyx"]
+
+[node name="PortalConnectionUI" type="HBoxContainer" node_paths=PackedStringArray("menu_button", "label")]
+script = ExtResource("1_uldyx")
+menu_button = NodePath("MarginContainer/MenuButton")
+label = NodePath("PortalUI/Name")
+
+[node name="PortalUI" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="PortalUI"]
+layout_mode = 2
+
+[node name="VSeparator" type="Label" parent="."]
+layout_mode = 2
+text = ">>>>"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MenuButton" type="MenuButton" parent="MarginContainer"]
+layout_mode = 2
