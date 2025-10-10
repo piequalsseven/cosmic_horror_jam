@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxlmtm7ohw770"
-path.s3tc="res://.godot/imported/house Base Color.png-86b2c288a5893dd3fc13199dde260323.s3tc.ctex"
+uid="uid://cixhjm565degi"
+path.s3tc="res://.godot/imported/texture feuilles.png-544908652a90b2ce2ffa246078149bda.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/main_house_exterior/house Base Color.png"
-dest_files=["res://.godot/imported/house Base Color.png-86b2c288a5893dd3fc13199dde260323.s3tc.ctex"]
+source_file="res://models/house exterior/texture feuilles.png"
+dest_files=["res://.godot/imported/texture feuilles.png-544908652a90b2ce2ffa246078149bda.s3tc.ctex"]
 
 [params]
 
