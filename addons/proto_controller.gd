@@ -104,9 +104,6 @@ func _physics_process(delta: float) -> void:
 	if can_move:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
 		var move_dir := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-		var g_angle : float = get_gravity().angle_to(Vector3.DOWN)
-		var rot_vector : Vector3 = Vector3.DOWN.cross(get_gravity()).normalized()
-		var new_up_direction : Vector3 = up_direction.rotated(rot_vector,g_angle)
 	
 		if move_dir:
 			velocity = move_dir * move_speed
@@ -129,18 +126,10 @@ func _physics_process(delta: float) -> void:
 ## Base of controller rotates around y (left/right). Head rotates around x (up/down).
 ## Modifies look_rotation based on rot_input, then resets basis and rotates by look_rotation.
 func rotate_look(rot_input : Vector2):
-	var g_angle : float = get_gravity().angle_to(Vector3.DOWN)
-	var rot_vector : Vector3 = Vector3.DOWN.cross(get_gravity()).normalized()
-	#print(rot_vector)
-	var new_up_direction : Vector3 = up_direction.rotated(rot_vector,g_angle)
-	print(rot_input)
-	#print(new_up_direction)
 	look_rotation.x -= rot_input.y * look_speed
 	look_rotation.x = clamp(look_rotation.x, deg_to_rad(-85), deg_to_rad(85))
-	look_rotation.y -= rot_input.x * look_speed
 	rotate_object_local(Vector3.UP, -rot_input.x * look_speed)
-	#rotation = base_rotation + look_rotation.y * new_up_direction
-	#print(rotation)
+
 	head.rotation.x = look_rotation.x
 
 
