@@ -22,4 +22,9 @@ func _ready():
 func _on_area_entered(area:Area3D):
 	if area.has_meta("teleportable_root"):
 		var root:Node3D = area.get_node(area.get_meta("teleportable_root"))
-		root.global_transform = _parent_portal.real_to_exit_transform(root.global_transform)
+		var teleported_transform =  _parent_portal.real_to_exit_transform(root.global_transform)
+		root.global_transform = teleported_transform
+		if root.get("look_rotation") != null:
+			root.base_rotation = root.rotation
+			root.look_rotation.y = root.rotation.y
+	

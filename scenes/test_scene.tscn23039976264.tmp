@@ -66,11 +66,11 @@ size = Vector3(2, 2.6, 2)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ddre"]
 albedo_color = Color(0.49019608, 0.6901961, 1, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_nd71p"]
-size = Vector3(60, 20, 60)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nd71p"]
 albedo_color = Color(0.9011889, 0.5610937, 0.1310018, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nd71p"]
+size = Vector3(60, 20, 60)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjeyg"]
 albedo_color = Color(0.84876937, 0.60538983, 0.69577473, 1)
@@ -86,7 +86,6 @@ environment = SubResource("Environment_nd71p")
 
 [node name="ProtoController" parent="." instance=ExtResource("1_g7g4h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19900179, 8.923832)
-has_gravity = false
 
 [node name="Area3D" type="Area3D" parent="ProtoController"]
 metadata/teleportable_root = NodePath("..")
@@ -165,7 +164,7 @@ script = ExtResource("3_7ddre")
 shape = SubResource("BoxShape3D_7ddre")
 
 [node name="Area2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 19.920275, 54.596592)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 55)
 
 [node name="Wall" type="CSGBox3D" parent="Area2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 4, 0)
@@ -228,17 +227,8 @@ script = ExtResource("3_7ddre")
 [node name="CollisionShape" type="CollisionShape3D" parent="Area2/CorridorPortalB/Teleport"]
 shape = SubResource("BoxShape3D_7ddre")
 
-[node name="TiltedArea" type="Area3D" parent="Area2"]
-gravity_space_override = 3
-gravity_point_center = Vector3(0, -0.5, 0.5)
-gravity_direction = Vector3(0, -0.5, 0.5)
-script = ExtResource("4_7ddre")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area2/TiltedArea"]
-shape = SubResource("BoxShape3D_nd71p")
-
 [node name="Area3" type="Node3D" parent="."]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -69.097466, 54.468384, -2.4764137)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 17.387611, 54.468384, -2.4764137)
 
 [node name="Wall" type="CSGBox3D" parent="Area3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 4, 0)
@@ -311,7 +301,7 @@ script = ExtResource("4_7ddre")
 shape = SubResource("BoxShape3D_nd71p")
 
 [node name="Area4" type="Node3D" parent="."]
-transform = Transform3D(-4.371139e-08, -0.99999994, 0, -4.371139e-08, 1.9106853e-15, -0.99999994, 1, -4.3711385e-08, -4.3711385e-08, 110.35385, 56.92036, -1.8285522)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 55, 0, 0)
 
 [node name="Wall" type="CSGBox3D" parent="Area4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 4, 0)
@@ -373,12 +363,3 @@ script = ExtResource("3_7ddre")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="Area4/CorridorPortalD/Teleport"]
 shape = SubResource("BoxShape3D_7ddre")
-
-[node name="TiltedArea" type="Area3D" parent="Area4"]
-gravity_space_override = 3
-gravity_point_center = Vector3(1, 0, 0)
-gravity_direction = Vector3(1, 0, 0)
-script = ExtResource("4_7ddre")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area4/TiltedArea"]
-shape = SubResource("BoxShape3D_nd71p")

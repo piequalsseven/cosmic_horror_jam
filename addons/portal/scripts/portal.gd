@@ -46,6 +46,7 @@ const _EXIT_CAMERA_NEAR_MIN:float = 0.01
 ## An environment set for the exit camera. Leave unset to use the default environment.
 @export var exit_environment:Environment
 
+
 ## The exit portal. Leave unset to use this portal as an exit only.
 @export var exit_portal:Portal
 
@@ -58,16 +59,20 @@ var _exit_camera:Camera3D
 # The number of seconds until the viewport updates its size
 var _seconds_until_resize:float
 
+###Custom###
+@export var possible_exit_portals : Array[Portal]
+
+####
 func _ready() -> void:
 	if not is_inside_tree():
 		push_error("The portal \"%s\" is not inside a SceneTree." % name)
-
+	
 	# An exit-free portal does not need to do anything
 	if exit_portal == null:
 		visible = false
 		set_process(false)
 		return
-
+	
 	if not exit_portal.is_inside_tree() or exit_portal.get_tree() != get_tree():
 		push_error("The exit_portal \"%s\" of \"%s\" is not inside the same SceneTree." % [exit_portal.name, name])
 
@@ -100,7 +105,15 @@ func _ready() -> void:
 		_create_viewport()
 
 	get_viewport().connect("size_changed", _handle_resize)
-
+	
+	###custom###
+	RoomManager.KeyChanged.connect(set_exit_portal_matching_key)
+	
+func set_exit_portal_matching_key(key : RoomManager.KEYS) -> void:
+	if !possible_exit_portals or possible_exit_portals.size() <= key as int:
+		return
+	exit_portal = possible_exit_portals[key as int]
+	
 func _handle_resize() -> void:
 	_seconds_until_resize = _RESIZE_THROTTLE_SECONDS
 
@@ -199,7 +212,7 @@ func real_to_exit_transform(real:Transform3D) -> Transform3D:
 	var exit_scale_vector:Vector3 = exit_portal.global_transform.basis.get_scale()
 	var scaled_at_exit:Transform3D = flipped.scaled(Vector3.ONE / exit_scale_vector * exit_scale)
 	# Convert from local space at the exit portal to global space
-	var local_at_exit:Transform3D = exit_portal.global_transform * scaled_at_exit
+	var local_at_exit : Transform3D = exit_portal.global_transform * scaled_at_exit
 	return local_at_exit
 
 ## Return a new position relative to the exit portal based on the real position relative to this portal.

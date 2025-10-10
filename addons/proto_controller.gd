@@ -53,6 +53,10 @@ var freeflying : bool = false
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
 
+###custom
+@onready var look_angle : float = 0
+@onready var base_rotation : Vector3 = Vector3()
+
 func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
@@ -84,11 +88,6 @@ func _physics_process(delta: float) -> void:
 		motion *= freefly_speed * delta
 		move_and_collide(motion)
 		return
-	
-	# Apply gravity to velocity
-	if has_gravity:
-		if not is_on_floor():
-			velocity += get_gravity() * delta
 
 	# Apply jumping
 	if can_jump:
@@ -105,16 +104,23 @@ func _physics_process(delta: float) -> void:
 	if can_move:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
 		var move_dir := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		var g_angle : float = get_gravity().angle_to(Vector3.DOWN)
+		var rot_vector : Vector3 = Vector3.DOWN.cross(get_gravity()).normalized()
+		var new_up_direction : Vector3 = up_direction.rotated(rot_vector,g_angle)
+	
 		if move_dir:
-			velocity.x = move_dir.x * move_speed
-			velocity.z = move_dir.z * move_speed
+			velocity = move_dir * move_speed
 		else:
 			velocity.x = move_toward(velocity.x, 0, move_speed)
 			velocity.z = move_toward(velocity.z, 0, move_speed)
+			velocity.y = move_toward(velocity.y, 0, move_speed)
 	else:
 		velocity.x = 0
 		velocity.y = 0
-	
+		# Apply gravity to velocity
+	if has_gravity:
+		if not is_on_floor():
+			velocity += get_gravity() * delta
 	# Use velocity to actually move
 	move_and_slide()
 
@@ -123,13 +129,19 @@ func _physics_process(delta: float) -> void:
 ## Base of controller rotates around y (left/right). Head rotates around x (up/down).
 ## Modifies look_rotation based on rot_input, then resets basis and rotates by look_rotation.
 func rotate_look(rot_input : Vector2):
+	var g_angle : float = get_gravity().angle_to(Vector3.DOWN)
+	var rot_vector : Vector3 = Vector3.DOWN.cross(get_gravity()).normalized()
+	#print(rot_vector)
+	var new_up_direction : Vector3 = up_direction.rotated(rot_vector,g_angle)
+	print(rot_input)
+	#print(new_up_direction)
 	look_rotation.x -= rot_input.y * look_speed
 	look_rotation.x = clamp(look_rotation.x, deg_to_rad(-85), deg_to_rad(85))
 	look_rotation.y -= rot_input.x * look_speed
-	transform.basis = Basis()
-	rotate_y(look_rotation.y)
-	head.transform.basis = Basis()
-	head.rotate_x(look_rotation.x)
+	rotate_object_local(Vector3.UP, -rot_input.x * look_speed)
+	#rotation = base_rotation + look_rotation.y * new_up_direction
+	#print(rotation)
+	head.rotation.x = look_rotation.x
 
 
 func enable_freefly():
