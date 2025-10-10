@@ -149,10 +149,11 @@ transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 3
 size = Vector3(1, 4, 5)
 material = SubResource("StandardMaterial3D_g7g4h")
 
-[node name="CorridorPortalA" parent="Area1" node_paths=PackedStringArray("exit_portal") instance=ExtResource("2_qjeyg")]
+[node name="CorridorPortalA" parent="Area1" node_paths=PackedStringArray("exit_portal", "possible_exit_portals") instance=ExtResource("2_qjeyg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000144124, 1.3, 2.2902026)
 
 exit_portal = NodePath("../../Area2/CorridorPortalB")
+possible_exit_portals = [NodePath("../../Area4/CorridorPortalD"), NodePath("../../Area2/CorridorPortalB"), NodePath("../../Area3/CorridorPortalC")]
 
 [node name="Area2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 19.920275, 54.596592)
@@ -198,7 +199,7 @@ transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 3
 size = Vector3(1, 4, 5)
 material = SubResource("StandardMaterial3D_7ddre")
 
-[node name="CorridorPortalB" type="MeshInstance3D" parent="Area2" node_paths=PackedStringArray("possible_exit_portals")]
+[node name="CorridorPortalB" type="MeshInstance3D" parent="Area2" node_paths=PackedStringArray("exit_portal", "possible_exit_portals")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.000144124, 1.3, -2.2234344)
 mesh = SubResource("ArrayMesh_nd71p")
 skeleton = NodePath("")
@@ -207,7 +208,8 @@ disable_viewport_distance = 13.0
 fade_out_distance_max = 12.0
 fade_out_distance_min = 10.0
 fade_out_color = Color(0, 0, 0, 1)
-possible_exit_portals = [null, NodePath("../../Area4/CorridorPortalD"), NodePath("../../Area3/CorridorPortalC")]
+exit_portal = NodePath("../../Area4/CorridorPortalD")
+possible_exit_portals = [NodePath("../../Area4/CorridorPortalD"), NodePath("../../Area1/CorridorPortalA"), NodePath("../../Area3/CorridorPortalC")]
 
 [node name="Teleport" type="Area3D" parent="Area2/CorridorPortalB"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -280,7 +282,7 @@ fade_out_distance_max = 12.0
 fade_out_distance_min = 10.0
 fade_out_color = Color(0, 0, 0, 1)
 exit_portal = NodePath("../../Area4/CorridorPortalD")
-possible_exit_portals = [NodePath("../../Area4/CorridorPortalD"), null, NodePath("../../Area2/CorridorPortalB")]
+possible_exit_portals = [NodePath("../../Area4/CorridorPortalD"), NodePath("../../Area2/CorridorPortalB"), NodePath("../../Area1/CorridorPortalA")]
 
 [node name="Teleport" type="Area3D" parent="Area3/CorridorPortalC"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
@@ -353,7 +355,7 @@ fade_out_distance_max = 12.0
 fade_out_distance_min = 10.0
 fade_out_color = Color(0, 0, 0, 1)
 exit_portal = NodePath("../../Area3/CorridorPortalC")
-possible_exit_portals = [NodePath("../../Area3/CorridorPortalC"), NodePath("../../Area2/CorridorPortalB"), null]
+possible_exit_portals = [NodePath("../../Area2/CorridorPortalB"), NodePath("../../Area1/CorridorPortalA"), NodePath("../../Area3/CorridorPortalC")]
 
 [node name="Teleport" type="Area3D" parent="Area4/CorridorPortalD"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
