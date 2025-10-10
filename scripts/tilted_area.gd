@@ -7,4 +7,3 @@ var tilt : Transform3D
 func _ready() -> void:
 	#set_gravity_direction(Vector3.DOWN.rotated(parent_node.rotation, parent_node.rotation.angle_to(Vector3.DOWN)).normalized())
 	print(gravity_direction)
-	
