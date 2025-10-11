@@ -1,13 +1,33 @@
-[gd_scene load_steps=14 format=3 uid="uid://ymlroa6fqlts"]
+[gd_scene load_steps=17 format=3 uid="uid://ymlroa6fqlts"]
 
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_rnknb"]
 [ext_resource type="MeshLibrary" uid="uid://b8dftt6uf57fv" path="res://models/BuildingMeshes/library.tres" id="1_vg3eq"]
 [ext_resource type="PackedScene" uid="uid://bne17l1a7p1l5" path="res://models/main_house_exterior/cosmic horror hut.blend" id="2_muuda"]
-[ext_resource type="ArrayMesh" uid="uid://gt70vs3c3hjo" path="res://models/meshTextures/treeMeshTexture.res" id="2_xg6vb"]
+[ext_resource type="ArrayMesh" uid="uid://wug5ng5k1wsu" path="res://models/meshTextures/treeMeshTexture.res" id="2_xg6vb"]
 [ext_resource type="PackedScene" uid="uid://cy4b0pyfgxas5" path="res://models/house exterior/tree.blend" id="3_vg3eq"]
 [ext_resource type="PackedScene" uid="uid://0fuwhlm68lwu" path="res://scenes/portal_quad.tscn" id="4_xg6vb"]
 [ext_resource type="PackedScene" uid="uid://dncmgippnngs6" path="res://addons/proto_controller.tscn" id="5_ltmdr"]
 [ext_resource type="PackedScene" uid="uid://nufhfm26w2c" path="res://models/BuildingMeshes/houseWalls.blend" id="6_muuda"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xg6vb"]
+
+[sub_resource type="Sky" id="Sky_ltmdr"]
+resource_local_to_scene = true
+sky_material = SubResource("ProceduralSkyMaterial_xg6vb")
+
+[sub_resource type="Environment" id="Environment_xg6vb"]
+background_mode = 2
+sky = SubResource("Sky_ltmdr")
+ambient_light_color = Color(0.69803923, 0.32941177, 0, 1)
+ambient_light_sky_contribution = 0.74
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0342
+volumetric_fog_emission = Color(1, 1, 1, 1)
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_anisotropy = -0.3
+volumetric_fog_length = 111.55
+volumetric_fog_ambient_inject = 0.1
+volumetric_fog_sky_affect = 0.591
 
 [sub_resource type="MultiMesh" id="MultiMesh_ltmdr"]
 transform_format = 1
@@ -31,6 +51,9 @@ albedo_color = Color(0.13913205, 0.2600691, 0.051944893, 1)
 size = Vector2(50, 50)
 
 [node name="StartingScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xg6vb")
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.743, 0, 295.954)
@@ -85,157 +108,155 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.56
 mesh = SubResource("PlaneMesh_fwbn4")
 surface_material_override/0 = SubResource("StandardMaterial3D_46lpw")
 
-[node name="portals" type="Node" parent="ground"]
-
-[node name="CorridorPortalA" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1.4133441, 0, 8.742277e-08, 0, -0.99999994, 0.1906487, 1.8841467, 9.871488)
+[node name="CorridorPortalA" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-0.99999994, 0, -1.5099579e-07, 0, 1.4133441, 0, 1.5099579e-07, 0, -0.99999994, 0.1906487, 1.8841467, 9.871488)
 disable_viewport_distance = 15.0
 fade_out_distance_max = 15.0
 fade_out_distance_min = 5.0
 exit_portal = NodePath("../CorridorPortalA4")
 
-[node name="CorridorPortalA4" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+[node name="CorridorPortalA4" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1.4133441, 0, 0, 0, 0.99999994, -0.74289703, 1.8841467, 296.5708)
 disable_viewport_distance = 15.0
 fade_out_distance_max = 15.0
 fade_out_distance_min = 5.0
 exit_portal = NodePath("../CorridorPortalA")
 
-[node name="CorridorPortal_Front3" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(25, 0, 0, 0, 6.396, 0, 0, 0, 4.493, 0.177, 1.884, -121.811264)
+[node name="CorridorPortal_Front3" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(25, 0, 0, 0, 14.947, 0, 0, 0, 4.493, 0.177, 1.884, -121.811264)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Bottom3")
 
-[node name="CorridorPortal_Front4" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(25, 0, 0, 0, 6.396, 0, 0, 0, 4.493, -50.90783, 1.884, -121.811264)
+[node name="CorridorPortal_Front4" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(25, 0, 0, 0, 14.947, 0, 0, 0, 4.493, -50.90783, 1.884, -121.811264)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Bottom4")
 
-[node name="CorridorPortal_Front5" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(25, 0, 0, 0, 6.396, 0, 0, 0, 4.493, -101.949875, 1.884, -121.811264)
+[node name="CorridorPortal_Front5" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(25, 0, 0, 0, 14.947, 0, 0, 0, 4.493, -101.949875, 1.884, -121.811264)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Bottom5")
 
-[node name="CorridorPortal_Front2" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(25, 0, 0, 0, 6.396, 0, 0, 0, 4.493, 51.3554, 1.884, -121.811264)
+[node name="CorridorPortal_Front2" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(25, 0, 0, 0, 14.947, 0, 0, 0, 4.493, 51.3554, 1.884, -121.811264)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Bottom2")
 
-[node name="CorridorPortal_Front1" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(25, 0, 0, 0, 6.396, 0, 0, 0, 4.493, 102.41466, 1.884, -121.811264)
+[node name="CorridorPortal_Front1" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(25, 0, 0, 0, 14.947, 0, 0, 0, 4.493, 102.41466, 1.884, -121.811264)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Bottom1")
 
-[node name="CorridorPortal_Right3" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.0927847e-06, 0, 5.139, 0, 7.317, 0, -25, 0, -2.2463283e-07, -125.32581, 1.884, 2.243186)
+[node name="CorridorPortal_Right3" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1.0927847e-06, 0, 5.139, 0, 14.947, 0, -25, 0, -2.2463283e-07, -125.32581, 1.884, 2.243186)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Left3")
 
-[node name="CorridorPortal_Right4" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.0927847e-06, 0, 5.139, 0, 7.317, 0, -25, 0, -2.2463283e-07, -125.32581, 1.884, 52.363655)
+[node name="CorridorPortal_Right4" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1.0927847e-06, 0, 5.139, 0, 14.947, 0, -25, 0, -2.2463283e-07, -125.32581, 1.884, 52.363655)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Left4")
 
-[node name="CorridorPortal_Right5" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.0927847e-06, 0, 5.139, 0, 7.317, 0, -25, 0, -2.2463283e-07, -125.32581, 1.884, 102.2776)
+[node name="CorridorPortal_Right5" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1.0927847e-06, 0, 5.139, 0, 14.947, 0, -25, 0, -2.2463283e-07, -125.32581, 1.884, 102.2776)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Left5")
 
-[node name="CorridorPortal_Right2" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.0927847e-06, 0, 5.139, 0, 7.317, 0, -25, 0, -2.2463283e-07, -125.32581, 1.884, -47.65617)
+[node name="CorridorPortal_Right2" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1.0927847e-06, 0, 5.139, 0, 14.947, 0, -25, 0, -2.2463283e-07, -125.32581, 1.884, -47.65617)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Left2")
 
-[node name="CorridorPortal_Right1" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.0927847e-06, 0, 5.139, 0, 7.317, 0, -25, 0, -2.2463283e-07, -125.32581, 1.884, -97.688446)
+[node name="CorridorPortal_Right1" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1.0927847e-06, 0, 5.139, 0, 14.947, 0, -25, 0, -2.2463283e-07, -125.32581, 1.884, -97.688446)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Left1")
 
-[node name="CorridorPortal_Left3" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.0927847e-06, 0, -5.139, 0, 7.317, 0, 25, 0, -2.2463283e-07, 124.68292, 1.884, 2.243186)
+[node name="CorridorPortal_Left3" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1.0927847e-06, 0, -5.139, 0, 14.947, 0, 25, 0, -2.2463283e-07, 124.68292, 1.884, 2.243186)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Right3")
 
-[node name="CorridorPortal_Left1" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.0927847e-06, 0, -5.139, 0, 7.317, 0, 25, 0, -2.2463283e-07, 124.68292, 1.884, -100.01285)
+[node name="CorridorPortal_Left1" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1.0927847e-06, 0, -5.139, 0, 14.947, 0, 25, 0, -2.2463283e-07, 124.68292, 1.884, -100.01285)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Right1")
 
-[node name="CorridorPortal_Left2" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.0927847e-06, 0, -5.139, 0, 7.317, 0, 25, 0, -2.2463283e-07, 124.68292, 1.884, -48.87812)
+[node name="CorridorPortal_Left2" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1.0927847e-06, 0, -5.139, 0, 14.947, 0, 25, 0, -2.2463283e-07, 124.68292, 1.884, -48.87812)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Right2")
 
-[node name="CorridorPortal_Left4" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.0927847e-06, 0, -5.139, 0, 7.317, 0, 25, 0, -2.2463283e-07, 124.68292, 1.884, 53.422016)
+[node name="CorridorPortal_Left4" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1.0927847e-06, 0, -5.139, 0, 14.947, 0, 25, 0, -2.2463283e-07, 124.68292, 1.884, 53.422016)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Right4")
 
-[node name="CorridorPortal_Left5" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.0927847e-06, 0, -5.139, 0, 7.317, 0, 25, 0, -2.2463283e-07, 124.68292, 1.884, 104.39075)
+[node name="CorridorPortal_Left5" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1.0927847e-06, 0, -5.139, 0, 14.947, 0, 25, 0, -2.2463283e-07, 124.68292, 1.884, 104.39075)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Right5")
 
-[node name="CorridorPortal_Bottom3" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-25, 0, -7.759674e-07, 0, 7.317, 0, 3.774895e-06, 0, -5.139, 2.5233307, 1.884, 123.026054)
+[node name="CorridorPortal_Bottom3" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-25, 0, -7.759674e-07, 0, 14.947, 0, 3.774895e-06, 0, -5.139, 2.5233307, 1.884, 123.026054)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Front3")
 
-[node name="CorridorPortal_Bottom2" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-25, 0, -7.759674e-07, 0, 7.317, 0, 3.774895e-06, 0, -5.139, 53.443954, 1.884, 123.026054)
+[node name="CorridorPortal_Bottom2" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-25, 0, -7.759674e-07, 0, 14.947, 0, 3.774895e-06, 0, -5.139, 53.443954, 1.884, 123.026054)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Front2")
 
-[node name="CorridorPortal_Bottom1" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-25, 0, -7.759674e-07, 0, 7.317, 0, 3.774895e-06, 0, -5.139, 104.60376, 1.884, 123.026054)
+[node name="CorridorPortal_Bottom1" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-25, 0, -7.759674e-07, 0, 14.947, 0, 3.774895e-06, 0, -5.139, 104.60376, 1.884, 123.026054)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Front1")
 
-[node name="CorridorPortal_Bottom4" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-25, 0, -7.759674e-07, 0, 7.317, 0, 3.774895e-06, 0, -5.139, -48.418648, 1.884, 123.026054)
+[node name="CorridorPortal_Bottom4" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-25, 0, -7.759674e-07, 0, 14.947, 0, 3.774895e-06, 0, -5.139, -48.418648, 1.884, 123.026054)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 exit_portal = NodePath("../CorridorPortal_Front4")
 
-[node name="CorridorPortal_Bottom5" parent="ground/portals" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-25, 0, -7.759674e-07, 0, 7.317, 0, 3.774895e-06, 0, -5.139, -99.54999, 1.884, 123.026054)
+[node name="CorridorPortal_Bottom5" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-25, 0, -7.759674e-07, 0, 14.947, 0, 3.774895e-06, 0, -5.139, -99.54999, 1.884, 123.026054)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
