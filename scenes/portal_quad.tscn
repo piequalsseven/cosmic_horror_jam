@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://0fuwhlm68lwu"]
+[gd_scene load_steps=7 format=4 uid="uid://brne7xow8crkb"]
 
 [ext_resource type="Script" uid="uid://si3lhqrnsi07" path="res://addons/portal/scripts/portal.gd" id="1_na7eq"]
 [ext_resource type="Script" uid="uid://dti2pifecwdx8" path="res://addons/portal/scripts/portal_teleport.gd" id="2_p3bba"]
