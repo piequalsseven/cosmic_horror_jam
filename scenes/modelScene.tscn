@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bxfdss2f0e4u3"]
+[gd_scene load_steps=9 format=3 uid="uid://bxfdss2f0e4u3"]
 
 [ext_resource type="PackedScene" uid="uid://bne17l1a7p1l5" path="res://models/main_house_exterior/cosmic horror hut.blend" id="1_fyc02"]
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_xc5td"]
 [ext_resource type="PackedScene" uid="uid://cy4b0pyfgxas5" path="res://models/house exterior/tree.blend" id="2_3bpe2"]
+[ext_resource type="PackedScene" uid="uid://0fuwhlm68lwu" path="res://scenes/portal_quad.tscn" id="4_q48oy"]
+[ext_resource type="PackedScene" uid="uid://dncmgippnngs6" path="res://addons/proto_controller.tscn" id="5_5f8hr"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_q48oy"]
 transform_format = 1
@@ -27,19 +29,31 @@ mesh = SubResource("PlaneMesh_3bpe2")
 surface_material_override/0 = SubResource("StandardMaterial3D_xc5td")
 
 [node name="cosmic horror hut" parent="." instance=ExtResource("1_fyc02")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.17985916, 3.4156933, 13.004955)
+transform = Transform3D(0.2, 0, 0, 0, 0.20703505, 0, 0, 0, 0.2, 0.17985916, 3.4156933, 13.004955)
 
 [node name="tree" parent="." instance=ExtResource("2_3bpe2")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -13.285267, 0, 8.114954)
+transform = Transform3D(-0.657366, 0, 0.24056177, 0, 0.7, 0, -0.24056177, 0, -0.657366, -13.285267, 0, 8.114954)
 
 [node name="tree2" parent="." instance=ExtResource("2_3bpe2")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -10.753051, 0, -11.429467)
+transform = Transform3D(-0.58372, 0, 0.38635597, 0, 0.7, 0, -0.38635597, 0, -0.58372, -10.753051, 0, -11.429467)
 
 [node name="tree3" parent="." instance=ExtResource("2_3bpe2")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 12.942347, 0, -1.6865759)
+transform = Transform3D(-0.2925069, 0, 0.63595575, 0, 0.7, 0, -0.63595575, 0, -0.2925069, 12.942347, 0, -1.6865759)
 
 [node name="tree5" parent="." instance=ExtResource("2_3bpe2")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 7.011984, 0, -15.487935)
 
 [node name="tree4" parent="." instance=ExtResource("2_3bpe2")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 9.736088, 0, 14.150794)
+
+[node name="CorridorPortalA" parent="." node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_q48oy")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, 0.2056973, 2.506493, 9.493692)
+exit_portal = NodePath("../CorridorPortalA2")
+
+[node name="CorridorPortalA2" parent="." node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_q48oy")]
+transform = Transform3D(0.99981624, 0, 0.01916267, 0, 1, 0, -0.01916267, 0, 0.99981624, 0.2056973, 2.506493, 0.10582161)
+exit_portal = NodePath("../CorridorPortalA")
+
+[node name="ProtoController" parent="." instance=ExtResource("5_5f8hr")]
+transform = Transform3D(-0.9993462, 0, -0.03615536, 0, 1, 0, 0.03615536, 0, -0.9993462, 0.07987642, 0, 6.325987)
+has_gravity = false

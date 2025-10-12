@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cy4b0pyfgxas5"
-path="res://.godot/imported/tree.blend-248fcb5596ba51cf1849073c9458fefe.scn"
+uid="uid://nufhfm26w2c"
+path="res://.godot/imported/houseWalls.blend-d8db78e1831cc4d548c835d680ffaf90.scn"
 
 [deps]
 
-source_file="res://models/house exterior/tree.blend"
-dest_files=["res://.godot/imported/tree.blend-248fcb5596ba51cf1849073c9458fefe.scn"]
+source_file="res://models/BuildingMeshes/houseWalls.blend"
+dest_files=["res://.godot/imported/houseWalls.blend-d8db78e1831cc4d548c835d680ffaf90.scn"]
 
 [params]
 
@@ -37,19 +37,7 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"meshes": {
-"tree_Cylinder": {
-"generate/lightmap_uv": 0,
-"generate/lods": 0,
-"generate/shadow_meshes": 0,
-"lods/normal_merge_angle": 20.0,
-"save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://models/meshTextures/treeMeshTexture.res",
-"save_to_file/path": "uid://wug5ng5k1wsu"
-}
-}
-}
+_subresources={}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
 blender/nodes/punctual_lights=true

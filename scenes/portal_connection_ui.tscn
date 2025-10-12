@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ftgj3pmrci0f" path="res://scripts/portal_connection_ui.gd" id="1_uldyx"]
 
+
 [node name="PortalConnectionUI" type="HBoxContainer" node_paths=PackedStringArray("menu_button", "label")]
 script = ExtResource("1_uldyx")
 menu_button = NodePath("MarginContainer/MenuButton")

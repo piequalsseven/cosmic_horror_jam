@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4mpndv8od83u"]
+
+[ext_resource type="PackedScene" uid="uid://nufhfm26w2c" path="res://models/BuildingMeshes/houseWalls.blend" id="1_2r5v5"]
+
+[node name="meshLibraryWalls" type="Node3D"]
+
+[node name="houseWalls" parent="." instance=ExtResource("1_2r5v5")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
