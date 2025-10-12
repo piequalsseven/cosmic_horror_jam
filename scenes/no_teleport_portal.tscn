@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=4 uid="uid://b6la13bx4qqs8"]
+
+[ext_resource type="Script" uid="uid://si3lhqrnsi07" path="res://addons/portal/scripts/portal.gd" id="1_q4r7t"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_82kw5"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4457b"]
+_surfaces = [{
+"aabb": AABB(-1.02429, -1.3, -0.2, 2.04857, 2.60001, 0.20001),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("BwAFAAQABwAEAAYAAQAHAAMAAQAFAAcAAgAEAAAAAgAGAAQAAwAGAAIAAwAHAAYAAAAFAAEAAAAEAAUA"),
+"lods": [0.156674, PackedByteArray("AwAFAAAAAQAFAAMAAwAAAAIAAAAFAAEA")],
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD+//v/AAAAAAAA+/8AAP///v/7/wAA/v8AAPv/AACZGWXmAAAAAJkZmRkAAAAAZeZl5gAAAABl5pkZAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nd71p"]
+resource_name = "room_Plane_001"
+_surfaces = [{
+"aabb": AABB(-1.02429, -1.3, -0.2, 2.04857, 2.60001, 0.20001),
+"attribute_data": PackedByteArray("AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//"),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("EQALAAgAEQAIAA4AAgASAAYAAgAMABIABAAJAAAABAAPAAkABwAQAAUABwATABAAAQANAAMAAQAKAA0A"),
+"lods": [0.156674, PackedByteArray("BgAWAAAAAgAWAAYABgAAAAQAFAAXABUA")],
+"material": SubResource("StandardMaterial3D_82kw5"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAD+//v/SGUAAP7/+/8AagAAAAD7/0hlAAAAAPv/AGr///7/+/9IZf///v/7/wBq/v8AAPv/SGX+/wAA+/8AapkZZeYAAP5/mRll5gAASGWZGWXmAAAAapkZmRkAAP5/mRmZGQAASGWZGZkZAAAAamXmZeYAAP5/ZeZl5gAASGVl5mXmAAAAamXmmRkAAP5/ZeaZGQAASGVl5pkZAAAAagAA/v/7/wBqAAAAAPv/AGqZGZkZAAD1b5kZmRkAAABqAAD/f/9/AAD///9//38AAAAA/3//f///////f/9/////f///AAD/f/9/AAD/f///////f/9/AAD/f///AAD/f/9/////f///////f/9/////fwAA/38AAP///3//fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4457b")
+
+[node name="NoTeleportPortal" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_nd71p")
+skeleton = NodePath("")
+script = ExtResource("1_q4r7t")
+disable_viewport_distance = 13.0
+fade_out_distance_max = 12.0
+fade_out_distance_min = 10.0
+fade_out_color = Color(0, 0, 0, 1)
