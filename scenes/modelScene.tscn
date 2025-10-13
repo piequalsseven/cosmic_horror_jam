@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxfdss2f0e4u3"]
+[gd_scene load_steps=10 format=3 uid="uid://bxfdss2f0e4u3"]
 
 [ext_resource type="PackedScene" uid="uid://bne17l1a7p1l5" path="res://models/main_house_exterior/cosmic horror hut.blend" id="1_fyc02"]
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_xc5td"]
 [ext_resource type="PackedScene" uid="uid://cy4b0pyfgxas5" path="res://models/house exterior/tree.blend" id="2_3bpe2"]
-[ext_resource type="PackedScene" uid="uid://0fuwhlm68lwu" path="res://scenes/portal_quad.tscn" id="4_q48oy"]
+[ext_resource type="Texture2D" uid="uid://hm6qi7yhfejl" path="res://models/BuildingMeshes/textures/floor_normalsFloor.png" id="2_4331n"]
+[ext_resource type="PackedScene" uid="uid://0fuwhlm68lwu" path="res://scenes/portal.tscn" id="4_q48oy"]
 [ext_resource type="PackedScene" uid="uid://dncmgippnngs6" path="res://addons/proto_controller.tscn" id="5_5f8hr"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_q48oy"]
@@ -16,7 +17,11 @@ buffer = PackedFloat32Array(-0.51184237, 0.019871052, 0.16794182, -17.17493, 0.0
 size = Vector2(40, 40)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xc5td"]
-albedo_color = Color(0.13913205, 0.2600691, 0.051944893, 1)
+albedo_color = Color(0.20040545, 0.11637438, 1.2032688e-08, 1)
+normal_enabled = true
+normal_scale = 1.31
+normal_texture = ExtResource("2_4331n")
+uv1_scale = Vector3(7, 7, 7)
 
 [node name="ModelScene" type="Node2D"]
 
@@ -25,6 +30,7 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 multimesh = SubResource("MultiMesh_q48oy")
 
 [node name="ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37319875, 0.11586213, -0.5527973)
 mesh = SubResource("PlaneMesh_3bpe2")
 surface_material_override/0 = SubResource("StandardMaterial3D_xc5td")
 
