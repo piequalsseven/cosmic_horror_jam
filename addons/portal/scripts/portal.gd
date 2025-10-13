@@ -62,7 +62,7 @@ var _seconds_until_resize:float
 ###Custom###
 @export var possible_exit_portals : Array[Portal]
 @export var portal_name : String
-
+@export var change_enviroment_on_teleport : bool
 ####
 func _ready() -> void:
 	if not is_inside_tree():
@@ -129,7 +129,10 @@ func _create_viewport() -> void:
 	# Create the exit camera which renders the portal surface for the viewport
 	_exit_camera = Camera3D.new()
 	_exit_camera.name = "Camera"
-	_exit_camera.environment = exit_environment
+	if exit_environment:
+		_exit_camera.environment = exit_environment
+	else:
+		_exit_camera.environment = get_viewport().get_camera_3d().environment
 	_viewport.add_child(_exit_camera)
 
 	# Resize the viewport on the next _process

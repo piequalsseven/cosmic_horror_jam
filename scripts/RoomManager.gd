@@ -1,6 +1,7 @@
 extends Node
 
 enum KEYS {KEY_1, KEY_2, KEY_3}
+var enviroment : WorldEnvironment
 
 var current_key : KEYS :
 	set(c):
