@@ -2,20 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c253xm1nmkfvd"
-path.s3tc="res://.godot/imported/entrance_candleNormals.png-847af897d3d5c7ce7c0f9fd28343f356.s3tc.ctex"
+uid="uid://m1tw41vyaccd"
+path.s3tc="res://.godot/imported/StairPlanksNormals.png-216cfe976ec11ede5c28e1a669847c56.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "b6167123598435d8184e2270fb77548e"
-}
+generator_parameters={}
 
 [deps]
 
-source_file="res://models/rooms/entrance_candleNormals.png"
-dest_files=["res://.godot/imported/entrance_candleNormals.png-847af897d3d5c7ce7c0f9fd28343f356.s3tc.ctex"]
+source_file="res://models/rooms/textures/StairPlanksNormals.png"
+dest_files=["res://.godot/imported/StairPlanksNormals.png-216cfe976ec11ede5c28e1a669847c56.s3tc.ctex"]
 
 [params]
 
@@ -30,7 +28,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://models/rooms/entrance_candleNormals.png"
+roughness/src_normal="res://models/rooms/textures/StairPlanksNormals.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

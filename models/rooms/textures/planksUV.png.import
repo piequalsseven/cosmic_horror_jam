@@ -2,20 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nlqu4ej5wiqi"
-path.s3tc="res://.godot/imported/entrance_Material.png-cc4fb12ccbfc5977cb43eb0ffb8122ef.s3tc.ctex"
+uid="uid://dgvjoxm7xw46d"
+path.s3tc="res://.godot/imported/planksUV.png-bc7e187c184c09c502c7275e521f3cfc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "0192b3bfd976185a4fae8e64ce608418"
-}
+generator_parameters={}
 
 [deps]
 
-source_file="res://models/rooms/entrance_Material.png"
-dest_files=["res://.godot/imported/entrance_Material.png-cc4fb12ccbfc5977cb43eb0ffb8122ef.s3tc.ctex"]
+source_file="res://models/rooms/textures/planksUV.png"
+dest_files=["res://.godot/imported/planksUV.png-bc7e187c184c09c502c7275e521f3cfc.s3tc.ctex"]
 
 [params]
 

@@ -2,20 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drvbodbixdmq2"
-path.s3tc="res://.godot/imported/entrance_textureFloor.png-f14a2e3a29f3809c2edc3dc95c6a8d0f.s3tc.ctex"
+uid="uid://cnk20hcyhuyug"
+path.s3tc="res://.godot/imported/tablePlankes.png-783ad2f05debdfc80e2fc6b3f9047e46.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "09765752a228b6014c7e4db4465c90e9"
-}
+generator_parameters={}
 
 [deps]
 
-source_file="res://models/rooms/entrance_textureFloor.png"
-dest_files=["res://.godot/imported/entrance_textureFloor.png-f14a2e3a29f3809c2edc3dc95c6a8d0f.s3tc.ctex"]
+source_file="res://models/rooms/textures/tablePlankes.png"
+dest_files=["res://.godot/imported/tablePlankes.png-783ad2f05debdfc80e2fc6b3f9047e46.s3tc.ctex"]
 
 [params]
 

@@ -2,20 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd4qlcwoy11tv"
-path.s3tc="res://.godot/imported/entrance_Material.001 Base Color.png-6bc3510b28d5bde2ed0fdeb6656eff4e.s3tc.ctex"
+uid="uid://cavc2y23a7uhn"
+path.s3tc="res://.godot/imported/candleNormals.png-9f12b3b17be7a56db6c89fa776dbe170.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "6b82025e2282b8c1cd0e7c0569242d1d"
-}
+generator_parameters={}
 
 [deps]
 
-source_file="res://models/rooms/entrance_Material.001 Base Color.png"
-dest_files=["res://.godot/imported/entrance_Material.001 Base Color.png-6bc3510b28d5bde2ed0fdeb6656eff4e.s3tc.ctex"]
+source_file="res://models/rooms/textures/candleNormals.png"
+dest_files=["res://.godot/imported/candleNormals.png-9f12b3b17be7a56db6c89fa776dbe170.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +23,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://models/rooms/textures/candleNormals.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
