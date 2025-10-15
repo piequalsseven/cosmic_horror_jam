@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Key" load_steps=3 format=3 uid="uid://b0fpogay87ko3"]
+
+[ext_resource type="Script" uid="uid://cvii1ns8wwq6g" path="res://addons/portal/scripts/KeyRes.gd" id="1_4euc5"]
+[ext_resource type="Texture2D" uid="uid://bhi7jtu6pfsuq" path="res://images/first_key_2D.jpg" id="1_s0d8x"]
+
+[resource]
+script = ExtResource("1_4euc5")
+keyname = &"First"
+icon = ExtResource("1_s0d8x")
+metadata/_custom_type_script = "uid://cvii1ns8wwq6g"
