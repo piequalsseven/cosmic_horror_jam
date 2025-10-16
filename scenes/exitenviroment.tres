@@ -8,9 +8,12 @@ sky_material = SubResource("ProceduralSkyMaterial_xg6vb")
 
 [resource]
 background_mode = 2
+background_energy_multiplier = 0.1
 sky = SubResource("Sky_ltmdr")
 ambient_light_color = Color(0.69803923, 0.32941177, 0, 1)
-ambient_light_sky_contribution = 0.74
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.1
+reflected_light_source = 1
 volumetric_fog_density = 0.1
 volumetric_fog_emission = Color(1, 1, 1, 1)
 volumetric_fog_emission_energy = 0.0

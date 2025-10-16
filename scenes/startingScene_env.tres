@@ -16,6 +16,7 @@ background_mode = 2
 background_color = Color(0.74164754, 0.35167298, 1.92523e-07, 1)
 sky = SubResource("Sky_ltmdr")
 ambient_light_sky_contribution = 0.74
+volumetric_fog_enabled = true
 volumetric_fog_emission = Color(0.88984275, 0.4273237, 0, 1)
 volumetric_fog_emission_energy = 0.3
 volumetric_fog_anisotropy = -0.3
