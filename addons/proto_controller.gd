@@ -110,7 +110,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, move_speed)
 			velocity.z = move_toward(velocity.z, 0, move_speed)
-			#velocity.y = move_toward(velocity.y, 0, move_speed)
+			velocity.y = move_toward(velocity.y, 0, move_speed)
 	else:
 		velocity.x = 0
 		velocity.y = 0
