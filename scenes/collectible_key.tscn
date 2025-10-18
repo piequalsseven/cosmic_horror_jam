@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ul4ca6hsjsod"]
+
+[ext_resource type="Script" uid="uid://cnlv5ggdlkhhw" path="res://scripts/collectible_key.gd" id="1_kh60s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xgmcf"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="CollectibleKey" type="Area3D"]
+script = ExtResource("1_kh60s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_xgmcf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dncmgippnngs6"]
+[gd_scene load_steps=7 format=3 uid="uid://dncmgippnngs6"]
 
 [ext_resource type="Script" uid="uid://dtsarabnbmk61" path="res://addons/proto_controller.gd" id="1_mfgp6"]
+[ext_resource type="Script" uid="uid://kl5h4pstbah5" path="res://scripts/door_opener.gd" id="2_hjrt5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -33,6 +34,11 @@ shape = SubResource("CapsuleShape3D_iof21")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="RayCast3D" type="RayCast3D" parent="Head"]
+target_position = Vector3(0, 0, -3)
+collision_mask = 8
+script = ExtResource("2_hjrt5")
 
 [node name="Area3D" type="Area3D" parent="."]
 metadata/teleportable_root = NodePath("..")
