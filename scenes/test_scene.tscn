@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://1rf18yojjhnh"]
+[gd_scene load_steps=30 format=4 uid="uid://1rf18yojjhnh"]
 
 [ext_resource type="PackedScene" uid="uid://dncmgippnngs6" path="res://addons/proto_controller.tscn" id="1_g7g4h"]
 [ext_resource type="Script" uid="uid://si3lhqrnsi07" path="res://addons/portal/scripts/portal.gd" id="2_nd71p"]
@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://bx8jo2goua5oc" path="res://scripts/portal_monager_ui.gd" id="6_3qnke"]
 [ext_resource type="PackedScene" uid="uid://cs1mliu8m7oea" path="res://models/KEY1.blend" id="6_ntc4i"]
 [ext_resource type="PackedScene" uid="uid://3c24apiqx6e4" path="res://scenes/no_teleport_portal.tscn" id="6_wtsjf"]
+[ext_resource type="Resource" uid="uid://cbqtyvdix8lhp" path="res://resources/Second.tres" id="7_ntc4i"]
+[ext_resource type="PackedScene" uid="uid://dewbi6jlpmw6s" path="res://models/key2.blend" id="8_u0xbq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_g7g4h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -161,7 +163,7 @@ exit_portal = NodePath("../../Area5/Portal5")
 portal_name = "White"
 
 [node name="PortalDoor" parent="Area1/CorridorPortalA" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("3_rnaij")]
-portal_connections = [NodePath("../../../Area2/CorridorPortalB"), NodePath("../../../Area3/CorridorPortalC"), NodePath("../../../Area4/CorridorPortalD")]
+portal_connections = [NodePath("../../../Area3/CorridorPortalC"), NodePath("../../../Area2/CorridorPortalB")]
 connections = {
 0: NodePath("../../../Area2/CorridorPortalB"),
 1: NodePath("../../../Area3/CorridorPortalC"),
@@ -200,6 +202,14 @@ key_mesh = NodePath("KEY1")
 key = ExtResource("5_gthg3")
 
 [node name="KEY1" parent="Area1/CollectibleKey" instance=ExtResource("6_ntc4i")]
+transform = Transform3D(-2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, 0, 0, 0, 0.05, 0, 0, 0)
+
+[node name="CollectibleKey2" parent="Area1" node_paths=PackedStringArray("key_mesh") instance=ExtResource("4_6qxox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.221018, 1.3952947, 4.3650117)
+key_mesh = NodePath("key2")
+key = ExtResource("7_ntc4i")
+
+[node name="key2" parent="Area1/CollectibleKey2" instance=ExtResource("8_u0xbq")]
 transform = Transform3D(-2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, 0, 0, 0, 0.05, 0, 0, 0)
 
 [node name="Area2" type="Node3D" parent="."]
@@ -271,6 +281,14 @@ script = ExtResource("3_7ddre")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="Area2/CorridorPortalB/Teleport"]
 shape = SubResource("BoxShape3D_7ddre")
+
+[node name="PortalDoor" parent="Area2/CorridorPortalB" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("3_rnaij")]
+portal_connections = [NodePath("../../../Area1/CorridorPortalA"), NodePath("../../../Area3/CorridorPortalC"), NodePath("../../../Area4/CorridorPortalD")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
 [node name="TiltedArea" type="Area3D" parent="Area2"]
 gravity_space_override = 3
@@ -444,6 +462,7 @@ gravity_direction = Vector3(-1, 0, 0)
 script = ExtResource("4_7ddre")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3/TiltedArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05581665, 0.017238617)
 shape = SubResource("BoxShape3D_nd71p")
 
 [node name="Area4" type="Node3D" parent="."]

@@ -63,6 +63,7 @@ var _seconds_until_resize:float
 @export var possible_exit_portals : Dictionary[Key, Portal]
 @export var portal_name : String
 @export var change_enviroment_on_teleport : bool
+var _portal_door : PortalDoor
 ####
 func _ready() -> void:
 	if not is_inside_tree():
