@@ -1,4 +1,3 @@
-@tool
 extends StaticBody3D
 class_name PortalDoor
 
@@ -32,7 +31,7 @@ func _ready() -> void:
 		if portal_connections[i]:
 			connections[i as RoomManager.KEYS] = portal_connections[i]
 		else:
-			connections[i as RoomManager.KEYS] = null
+			connections[i as RoomManager.KEYS] = get_tree().get_first_node_in_group("CorridorEntrance")
 	connections.make_read_only()
 
 func change_state() -> void:
