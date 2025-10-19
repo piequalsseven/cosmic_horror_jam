@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://ymlroa6fqlts"]
+[gd_scene load_steps=45 format=3 uid="uid://ymlroa6fqlts"]
 
 [ext_resource type="Environment" uid="uid://bythca13xs6it" path="res://scenes/startingScene_env.tres" id="1_fwbn4"]
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_rnknb"]
@@ -81,10 +81,6 @@ uv1_scale = Vector3(20, 20, 20)
 material = SubResource("StandardMaterial3D_vs7cs")
 size = Vector2(0, 0)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_52452"]
-flip_faces = true
-size = Vector2(100, 100)
-
 [sub_resource type="PlaneMesh" id="PlaneMesh_d1305"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_d1305"]
@@ -155,7 +151,7 @@ disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 5.0
 exit_environment = SubResource("Environment_ltmdr")
-exit_portal = NodePath("../../final(probably)entrance/floorEntrance/EntranceFloorCenterPortalA4")
+exit_portal = NodePath("../../final(probably)entrance/EntranceFloorCenterPortalA4")
 change_enviroment_on_teleport = true
 
 [node name="Portal4" parent="ground" node_paths=PackedStringArray("exit_portal") instance=ExtResource("9_ltmdr")]
@@ -426,12 +422,6 @@ metadata/Player = true
 [node name="FloorNoFloorRoom" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 176.9228, -21.84671, 1536.8025)
 mesh = SubResource("PlaneMesh_vg3eq")
-
-[node name="noFloorDownportal" parent="FloorNoFloorRoom" instance=ExtResource("4_xg6vb")]
-transform = Transform3D(1.375, 0, 0, 0, 1.943, 0, 0, 0, 1.375, -1.7410126, 3.7365532, 3.0651855)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 128.14812, 0)
@@ -818,87 +808,239 @@ light_energy = 1.89
 light_size = 0.553
 omni_range = 9.693588
 
-[node name="ground3" type="MeshInstance3D" parent="library"]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 6.9596405, -2.7825155, 0.5599365)
-mesh = SubResource("PlaneMesh_52452")
-skeleton = NodePath("../../final(probably)entrance/floorEntrance")
+[node name="libraryFloor" parent="library" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, -9.512558, 0.1121788, -12.161316)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
 
-[node name="libraryGroundEntrance" parent="library/ground3" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-6.010316e-08, 0, -1.375, 0, 1.943, 0, 1.375, 0, -6.010316e-08, 25.489136, 6.0217314, -32.948776)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../../ground4/rightCeiling")
+[node name="PortalDoor" parent="library/libraryFloor" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004714966, -0.047130585, -0.09338379)
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceFloorRight"), NodePath("../../libraryrightCeiling"), NodePath("../../../LRoom/Portal2")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
-[node name="ground4" type="MeshInstance3D" parent="library"]
-transform = Transform3D(-2.1855694e-08, -4.371139e-08, -0.5, 0, -0.5, 4.371139e-08, -0.5, 1.9106855e-15, 2.1855694e-08, 6.9596405, 9.147388, 5.743225)
-mesh = SubResource("PlaneMesh_52452")
-skeleton = NodePath("../../final(probably)entrance/floorEntrance")
+[node name="libraryrightCeiling" parent="library" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.376099, 7.9104376, 9.543274)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
 
-[node name="rightCeiling" parent="library/ground4" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.375, -4.2351647e-21, -1.2020632e-07, 0, 1.943, 2.2967649e-22, 1.2020632e-07, 3.2455389e-22, -1.375, -7.585449, 2.6353614, 44.54767)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../../ground3/libraryGroundEntrance")
+[node name="PortalDoor" parent="library/libraryrightCeiling" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceuselessBalconyPortal"), NodePath("../../libraryFloor"), NodePath("../../../LRoom/Portal2")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
-[node name="LeftCeiling" parent="library/ground4" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-6.010316e-08, -8.4703295e-21, -1.375, 4.5935297e-22, 1.943, 0, 1.375, 3.2455406e-22, -6.010316e-08, -11.124023, 2.6854696, -22.446922)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../../../final(probably)entrance/floorEntrance/EntranceFloorLeftPortalA5")
+[node name="libraryLeftCeiling" parent="library" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.160534, 7.9104376, 11.325562)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="library/libraryLeftCeiling" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceStairesBalconyPortal"), NodePath("../../libraryFloor"), NodePath("../../libraryGroundWall")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="libraryBackWall" parent="library" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, 1, -8.742278e-08, 1, -4.371139e-08, 0, -3.821371e-15, -8.742278e-08, -1, 22.917038, 4.006805, 23.185303)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="library/libraryBackWall" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../noFloorRoom/noFloorEntranceLeftWall"), NodePath("../../libraryCeilingWall"), NodePath("../../libraryLeftCeiling")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="libraryGroundWall" parent="library" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.371139e-08, 1, -3.821371e-15, -4.371139e-08, 1.9106855e-15, 1, 1, 4.371139e-08, 4.371139e-08, 22.829964, -1.0443072, 14.880737)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="library/libraryGroundWall" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../libraryCeilingWall"), NodePath("../../libraryLeftCeiling")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="libraryCeilingWall" parent="library" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.3711385e-08, -1, 4.3711385e-08, 0, -4.371139e-08, -0.9999999, 0.9999999, -4.371139e-08, 1.9106853e-15, -14.243767, 9.087049, -5.3094482)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="library/libraryCeilingWall" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(0.99999994, 0, 0, -3.5527137e-15, 1, 0, 0, 0, 0.99999994, 0.004699707, -0.04712677, -0.0078048706)
+portal_connections = [NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../libraryGroundWall"), NodePath("../../libraryrightCeiling")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
 [node name="3rdKeyRoom" parent="." instance=ExtResource("14_r1rbk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 157.36255, 2.723381, 1238.3961)
 
+[node name="3RdKeybackCeiling" parent="3rdKeyRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3110962, 8.555008, -8.600708)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="3rdKeyRoom/3RdKeybackCeiling" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../noFloorRoom/NoFloorLeftCeiling"), NodePath("../../../library/libraryFloor"), NodePath("../../../library/libraryGroundWall")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="3RdKeyCeiling" parent="3rdKeyRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.3110962, 8.555008, 23.042725)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="3rdKeyRoom/3RdKeyCeiling" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceceilingPortal"), NodePath("../../3RdKeyFloor"), NodePath("../../3RdKeywall")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="3RdKeyFloor" parent="3rdKeyRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(1, -8.742278e-08, 8.742278e-08, -8.742278e-08, -1, 0, 8.742278e-08, -7.642742e-15, -1, 3.28273, 0.87998986, 23.042725)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="3rdKeyRoom/3RdKeyFloor" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../library/libraryFloor"), NodePath("../../3RdKeyCeiling"), NodePath("../../3RdKeywall")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="3RdKeyBackFloor" parent="3rdKeyRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 3.3334885, -2.862596, -8.410706)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="3rdKeyRoom/3RdKeyBackFloor" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../../library/libraryFloor"), NodePath("../../../library/libraryGroundWall")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="3RdKeyBackwall" parent="3rdKeyRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -5.3668747, 4.744367, -8.392395)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="3rdKeyRoom/3RdKeyBackwall" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceLeftwallPortal"), NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../3RdKeyBackFloor")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="3RdKeywall" parent="3rdKeyRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, -1, -8.742278e-08, -1, -4.371139e-08, 0, -3.821371e-15, 8.742278e-08, -1, -5.3668747, 4.6518793, 23.016785)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="3rdKeyRoom/3RdKeywall" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../library/libraryCeilingWall"), NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../3RdKeyFloor")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
 [node name="final(probably)entrance" parent="." instance=ExtResource("15_drejw")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 1.471, 3.955, 1064.629)
 
-[node name="floorEntrance" type="MeshInstance3D" parent="final(probably)entrance"]
-transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 12.28302, -0.1286602, -0.73549944)
-mesh = SubResource("PlaneMesh_vg3eq")
-skeleton = NodePath("../..")
-
-[node name="EntranceFloorCenterPortalA4" parent="final(probably)entrance/floorEntrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(1.375, 0, 0, 0, 1.943, 0, 0, 0, 1.375, 1.2491779, 2.8736162, -25.71701)
+[node name="EntranceFloorCenterPortalA4" parent="final(probably)entrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-3.005158e-08, 0, -0.6875, 0, 0.9715, 0, 0.6875, 0, -3.005158e-08, 25.14154, 1.3081479, -0.11090994)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 5.0
-exit_portal = NodePath("../../../infinit corridor/ground2/firstCorridorEntrance")
+exit_portal = NodePath("../../infinit corridor/firstCorridorEntrance")
 
-[node name="EntranceFloorLeftPortalA5" parent="final(probably)entrance/floorEntrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-6.010316e-08, 0, 1.375, 0, 1.943, 0, -1.375, 0, -6.010316e-08, -41.14336, 2.8141065, -5.233032)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../../../library/ground3/libraryGroundEntrance")
+[node name="EntranceFloorRight" parent="final(probably)entrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 14.922852, 1.1546583, -21.280941)
+exit_portal = NodePath("../EntranceFloorCenterPortalA4")
 
-[node name="floorEntrance2" type="MeshInstance3D" parent="final(probably)entrance"]
-transform = Transform3D(-2.1855694e-08, 4.371139e-08, 0.5, 0, -0.5, 4.371139e-08, 0.5, 1.9106855e-15, 2.1855694e-08, 12.28302, 10.331297, -0.73549944)
-mesh = SubResource("PlaneMesh_vg3eq")
-skeleton = NodePath("../..")
+[node name="PortalDoor" parent="final(probably)entrance/EntranceFloorRight" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.047130585, 0.029148102)
+portal_connections = [NodePath("../../../library/libraryFloor"), NodePath("../../EntranceuselessBalconyPortal"), NodePath("../../EntranceLeftwallPortal")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
-[node name="entranceStairsBalcony" parent="final(probably)entrance/floorEntrance2" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(1.375, 0, 0, 0, 1.943, 0, 0, 0, 1.375, 9.942217, 10.949209, -61.618286)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../../../infinit corridor/ground2/firstCorridorEntrance")
+[node name="EntranceceilingPortal" parent="final(probably)entrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 25.123291, 8.947951, -0.078626156)
+exit_portal = NodePath("../EntranceFloorCenterPortalA4")
 
-[node name="EntranceBalcony" parent="final(probably)entrance/floorEntrance2" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(1.375, 0, 0, 0, 1.943, 0, 0, 0, 1.375, -13.644174, 10.949212, -61.618286)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../../../infinit corridor/ground2/firstCorridorEntrance")
+[node name="PortalDoor" parent="final(probably)entrance/EntranceceilingPortal" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.047130585, 0.10210228)
+portal_connections = [NodePath("../../../library/libraryFloor"), NodePath("../../EntranceFloorCenterPortalA4"), NodePath("../../EntranceLeftwallPortal")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
-[node name="EntranceCeileing" parent="final(probably)entrance/floorEntrance2" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1.375, 0, -1.2020632e-07, 0, 1.943, 0, 1.2020632e-07, 0, -1.375, 1.335628, 3.0391884, 25.735535)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../../../library/ground3/libraryGroundEntrance")
+[node name="EntranceuselessBalconyPortal" parent="final(probably)entrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18.66095, 4.9641194, -7.5557213)
+exit_portal = NodePath("../EntranceFloorCenterPortalA4")
+
+[node name="PortalDoor" parent="final(probably)entrance/EntranceuselessBalconyPortal" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01793623, 0.10211182)
+portal_connections = [NodePath("../../../library/libraryrightCeiling"), NodePath("../../EntranceFloorRight"), NodePath("../../EntranceLeftwallPortal")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="EntranceStairesBalconyPortal" parent="final(probably)entrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18.66095, 4.984809, 4.250326)
+exit_portal = NodePath("../EntranceFloorCenterPortalA4")
+
+[node name="PortalDoor" parent="final(probably)entrance/EntranceStairesBalconyPortal" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.047130585, 0.10210228)
+portal_connections = [NodePath("../../../library/libraryLeftCeiling"), NodePath("../../EntranceFloorCenterPortalA4"), NodePath("../../EntranceLeftwallPortal")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="EntranceLeftwallPortal" parent="final(probably)entrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, 1, -8.742278e-08, 1, -4.371139e-08, 0, -3.821371e-15, -8.742278e-08, -1, 19.855225, 8.896505, 21.892935)
+exit_portal = NodePath("../EntranceFloorCenterPortalA4")
+
+[node name="PortalDoor" parent="final(probably)entrance/EntranceLeftwallPortal" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.103027344, 0.10210228)
+portal_connections = [NodePath(""), NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../EntranceFloorRight")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="final(probably)entrance"]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 20.677246, 1.1371024, 7.623411)
@@ -1249,753 +1391,856 @@ expand_mode = 1
 [node name="infinit corridor" parent="." instance=ExtResource("17_h53cn")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.4894867, 8.352936, 1540.6616)
 
-[node name="OmniLight3D35" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.736284, 4.1356697, -24.223328)
+[node name="firstCorridorEntrance" parent="infinit corridor" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, -3.821371e-15, 1, -8.742278e-08, -1, 0, 1, -8.742278e-08, -4.371139e-08, -15.171324, 0.28959894, -24.196472)
+exit_portal = NodePath("../../final(probably)entrance/EntranceFloorCenterPortalA4")
+
+[node name="PortalDoor" parent="infinit corridor/firstCorridorEntrance" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.047130585, 0.10210228)
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceFloorCenterPortalA4"), NodePath("../../SecondCorridorExit"), NodePath("../../SecondCorridorExit")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="FirstCorridorExit" parent="infinit corridor" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, -6.600236e-15, -1, -1.509958e-07, -1, 0, -1, 1.509958e-07, -4.371139e-08, 16.338697, 0.28959894, -24.196472)
+exit_portal = NodePath("../../final(probably)entrance/EntranceFloorCenterPortalA4")
+
+[node name="PortalDoor" parent="infinit corridor/FirstCorridorExit" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.047130585, 0.10210228)
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceFloorCenterPortalA4"), NodePath("../../SecondCorridorEntrance"), NodePath("../../SecondCorridorEntrance")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="SecondCorridorEntrance" parent="infinit corridor" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, -3.821371e-15, 1, -8.742278e-08, -1, 0, 1, -8.742278e-08, -4.371139e-08, -15.171324, 0.28720427, 0.04815674)
+exit_portal = NodePath("../../final(probably)entrance/EntranceFloorCenterPortalA4")
+
+[node name="PortalDoor" parent="infinit corridor/SecondCorridorEntrance" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.047130585, 0.10210228)
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceFloorCenterPortalA4"), NodePath("../../FirstCorridorExit"), NodePath("../../FirstCorridorExit")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="SecondCorridorExit" parent="infinit corridor" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, -6.600236e-15, -1, -1.509958e-07, -1, 0, -1, 1.509958e-07, -4.371139e-08, 16.3387, 0.28720427, 0.04815674)
+exit_portal = NodePath("../../final(probably)entrance/EntranceFloorCenterPortalA4")
+
+[node name="PortalDoor" parent="infinit corridor/SecondCorridorExit" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.047130585, 0.10210228)
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceFloorCenterPortalA4"), NodePath("../../firstCorridorEntrance"), NodePath("../../firstCorridorEntrance")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="infinitCorridorLights" type="Node3D" parent="infinit corridor"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.3806477, -4.48256, 5.491211)
+
+[node name="OmniLight3D32" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8772988, 9.74724, -4.274414)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D36" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.887733, 4.1356697, -24.223328)
+[node name="OmniLight3D28" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.526497, 9.74724, -4.274414)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D37" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.304981, 4.1356697, -23.789429)
+[node name="OmniLight3D29" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.29835, 9.74724, -4.274414)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D38" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.302616, 4.1356697, -24.646301)
+[node name="OmniLight3D30" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.057121, 9.74724, -4.274414)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D39" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.94900584, 4.1356697, -24.223328)
+[node name="OmniLight3D43" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.613424, 9.74724, -52.730347)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D40" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.100455046, 4.1356697, -24.223328)
+[node name="OmniLight3D44" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0458813, 9.74724, -52.730347)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D41" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5177028, 4.1356697, -23.789429)
+[node name="OmniLight3D45" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.871717, 9.74724, -52.730347)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D42" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5153377, 4.1356697, -24.646301)
+[node name="OmniLight3D46" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.693626, 9.74724, -52.730347)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D67" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.1879, 4.1356697, -24.223328)
+[node name="OmniLight3D47" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8772988, 9.74724, -52.730347)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D68" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.03645, 4.1356697, -24.223328)
+[node name="OmniLight3D48" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.526497, 9.74724, -52.730347)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D69" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.619203, 4.1356697, -23.789429)
+[node name="OmniLight3D49" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.29835, 9.74724, -52.730347)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D70" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.621568, 4.1356697, -24.646301)
+[node name="OmniLight3D50" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.057121, 9.74724, -52.730347)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D71" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.736284, 4.1356697, -0.0031738281)
+[node name="OmniLight3D51" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.969315, 9.74724, -66.09607)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D72" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.887733, 4.1356697, -0.0031738281)
+[node name="OmniLight3D52" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.689991, 9.74724, -66.09607)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D73" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.304981, 4.1356697, 0.4307251)
+[node name="OmniLight3D53" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11.515827, 9.74724, -66.09607)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D74" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.302616, 4.1356697, -0.42614746)
+[node name="OmniLight3D54" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -18.337736, 9.74724, -66.09607)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D75" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.94900584, 4.1356697, -0.0031738281)
+[node name="OmniLight3D55" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.2331886, 9.74724, -66.09607)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D76" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.100455046, 4.1356697, -0.0031738281)
+[node name="OmniLight3D56" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.882388, 9.74724, -66.09607)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D77" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5177028, 4.1356697, 0.4307251)
+[node name="OmniLight3D57" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.65424, 9.74724, -66.09607)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D78" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5153377, 4.1356697, -0.42614746)
+[node name="OmniLight3D58" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 29.413012, 9.74724, -66.09607)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D79" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.1879, 4.1356697, -0.0031738281)
+[node name="OmniLight3D59" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.969315, 9.74724, -17.662964)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D80" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.03645, 4.1356697, -0.0031738281)
+[node name="OmniLight3D60" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.689991, 9.74724, -17.662964)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D81" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.619203, 4.1356697, 0.4307251)
+[node name="OmniLight3D61" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11.515827, 9.74724, -17.662964)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D82" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.621568, 4.1356697, -0.42614746)
+[node name="OmniLight3D62" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -18.337736, 9.74724, -17.662964)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D27" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.9260633, 0.39105988, 3.354004)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D31" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.9035892, 0.39105988, 3.354004)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D33" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.3165073, 0.39105988, 3.354004)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D34" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -10.727462, 0.39105988, 3.354004)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D32" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.4419992, 0.39105988, 3.354004)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D28" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.3826003, 0.39105988, 3.354004)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D29" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.768526, 0.39105988, 3.354004)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D30" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 13.147912, 0.39105988, 3.354004)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D43" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.9260633, 0.39105988, -20.873962)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D44" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.9035892, 0.39105988, -20.873962)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D45" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.3165073, 0.39105988, -20.873962)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D46" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -10.727462, 0.39105988, -20.873962)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D47" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.4419992, 0.39105988, -20.873962)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D48" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.3826003, 0.39105988, -20.873962)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D49" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.768526, 0.39105988, -20.873962)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D50" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 13.147912, 0.39105988, -20.873962)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D51" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 2.1040084, 0.39105988, -27.556824)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D52" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -4.725644, 0.39105988, -27.556824)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D53" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -8.138562, 0.39105988, -27.556824)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D54" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -11.549517, 0.39105988, -27.556824)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D55" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -1.2640543, 0.39105988, -27.556824)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D56" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 5.5605454, 0.39105988, -27.556824)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D57" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 8.946471, 0.39105988, -27.556824)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D58" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 12.325857, 0.39105988, -27.556824)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D59" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 2.1040084, 0.39105988, -3.340271)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D60" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -4.725644, 0.39105988, -3.340271)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D61" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -8.138562, 0.39105988, -3.340271)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D62" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -11.549517, 0.39105988, -3.340271)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D83" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 8.889013, 0.39105988, -5.513794)
+[node name="OmniLight3D83" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.539324, 9.74724, -22.01001)
 light_color = Color(0, 0.48786312, 0.89901686, 1)
 light_energy = 1.74
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D86" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 8.889013, 0.39105988, -7.038025)
+[node name="OmniLight3D86" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.539324, 9.74724, -25.058472)
 light_color = Color(0.6443716, 0.16069025, 0.9999998, 1)
 light_energy = 0.179
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D84" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 8.889013, 0.39105988, -29.787231)
+[node name="OmniLight3D84" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.539324, 9.74724, -70.556885)
 light_color = Color(0, 0.48786312, 0.89901686, 1)
 light_energy = 1.127
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D85" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 8.889013, 0.39105988, -31.842285)
+[node name="OmniLight3D85" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.539324, 9.74724, -74.66699)
 light_color = Color(0.5903431, 0.2416434, 1, 1)
 light_energy = 0.596
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D63" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -1.2640543, 0.39105988, -3.340271)
+[node name="OmniLight3D63" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.2331886, 9.74724, -17.662964)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D64" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 5.5605454, 0.39105988, -3.340271)
+[node name="OmniLight3D64" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 15.882388, 9.74724, -17.662964)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D65" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 8.946471, 0.39105988, -3.340271)
+[node name="OmniLight3D65" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 22.65424, 9.74724, -17.662964)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D66" type="OmniLight3D" parent="infinit corridor"]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 12.325857, 0.39105988, -3.340271)
+[node name="OmniLight3D66" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 29.413012, 9.74724, -17.662964)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="ground2" type="MeshInstance3D" parent="infinit corridor"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.248962, -0.86555743, -16.53772)
-mesh = SubResource("PlaneMesh_52452")
-skeleton = NodePath("../../final(probably)entrance/floorEntrance")
+[node name="OmniLight3D35" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.233866, 17.23646, -59.429077)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
 
-[node name="firstCorridorEntrance" parent="infinit corridor/ground2" node_paths=PackedStringArray("exit_portal") groups=["CorridorEntrance"] instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-6.010316e-08, 0, 1.375, 0, 1.943, 0, -1.375, 0, -6.010316e-08, -36.7687, 2.5294776, -15.268)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../SecondCorridorExit")
+[node name="OmniLight3D36" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.536764, 17.23646, -59.429077)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
 
-[node name="FirstCorridorExit" parent="infinit corridor/ground2" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-6.010316e-08, 0, -1.375, 0, 1.943, 0, 1.375, 0, -6.010316e-08, 26.026104, 2.5294776, -15.486816)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../SecondCorridorEntrance")
+[node name="OmniLight3D37" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.37126, 17.23646, -58.56128)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
 
-[node name="SecondCorridorEntrance" parent="infinit corridor/ground2" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-6.010316e-08, 0, 1.375, 0, 1.943, 0, -1.375, 0, -6.010316e-08, -36.7687, 2.5294776, 33.189)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../FirstCorridorExit")
+[node name="OmniLight3D38" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.36653, 17.23646, -60.275024)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
 
-[node name="SecondCorridorExit" parent="infinit corridor/ground2" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-6.010316e-08, 0, -1.375, 0, 1.943, 0, 1.375, 0, -6.010316e-08, 26.026104, 2.5294776, 32.97339)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../firstCorridorEntrance")
+[node name="OmniLight3D39" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.659309, 17.23646, -59.429077)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D40" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9622073, 17.23646, -59.429077)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D41" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.796703, 17.23646, -58.56128)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D42" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7919726, 17.23646, -60.275024)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D67" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.614502, 17.23646, -59.429077)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D68" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.311604, 17.23646, -59.429077)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D69" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.477108, 17.23646, -58.56128)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D70" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.481838, 17.23646, -60.275024)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D71" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.233866, 17.23646, -10.98877)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D72" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.536764, 17.23646, -10.98877)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D73" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.37126, 17.23646, -10.120972)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D74" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.36653, 17.23646, -11.834717)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D75" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.659309, 17.23646, -10.98877)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D76" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9622073, 17.23646, -10.98877)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D77" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.796703, 17.23646, -10.120972)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D78" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7919726, 17.23646, -11.834717)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D79" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.614502, 17.23646, -10.98877)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D80" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.311604, 17.23646, -10.98877)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D81" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.477108, 17.23646, -10.120972)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D82" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.481838, 17.23646, -11.834717)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D27" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.613424, 9.74724, -4.274414)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D31" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0458813, 9.74724, -4.274414)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D33" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.871717, 9.74724, -4.274414)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D34" type="OmniLight3D" parent="infinit corridor/infinitCorridorLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.693626, 9.74724, -4.274414)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
 
 [node name="noFloorRoom" parent="." instance=ExtResource("18_52452")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 176.97073, -20.703941, 1591.6666)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="noFloorRoom"]
+[node name="noFloorRoomLights" type="Node3D" parent="noFloorRoom"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.7692795, 6.4044333, 5.930542)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="mainLight" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.7692795, 11.468403, -3.340088)
+[node name="mainLight" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.127939, -18.54126)
 light_color = Color(0.99999994, 0.4011957, 0.15091738, 1)
 light_energy = 13.05
 light_size = 0.1
 omni_range = 131.05
 
-[node name="mainLight2" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -163.35025, 12.409304, -140.85382)
+[node name="mainLight2" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -325.16193, 12.009741, -293.56873)
 light_color = Color(0.99999994, 0.4011957, 0.15091738, 1)
 light_energy = 13.05
 light_size = 0.1
 omni_range = 131.05
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.7917938, 6.357366, 6.2282104)
+[node name="OmniLight3D2" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0450287, -0.09413433, 0.5953369)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D26" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.2426987, 6.357366, 5.522644)
+[node name="OmniLight3D26" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0239563, -0.09413433, -0.8157959)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D27" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.408043, 6.5344734, 5.2194824)
+[node name="OmniLight3D27" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.354645, 0.26008034, -1.4221191)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D28" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 21.525307, 10.23819, 5.102356)
+[node name="OmniLight3D28" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.589172, 7.667513, -1.6563721)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D36" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 21.69989, 10.350762, 7.3098145)
+[node name="OmniLight3D36" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.93834, 7.892658, 2.758545)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D37" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 22.611984, 10.832319, 16.36444)
+[node name="OmniLight3D37" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.762527, 8.855772, 20.867798)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D38" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 22.725258, 10.862215, 17.593567)
+[node name="OmniLight3D38" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.989075, 8.915564, 23.32605)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D29" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 21.31659, 10.184182, 3.6080322)
+[node name="OmniLight3D29" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.171738, 7.559498, -4.6450195)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D30" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 20.163628, 9.588391, -7.9887695)
+[node name="OmniLight3D30" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.865814, 6.367916, -27.838623)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D31" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 19.821892, 9.432229, -11.053284)
+[node name="OmniLight3D31" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.182343, 6.0555916, -33.96765)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D32" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.79718, 19.439365, 20.862427)
+[node name="OmniLight3D32" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.132919, 26.069864, 29.86377)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D33" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.88664246, 19.197937, 19.502563)
+[node name="OmniLight3D33" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3118439, 25.587008, 27.144043)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D34" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.4541702, 18.950634, 18.005676)
+[node name="OmniLight3D34" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3697815, 25.092402, 24.150269)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D35" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.5609818, 18.876064, 16.698547)
+[node name="OmniLight3D35" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.583405, 24.943262, 21.53601)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.7751465, 6.2667365, 6.4868774)
+[node name="OmniLight3D3" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.011734, -0.2753935, 1.1126709)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -6.833748, 6.182058, 6.757263)
+[node name="OmniLight3D4" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.128937, -0.4447508, 1.6534424)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 10.48838, 13.768381, 16.203552)
+[node name="OmniLight3D5" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.51532, 14.727896, 20.54602)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D6" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.140068, 15.249008, 4.0056763)
+[node name="OmniLight3D6" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.818695, 17.68915, -3.8497314)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D7" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.619728, 16.925938, -10.2039795)
+[node name="OmniLight3D7" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.778015, 21.043009, -32.269043)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D8" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.9610977, 17.680817, -16.830322)
+[node name="OmniLight3D8" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.460754, 22.552767, -45.52173)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D9" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -5.748863, 5.5033836, -16.480408)
+[node name="OmniLight3D9" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9591675, -1.8020992, -44.8219)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D10" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -8.465324, 6.46244, -4.57782)
+[node name="OmniLight3D10" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.39209, 0.11601353, -21.016724)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D15" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.09005, 1.2656727, -2.3483887)
+[node name="OmniLight3D15" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.718658, -10.277521, -16.557861)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D16" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.09005, 0.30174637, 12.7126465)
+[node name="OmniLight3D16" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.718658, -12.205374, 13.564209)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D17" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.980652, 1.8313599, -13.706604)
+[node name="OmniLight3D17" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.499863, -9.146147, -39.274292)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D18" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.980652, 1.8313599, -13.706604)
+[node name="OmniLight3D18" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.499863, -9.146147, -39.274292)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D19" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.980652, 2.032178, -18.097717)
+[node name="OmniLight3D19" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.499863, -8.744511, -48.05652)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D20" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 9.368233, 13.985561, -3.2717896)
+[node name="OmniLight3D20" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.275024, 15.162256, -18.404663)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D21" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 12.339882, 14.16555, -2.6334229)
+[node name="OmniLight3D21" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.218323, 15.522234, -17.12793)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D22" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.2425842, 13.24555, -4.9191895)
+[node name="OmniLight3D22" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0237274, 13.682234, -21.699463)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D23" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.2852173, 13.075766, -5.4919434)
+[node name="OmniLight3D23" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0318756, 13.342665, -22.84497)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D24" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.707222, 12.84665, -6.1674194)
+[node name="OmniLight3D24" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.875885, 12.884434, -24.195923)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D25" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.0739365, 12.585148, -6.635254)
+[node name="OmniLight3D25" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.609314, 12.361429, -25.131592)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D11" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.079628, 6.607522, -2.1871338)
+[node name="OmniLight3D11" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.620697, 0.40617752, -16.235352)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D12" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.535484, 6.8602085, 0.12542725)
+[node name="OmniLight3D12" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.53241, 0.9115505, -11.6102295)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D13" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -11.97628, 7.7382746, 11.069946)
+[node name="OmniLight3D13" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.414001, 2.6676826, 10.278809)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="OmniLight3D14" type="OmniLight3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.022514, 8.169273, 15.639221)
+[node name="OmniLight3D14" type="OmniLight3D" parent="noFloorRoom/noFloorRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.50647, 3.5296803, 19.417358)
 light_color = Color(0.972549, 0.69411767, 0, 1)
 light_energy = 13.86
 light_size = 0.1
 omni_range = 11.758
 
-[node name="FloorNoFloorRoom" type="MeshInstance3D" parent="noFloorRoom"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.023971558, -0.57138443, -27.432068)
-mesh = SubResource("PlaneMesh_vg3eq")
-skeleton = NodePath("../..")
+[node name="noFloorEntranceLeftWall" parent="noFloorRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, -1, 1, -4.371139e-08, 0, -4.371139e-08, -1, -4.371139e-08, 28.682152, 12.723101, 20.872986)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
 
-[node name="noFloorDownportal" parent="noFloorRoom/FloorNoFloorRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(1.375, 0, 0, 0, 1.943, 0, 0, 0, 1.375, -1.7410126, 3.7365532, 3.0651855)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../../../final(probably)entrance/floorEntrance/EntranceFloorLeftPortalA5")
+[node name="PortalDoor" parent="noFloorRoom/noFloorEntranceLeftWall" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../library/libraryBackWall"), NodePath("../../NoFloorRightWall"), NodePath("../../noFloorLeftFloor")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="NoFloorExitLeftWall" parent="noFloorRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -18.505585, 12.723101, 20.872986)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="noFloorRoom/NoFloorExitLeftWall" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028625965, -0.0029296875, -0.0078048706)
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceLeftwallPortal"), NodePath("../../NoFloorRightWall"), NodePath("../../NoFloorLeftCeiling")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="noFloorLeftFloor" parent="noFloorRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.9047241, 1.1148663, 22.135254)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="noFloorRoom/noFloorLeftFloor" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../library/libraryFloor"), NodePath("../../NoFloorLeftCeiling"), NodePath("../../noFloorEntranceLeftWall")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="NoFloorLeftCeiling" parent="noFloorRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(0.99999994, 8.742277e-08, -8.742278e-08, 8.742277e-08, -0.99999994, 0, -8.742277e-08, -7.642741e-15, -1, -0.9330826, 20.560406, 22.135254)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="noFloorRoom/NoFloorLeftCeiling" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../library/libraryLeftCeiling"), NodePath("../../noFloorLeftFloor"), NodePath("../../NoFloorExitLeftWall")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="NoFloorRightCeiling" parent="noFloorRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-0.9995726, -8.738541e-08, -0.02923007, 8.742276e-08, -0.9999999, 0, -0.02923007, -2.555374e-09, 0.9995727, -0.88440704, 20.357029, -25.909424)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="noFloorRoom/NoFloorRightCeiling" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../LRoom/Portal5"), NodePath("../../NoFloorRightWall"), NodePath("../../NoFloorRightWall")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="NoFloorRightFloor" parent="noFloorRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-0.9999998, 8.742277e-08, 0, -8.742276e-08, -0.9999999, 0, 0, 0, 0.99999994, -0.88440704, 1.1995678, -25.758911)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="noFloorRoom/NoFloorRightFloor" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../LRoom/Portal36"), NodePath("../../../library/libraryCeilingWall"), NodePath("../../NoFloorRightWall")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="NoFloorRightWall" parent="noFloorRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, 0.9999924, -0.0039094468, -1.7088926e-10, 0.0039094468, 0.9999924, 4.3711054e-08, -18.505585, 12.841856, -24.482117)
+exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="PortalDoor" parent="noFloorRoom/NoFloorRightWall" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+portal_connections = [NodePath("../../../LRoom/Portal4"), NodePath("../../NoFloorExitLeftWall"), NodePath("../../../library/libraryLeftCeiling")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
 [node name="bridgesRoom" parent="." instance=ExtResource("19_w8mes")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -142.84079, -13.860474, 1542.28)
@@ -2009,7 +2254,7 @@ exit_portal = NodePath("../PortalStartSection2")
 
 [node name="PortalDoor" parent="LRoom/Portal36" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.027679443, 0, 0)
-portal_connections = [null, null, NodePath("../../Portal1")]
+portal_connections = [null, NodePath("../../../ground/Portal5"), NodePath("../../Portal1")]
 connections = {
 0: null,
 1: null,
@@ -2021,7 +2266,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1480865, 0.9762869, -14.646
 exit_portal = NodePath("../PortalStartSection2")
 
 [node name="PortalDoor" parent="LRoom/Portal37" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
-portal_connections = [null, NodePath("../../Portal6"), NodePath("../../Portal4")]
+portal_connections = [NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../Portal6"), NodePath("../../Portal4")]
 connections = {
 0: null,
 1: null,
@@ -2034,7 +2279,7 @@ exit_portal = NodePath("../PortalStartSection2")
 
 [node name="PortalDoor" parent="LRoom/Portal3" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13970947, 0, 0)
-portal_connections = [null, NodePath("../../Portal5"), NodePath("../../Portal2")]
+portal_connections = [NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../Portal5"), NodePath("../../Portal2")]
 connections = {
 0: null,
 1: null,
@@ -2042,11 +2287,11 @@ connections = {
 }
 
 [node name="Portal2" parent="LRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -3.5, 5.499, -14.893)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -3.5, 5.4990005, -14.606323)
 exit_portal = NodePath("../../triangleRoom/Portal7")
 
 [node name="PortalDoor" parent="LRoom/Portal2" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025222778, 0.14855957)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025222778, -0.07659912)
 portal_connections = [NodePath("../../../triangleRoom/Portal9"), NodePath("../../Portal4"), NodePath("../../Portal3")]
 connections = {
 0: null,
@@ -2072,7 +2317,7 @@ exit_portal = NodePath("../PortalStartSection2")
 
 [node name="PortalDoor" parent="LRoom/Portal6" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.047130585, 1.4713135)
-portal_connections = [null, NodePath("../../Portal37"), NodePath("../../Portal2")]
+portal_connections = [NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../Portal37"), NodePath("../../Portal2")]
 connections = {
 0: null,
 1: null,
@@ -2096,7 +2341,7 @@ transform = Transform3D(1.9106857e-15, 4.3711392e-08, -0.99999994, 1.0000001, -4
 exit_portal = NodePath("../PortalStartSection2")
 
 [node name="PortalDoor" parent="LRoom/Portal4" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
-portal_connections = [null, NodePath("../../Portal1"), NodePath("../../Portal5")]
+portal_connections = [NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../Portal1"), NodePath("../../Portal5")]
 connections = {
 0: null,
 1: null,
@@ -2110,11 +2355,11 @@ transform = Transform3D(4.3711385e-08, 0.99999994, -8.742277e-08, 0.99999994, -4
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -114.61842, 51.374466, 1890.8691)
 
 [node name="Portal7" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-4.3711385e-08, -0.9999999, -4.371139e-08, 0, -4.3711385e-08, 1, -0.9999999, 4.3711385e-08, 1.9106855e-15, 8.37, -0.939, 0.38)
+transform = Transform3D(-4.3711385e-08, -0.9999999, -4.371139e-08, 0, -4.3711385e-08, 1, -0.9999999, 4.3711385e-08, 1.9106855e-15, 8.369999, -1.2237663, 0.38000488)
 exit_portal = NodePath("../../LRoom/Portal2")
 
 [node name="Portal8" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-4.3711385e-08, -0.99999994, 4.371139e-08, 0, -4.3711385e-08, -1, 0.99999994, -4.3711385e-08, 1.9106855e-15, 8.370487, 8.255581, 0.39154053)
+transform = Transform3D(-4.3711385e-08, -0.99999994, 4.371139e-08, 0, -4.3711385e-08, -1, 0.99999994, -4.3711385e-08, 1.9106855e-15, 8.370487, 8.575584, 0.39154053)
 exit_portal = NodePath("../../LRoom/PortalStartSection2")
 
 [node name="Portal9" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
@@ -2122,15 +2367,15 @@ transform = Transform3D(-0.86602527, 0.5, 2.1855696e-08, 0, -4.3711385e-08, 1, 0
 exit_portal = NodePath("../../LRoom/Portal1")
 
 [node name="Portal10" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(0.8660252, 0.49999994, 2.1855692e-08, 3.7855166e-08, -2.185569e-08, -0.99999994, -0.4999999, 0.86602527, -3.785517e-08, -1.5274467, 8.400803, -5.651428)
+transform = Transform3D(0.8660252, 0.49999994, 2.1855692e-08, 3.7855166e-08, -2.185569e-08, -0.99999994, -0.4999999, 0.86602527, -3.785517e-08, -1.5274467, 8.619129, -5.651428)
 exit_portal = NodePath("../Portal11")
 
 [node name="Portal12" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-0.86602557, 0.5000002, -2.1855698e-08, 0, -4.37114e-08, -1.0000001, -0.5000002, -0.86602557, 3.7855177e-08, -1.3845024, 8.3693695, 6.2695313)
+transform = Transform3D(-0.86602557, 0.5000002, -2.1855698e-08, 0, -4.37114e-08, -1.0000001, -0.5000002, -0.86602557, 3.7855177e-08, -1.3845024, 8.626904, 6.2695313)
 exit_portal = NodePath("../Portal8")
 
 [node name="Portal11" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(0.8660253, 0.49999997, 2.1855694e-08, 0, -4.3711385e-08, 1, 0.49999997, -0.8660253, -3.7855173e-08, -1.3845024, -0.92505074, 6.2695313)
+transform = Transform3D(0.8660253, 0.5, 2.3197916e-08, -0.00313285, 0.0054262057, 0.9999804, 0.49999022, -0.86600834, 0.0062656514, -1.3845024, -1.1905117, 6.2695313)
 exit_portal = NodePath("../Portal7")
 
 [node name="yellowTriangleRightgarden2" type="MeshInstance3D" parent="triangleRoom"]
