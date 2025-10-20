@@ -44,7 +44,7 @@ func change_state() -> void:
 		close_door()
 	else:
 		open_door()
-		
+
 func open_door() -> void:
 		_parent_portal.exit_portal = connections[RoomManager.get_current_key_id()]
 		anim_player.play(&"Open")
@@ -55,7 +55,7 @@ func open_door() -> void:
 		exit_door.open_door_with_portal()
 		if exit_door.portal_connections.has(_parent_portal):
 			_parent_portal.exit_portal.exit_portal = _parent_portal
-			
+
 func open_door_with_portal() -> void:
 		anim_player.play(&"Open")
 		open = true
