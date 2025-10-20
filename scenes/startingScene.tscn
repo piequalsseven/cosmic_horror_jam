@@ -3182,129 +3182,56 @@ transform = Transform3D(4.3711385e-08, 0.99999994, -8.742277e-08, 0.99999994, -4
 [node name="LRoomLights" type="Node3D" parent="LRoom"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -252.63605, -7.8174973, 56.17804)
 
-[node name="OmniLight3D87" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 23.502815, -102.48743)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D99" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 35.08148, -105.97266)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
 [node name="OmniLight3D100" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 35.08148, -111.20325)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 522.6039, 35.02028, -124.23633)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
 [node name="OmniLight3D101" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 35.08148, -115.774414)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 527.1647, 35.02028, -124.23633)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
 [node name="OmniLight3D102" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 35.08148, -121.01257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 532.3479, 35.06264, -124.492065)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
 [node name="OmniLight3D103" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 15.972507, -105.97266)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 531.91406, 15.874224, -124.492065)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
 [node name="OmniLight3D104" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 15.972507, -111.20325)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 526.5502, 15.874224, -124.33276)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
 [node name="OmniLight3D105" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 15.972507, -115.774414)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 522.0867, 15.850918, -124.33276)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
-[node name="OmniLight3D106" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 15.972507, -121.01257)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D88" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 28.08102, -102.48743)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D127" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 390.67072, 44.585876, -122.85486)
+[node name="OmniLight3D130" type="SpotLight3D" parent="LRoom/LRoomLights"]
+transform = Transform3D(-0.15302032, 0, 0.9882231, 0, 1, 0, -0.9882231, 0, -0.15302032, 493.14017, 25.095974, -133.90564)
 light_color = Color(0.4956296, 0.0022006342, 0.75646424, 1)
 light_energy = 16.0
 light_indirect_energy = 16.0
 light_size = 1.0
-omni_range = 103.25766
-
-[node name="OmniLight3D128" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 390.67072, 44.585876, -63.322998)
-light_color = Color(0.4956296, 0.0022006342, 0.75646424, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_size = 1.0
-omni_range = 103.25766
-
-[node name="OmniLight3D129" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 390.67072, 44.585876, -223.12561)
-light_color = Color(0.4956296, 0.0022006342, 0.75646424, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_size = 1.0
-omni_range = 103.25766
-
-[node name="OmniLight3D130" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 390.67072, 107.373215, -144.24194)
-light_color = Color(0.4956296, 0.0022006342, 0.75646424, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_size = 1.0
-omni_range = 103.25766
-
-[node name="OmniLight3D131" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 390.67072, -36.653793, -144.24194)
-light_color = Color(0.4956296, 0.0022006342, 0.75646424, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_size = 1.0
-omni_range = 103.25766
-
-[node name="OmniLight3D89" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 33.307674, -102.48743)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
-
-[node name="OmniLight3D90" type="OmniLight3D" parent="LRoom/LRoomLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 499.6834, 18.274895, -102.48743)
-light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
-light_energy = 1.89
-light_size = 0.235
-omni_range = 9.693588
+spot_range = 203.88373
+spot_angle = 72.1698
 
 [node name="OmniLight3D91" type="OmniLight3D" parent="LRoom/LRoomLights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 504.97235, 17.776716, -102.43286)
@@ -3329,6 +3256,48 @@ omni_range = 9.693588
 
 [node name="OmniLight3D124" type="OmniLight3D" parent="LRoom/LRoomLights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 510.3134, 17.776716, -141.1781)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D132" type="OmniLight3D" parent="LRoom/LRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 520.7809, 33.278828, -141.1781)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D133" type="OmniLight3D" parent="LRoom/LRoomLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 525.95447, 33.278828, -141.1781)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D134" type="OmniLight3D" parent="LRoom/LRoomLights"]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 498.67487, 29.238514, -141.0022)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D135" type="OmniLight3D" parent="LRoom/LRoomLights"]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 498.65936, 24.064953, -141.0022)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D136" type="OmniLight3D" parent="LRoom/LRoomLights"]
+transform = Transform3D(-1.6292068e-07, 1, 3.8213718e-15, -4.371139e-08, -3.300118e-15, -1, -1, -1.6292068e-07, 4.371139e-08, 498.81946, 35.04853, -134.89453)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D137" type="OmniLight3D" parent="LRoom/LRoomLights"]
+transform = Transform3D(-1.6292068e-07, 1, 3.8213718e-15, -4.371139e-08, -3.300118e-15, -1, -1, -1.6292068e-07, 4.371139e-08, 498.7968, 35.09716, -140.11328)
 light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
