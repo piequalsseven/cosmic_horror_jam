@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://ymlroa6fqlts"]
+[gd_scene load_steps=46 format=3 uid="uid://ymlroa6fqlts"]
 
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_rnknb"]
 [ext_resource type="PackedScene" uid="uid://bne17l1a7p1l5" path="res://models/main_house_exterior/cosmic horror hut.blend" id="2_muuda"]
@@ -19,6 +19,7 @@
 [ext_resource type="Resource" uid="uid://b0fpogay87ko3" path="res://resources/First.tres" id="17_d1305"]
 [ext_resource type="PackedScene" uid="uid://bbxrg5h5sy518" path="res://models/rooms/infinit corridor.blend" id="17_h53cn"]
 [ext_resource type="PackedScene" uid="uid://dmo3lxmuk25k2" path="res://models/rooms/noFloorRoom.blend" id="18_52452"]
+[ext_resource type="Script" uid="uid://brdm6ajo3tm5u" path="res://scripts/tilted_area.gd" id="18_d1305"]
 [ext_resource type="Resource" uid="uid://cbqtyvdix8lhp" path="res://resources/Second.tres" id="19_oom5t"]
 [ext_resource type="PackedScene" uid="uid://cutcupswobmxj" path="res://models/rooms/bridgesRoom.blend" id="19_w8mes"]
 [ext_resource type="Resource" uid="uid://bknoxduw2fwpv" path="res://resources/Third.tres" id="20_s5m1i"]
@@ -79,6 +80,9 @@ uv1_scale = Vector3(20, 20, 20)
 [sub_resource type="PlaneMesh" id="PlaneMesh_vg3eq"]
 material = SubResource("StandardMaterial3D_vs7cs")
 size = Vector2(0, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oom5t"]
+size = Vector3(5.8621826, 10.255371, 6.373535)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_d1305"]
 
@@ -1558,6 +1562,16 @@ visible = false
 use_collision = true
 size = Vector3(20.137817, 1, 7.7724667)
 
+[node name="TiltedArea" type="Area3D" parent="3rdKeyRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0142593, 0, 11.101379)
+gravity_space_override = 3
+script = ExtResource("18_d1305")
+metadata/_custom_type_script = "uid://brdm6ajo3tm5u"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3rdKeyRoom/TiltedArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4310913, -3.6408691, -3.3503418)
+shape = SubResource("BoxShape3D_oom5t")
+
 [node name="final(probably)entrance" parent="." instance=ExtResource("15_drejw")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 1.471, 3.955, 1064.629)
 
@@ -1582,7 +1596,7 @@ connections = {
 }
 
 [node name="EntranceceilingPortal" parent="final(probably)entrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 25.123291, 8.947951, -0.078626156)
+transform = Transform3D(4.371139e-08, -3.821371e-15, -1, -8.742278e-08, -1, 0, -1, 8.742278e-08, -4.371139e-08, 25.123291, 8.947951, -0.078626156)
 exit_portal = NodePath("../EntranceFloorCenterPortalA4")
 
 [node name="PortalDoor" parent="final(probably)entrance/EntranceceilingPortal" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]

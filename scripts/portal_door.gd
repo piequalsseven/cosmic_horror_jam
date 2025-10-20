@@ -47,7 +47,7 @@ func change_state() -> void:
 		open_door()
 		
 func open_door() -> void:
-	if RoomManager.get_current_key_id() <= 0:
+	if RoomManager.get_current_key_id() < 0:
 		_parent_portal.exit_portal = get_tree().get_first_node_in_group("CorridorEntrance")
 		AudioManager.play_open_door()
 		await get_tree().create_timer(OPEN_DELAY).timeout
