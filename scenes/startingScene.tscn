@@ -1,6 +1,5 @@
-[gd_scene load_steps=39 format=3 uid="uid://ymlroa6fqlts"]
+[gd_scene load_steps=38 format=3 uid="uid://ymlroa6fqlts"]
 
-[ext_resource type="Environment" uid="uid://bythca13xs6it" path="res://scenes/startingScene_env.tres" id="1_fwbn4"]
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_rnknb"]
 [ext_resource type="PackedScene" uid="uid://bne17l1a7p1l5" path="res://models/main_house_exterior/cosmic horror hut.blend" id="2_muuda"]
 [ext_resource type="ArrayMesh" uid="uid://wug5ng5k1wsu" path="res://models/meshTextures/treeMeshTexture.res" id="2_xg6vb"]
@@ -85,10 +84,9 @@ size = Vector2(0, 0)
 flip_faces = true
 size = Vector2(100, 100)
 
-[node name="StartingScene" type="Node3D"]
+[node name="StartingScene2" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource("1_fwbn4")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, -0.5006045, 0.86567616, 0, -0.86567616, -0.5006045, -13.521166, 212.40184, -180.00545)
@@ -385,37 +383,15 @@ transform = Transform3D(-1.4990193, 0, -0.054233044, 0, 1.5, 0, 0.054233044, 0, 
 has_gravity = false
 metadata/Player = true
 
-[node name="floorEntrance" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.69768, 1040.063)
-mesh = SubResource("PlaneMesh_vg3eq")
-
-[node name="EntrancePortalA4" parent="floorEntrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(1.375, 0, 0, 0, 1.943, 0, 0, 0, 1.375, 1.2491779, 2.8736162, -25.71701)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../../infinit corridor/ground2/firstCorridorEntrance")
-
-[node name="FloorLeftPortalA5" parent="floorEntrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-6.010316e-08, 0, 1.375, 0, 1.943, 0, -1.375, 0, -6.010316e-08, -41.14336, 2.8141065, -5.233032)
-disable_viewport_distance = 50.0
-fade_out_distance_max = 50.0
-fade_out_distance_min = 5.0
-exit_portal = NodePath("../../FloorNoFloorRoom/noFloorDownportal")
-
-[node name="key2" parent="floorEntrance" instance=ExtResource("11_vs7cs")]
-transform = Transform3D(0.124711715, 0, -0.0833486, 0, 0.15, 0, 0.0833486, 0, 0.124711715, -147.00699, -16.693415, 243.10352)
-
 [node name="FloorNoFloorRoom" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 176.9228, -21.84671, 1536.8025)
 mesh = SubResource("PlaneMesh_vg3eq")
 
-[node name="noFloorDownportal" parent="FloorNoFloorRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+[node name="noFloorDownportal" parent="FloorNoFloorRoom" instance=ExtResource("4_xg6vb")]
 transform = Transform3D(1.375, 0, 0, 0, 1.943, 0, 0, 0, 1.375, -1.7410126, 3.7365532, 3.0651855)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 5.0
-exit_portal = NodePath("../../floorEntrance/FloorLeftPortalA5")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 128.14812, 0)
@@ -423,9 +399,6 @@ size = Vector3(600, 1, 600)
 
 [node name="library" parent="." instance=ExtResource("12_46lpw")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -146.28186, -13.196793, 1285.2677)
-
-[node name="key2" parent="library" instance=ExtResource("11_vs7cs")]
-transform = Transform3D(0.062355857, 0, -0.0416743, 0, 0.075, 0, 0.0416743, 0, 0.062355857, -0.3625641, 0.10052872, -1.0505981)
 
 [node name="OmniLight3D45" type="OmniLight3D" parent="library"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 8.726326, 7.792866, 17.870667)
@@ -1988,18 +1961,225 @@ fade_out_distance_min = 5.0
 exit_portal = NodePath("../../../final(probably)entrance/floorEntrance/EntranceFloorLeftPortalA5")
 
 [node name="bridgesRoom" parent="." instance=ExtResource("19_w8mes")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -142.84079, -13.860474, 1542.28)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -142.83571, -13.860473, 1542.245)
+
+[node name="Portal13" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.122375, 1, -1.9481201)
+exit_portal = NodePath("../../infinit corridor/ground2/firstCorridorEntrance")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal13" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12683105, 0, 0)
+portal_connections = [null, NodePath("../../Portal28"), NodePath("../../Portal18")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal28" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, 3.821371e-15, -1, 8.742278e-08, -1, 0, -1, -8.742278e-08, -4.371139e-08, 24.122375, 8.9, 1.6834106)
+exit_portal = NodePath("../../chainsRoom/Portal33")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal28" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12683105, 0, 0)
+portal_connections = [NodePath("../../../chainsRoom/Portal33"), NodePath("../../Portal13"), NodePath("../../Portal17")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal17" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, 24.122375, 4.7837257, -6.9)
+exit_portal = NodePath("../Portal13")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal17" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030186176, -0.25524902, 0)
+portal_connections = [NodePath("../../../triangleRoom/Portal7"), NodePath("../../Portal22"), NodePath("../../Portal13")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal22" parent="bridgesRoom" instance=ExtResource("4_xg6vb")]
+transform = Transform3D(1.9106853e-15, 4.3711385e-08, -1, 0.99999994, -4.3711385e-08, 0, -4.3711385e-08, -0.99999994, -4.371139e-08, 24.122375, 4.8330836, 6.72)
+visible = false
+
+[node name="PortalDoor" parent="bridgesRoom/Portal22" node_paths=PackedStringArray("connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal14" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18.216118, 0.98933125, -2.067505)
+exit_portal = NodePath("../Portal22")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal14" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12683105, 0, 0)
+portal_connections = [NodePath("../../../chainsRoom/Portal31"), NodePath("../../Portal26"), NodePath("../../Portal22")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal26" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, 6.600236e-15, 1, 1.509958e-07, -1, 0, 1, 1.509958e-07, -4.371139e-08, -18.216118, 8.9, 2.1104126)
+exit_portal = NodePath("../../LRoom/Portal6")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal26" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12683105, 0, 0)
+portal_connections = [NodePath("../../../LRoom/Portal6"), NodePath("../../Portal14"), NodePath("../../Portal21")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal18" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -18.216118, 4.7837257, -6.9)
+exit_portal = NodePath("../../ground/Portal4")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal18" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030186176, -0.25524902, 0)
+portal_connections = [NodePath("../../../LRoom/Portal4"), NodePath("../../Portal21"), NodePath("../../Portal26")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal21" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(1.9106853e-15, -4.3711385e-08, 1, -0.99999994, -4.3711385e-08, 0, 4.3711385e-08, -0.99999994, -4.371139e-08, -18.216118, 4.849291, 6.72)
+exit_portal = NodePath("../Portal14")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal21" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+portal_connections = [NodePath("../../../triangleRoom/Portal9"), NodePath("../../Portal18"), NodePath("../../Portal14")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal16" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, 4.8212967, 0.98933125, 21.003967)
+exit_portal = NodePath("../../chainsRoom/Portal29")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal16" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12683105, 0, 0)
+portal_connections = [NodePath("../../../chainsRoom/Portal29"), NodePath("../../Portal25"), NodePath("../../Portal24")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal25" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(0.99999994, 1.509958e-07, -8.742277e-08, 1.5099579e-07, -1, 5.6250325e-16, -8.742277e-08, -1.3762976e-14, -0.99999994, 1.1646118, 8.9, 21.165466)
+exit_portal = NodePath("../Portal23")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal25" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12683105, 0, 0)
+portal_connections = [NodePath("../../../LRoom/Portal2"), NodePath("../../Portal16"), NodePath("../../Portal23")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal19" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, 0.99999994, 8.742277e-08, 1, -4.3711385e-08, 0, 3.821371e-15, 8.742277e-08, -0.99999994, -3.9000015, 4.8056793, 21.033997)
+exit_portal = NodePath("../../LRoom/Portal4")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal19" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030186176, -0.25524902, 0)
+portal_connections = [NodePath("../../../ground/Portal4"), NodePath("../../Portal23"), NodePath("../../Portal25")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal23" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.3711385e-08, -0.9999999, 8.742277e-08, -0.9999999, -4.3711385e-08, 0, 3.8213705e-15, -8.742277e-08, -0.9999999, 9.72, 4.849291, 21.34375)
+exit_portal = NodePath("../Portal19")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal23" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+portal_connections = [NodePath("../../../triangleRoom/Portal11"), NodePath("../../Portal19"), NodePath("../../Portal16")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal15" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 4.9233475, 0.8970876, -21.200806)
+exit_portal = NodePath("../Portal27")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal15" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12683105, 0, 0)
+portal_connections = [NodePath("../../../LRoom/Portal36"), NodePath("../../Portal27"), NodePath("../../Portal23")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal27" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-0.9999999, -1.509958e-07, 0, 1.5099579e-07, -1, -1.0095638e-14, 1.524399e-21, -1.0095639e-14, 0.9999999, 0.7368164, 8.9, -21.030762)
+exit_portal = NodePath("../../LRoom/Portal37")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal27" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12683105, 0, 0)
+portal_connections = [NodePath("../../../LRoom/Portal37"), NodePath("../../Portal15"), NodePath("../../Portal20")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal24" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.371139e-08, -0.9999999, 0, 1, -4.3711385e-08, 0, 0, 0, 0.9999999, 9.72, 4.836587, -21.278198)
+exit_portal = NodePath("../Portal20")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal24" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030186176, -0.25524902, 0)
+portal_connections = [NodePath("../../../LRoom/Portal4"), NodePath("../../Portal20"), NodePath("../../Portal27")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal20" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.3711385e-08, 0.9999999, 0, -0.9999999, -4.3711385e-08, 0, 0, 0, 0.9999999, -3.9, 4.85, -21.039)
+exit_portal = NodePath("../Portal24")
+
+[node name="PortalDoor" parent="bridgesRoom/Portal20" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+portal_connections = [NodePath("../../../LRoom/Portal1"), NodePath("../../Portal24"), NodePath("../../Portal15")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
 [node name="LRoom" parent="." instance=ExtResource("20_vieln")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 511.54782, 24.77005, 1435.0135)
 
 [node name="Portal36" parent="LRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.16, 1, 5.211)
-exit_portal = NodePath("../PortalStartSection2")
+exit_portal = NodePath("../../chainsRoom/Portal30")
 
 [node name="PortalDoor" parent="LRoom/Portal36" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.027679443, 0, 0)
-portal_connections = [null, null, NodePath("../../Portal1")]
+portal_connections = [NodePath("../../../bridgesRoom/Portal15"), null, NodePath("../../Portal1")]
 connections = {
 0: null,
 1: null,
@@ -2008,7 +2188,7 @@ connections = {
 
 [node name="Portal37" parent="LRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8202362, 1, -14.64624)
-exit_portal = NodePath("../PortalStartSection2")
+exit_portal = NodePath("../Portal6")
 
 [node name="PortalDoor" parent="LRoom/Portal37" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 portal_connections = [null, NodePath("../../Portal6"), NodePath("../../Portal4")]
@@ -2020,11 +2200,11 @@ connections = {
 
 [node name="Portal3" parent="LRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.879135, 1, -10.947876)
-exit_portal = NodePath("../PortalStartSection2")
+exit_portal = NodePath("../../bridgesRoom/Portal14")
 
 [node name="PortalDoor" parent="LRoom/Portal3" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13970947, 0, 0)
-portal_connections = [null, NodePath("../../Portal5"), NodePath("../../Portal2")]
+portal_connections = [NodePath("../../../bridgesRoom/Portal14"), NodePath("../../Portal5"), NodePath("../../Portal2")]
 connections = {
 0: null,
 1: null,
@@ -2037,7 +2217,7 @@ exit_portal = NodePath("../../triangleRoom/Portal7")
 
 [node name="PortalDoor" parent="LRoom/Portal2" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025222778, 0.14855957)
-portal_connections = [NodePath("../../../triangleRoom/Portal9"), NodePath("../../Portal4"), NodePath("../../Portal3")]
+portal_connections = [NodePath("../../../triangleRoom/Portal7"), NodePath("../../Portal4"), NodePath("../../Portal3")]
 connections = {
 0: null,
 1: null,
@@ -2046,10 +2226,10 @@ connections = {
 
 [node name="Portal1" parent="LRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(-4.371139e-08, 0.99999994, 3.821371e-15, -4.371139e-08, 1.9106853e-15, -1, -1, -4.3711385e-08, 4.371139e-08, -3.5, 9.932, -12.6)
-exit_portal = NodePath("../PortalStartSection2")
+exit_portal = NodePath("../../infinit corridor/ground2/firstCorridorEntrance")
 
 [node name="PortalDoor" parent="LRoom/Portal1" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
-portal_connections = [null, NodePath("../../Portal4"), NodePath("../../Portal3")]
+portal_connections = [null, NodePath("../../Portal4"), NodePath("../../Portal36")]
 connections = {
 0: null,
 1: null,
@@ -2058,11 +2238,11 @@ connections = {
 
 [node name="Portal6" parent="LRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 9.069382, 8.861172, -16.063171)
-exit_portal = NodePath("../PortalStartSection2")
+exit_portal = NodePath("../Portal37")
 
 [node name="PortalDoor" parent="LRoom/Portal6" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.047130585, 1.4713135)
-portal_connections = [null, NodePath("../../Portal37"), NodePath("../../Portal2")]
+portal_connections = [NodePath("../../../bridgesRoom/Portal26"), NodePath("../../Portal37"), NodePath("../../Portal2")]
 connections = {
 0: null,
 1: null,
@@ -2071,10 +2251,10 @@ connections = {
 
 [node name="Portal5" parent="LRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(1, 8.742278e-08, -8.742278e-08, 8.742278e-08, -1, 0, -8.742278e-08, -7.642742e-15, -1, 1.1622772, 8.949133, 5.3080444)
-exit_portal = NodePath("../PortalStartSection2")
+exit_portal = NodePath("../Portal3")
 
 [node name="PortalDoor" parent="LRoom/Portal5" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
-portal_connections = [null, NodePath("../../Portal3"), NodePath("../../Portal4")]
+portal_connections = [NodePath("../../../chainsRoom/Portal34"), NodePath("../../Portal3"), NodePath("../../Portal4")]
 connections = {
 0: null,
 1: null,
@@ -2083,10 +2263,10 @@ connections = {
 
 [node name="Portal4" parent="LRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(1.9106857e-15, 4.3711392e-08, -0.99999994, 1.0000001, -4.3711392e-08, 0, -4.3711392e-08, -1.0000001, -4.3711385e-08, 14.863358, 4.941057, -6.0028687)
-exit_portal = NodePath("../PortalStartSection2")
+exit_portal = NodePath("../Portal1")
 
 [node name="PortalDoor" parent="LRoom/Portal4" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
-portal_connections = [null, NodePath("../../Portal1"), NodePath("../../Portal5")]
+portal_connections = [NodePath("../../../bridgesRoom/Portal19"), NodePath("../../Portal1"), NodePath("../../Portal5")]
 connections = {
 0: null,
 1: null,
@@ -2097,40 +2277,99 @@ connections = {
 transform = Transform3D(4.3711385e-08, 0.99999994, -8.742277e-08, 0.99999994, -4.3711385e-08, 0, -3.8213705e-15, -8.742277e-08, -0.99999994, -3.5, 2.739, 0)
 
 [node name="triangleRoom" parent="." instance=ExtResource("21_m43nb")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -114.61842, 51.374466, 1890.8691)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -114.629234, 51.41736, 1890.8477)
 
 [node name="Portal7" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-4.3711385e-08, -0.9999999, -4.371139e-08, 0, -4.3711385e-08, 1, -0.9999999, 4.3711385e-08, 1.9106855e-15, 8.37, -0.939, 0.38)
+transform = Transform3D(-4.3711385e-08, -0.9999999, -4.371139e-08, 0, -4.3711385e-08, 1, -0.9999999, 4.3711385e-08, 1.9106855e-15, 8.369999, -1.2143974, 0.38000488)
 exit_portal = NodePath("../../LRoom/Portal2")
 
 [node name="Portal8" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-4.3711385e-08, -0.99999994, 4.371139e-08, 0, -4.3711385e-08, -1, 0.99999994, -4.3711385e-08, 1.9106855e-15, 8.370487, 8.255581, 0.39154053)
-exit_portal = NodePath("../../LRoom/PortalStartSection2")
+transform = Transform3D(-4.3711385e-08, -0.99999994, 4.371139e-08, 0, -4.3711385e-08, -1, 0.99999994, -4.3711385e-08, 1.9106855e-15, 8.370487, 8.8, 0.39154053)
+exit_portal = NodePath("../../chainsRoom/Portal32")
 
 [node name="Portal9" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(-0.86602527, 0.5, 2.1855696e-08, 0, -4.3711385e-08, 1, 0.5, 0.86602527, 3.7855173e-08, -1.5274467, -1.2099342, -5.651428)
-exit_portal = NodePath("../../LRoom/Portal1")
+exit_portal = NodePath("../../bridgesRoom/Portal28")
 
 [node name="Portal10" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(0.8660252, 0.49999994, 2.1855692e-08, 3.7855166e-08, -2.185569e-08, -0.99999994, -0.4999999, 0.86602527, -3.785517e-08, -1.5274467, 8.400803, -5.651428)
-exit_portal = NodePath("../Portal11")
+transform = Transform3D(0.8660252, 0.49999994, 2.1855692e-08, 3.7855166e-08, -2.185569e-08, -0.99999994, -0.4999999, 0.86602527, -3.785517e-08, -1.527, 8.8, -5.651)
+exit_portal = NodePath("../../bridgesRoom/Portal19")
 
 [node name="Portal12" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-0.86602557, 0.5000002, -2.1855698e-08, 0, -4.37114e-08, -1.0000001, -0.5000002, -0.86602557, 3.7855177e-08, -1.3845024, 8.3693695, 6.2695313)
-exit_portal = NodePath("../Portal8")
+transform = Transform3D(-0.86602557, 0.5000002, -2.1855698e-08, 0, -4.37114e-08, -1.0000001, -0.5000002, -0.86602557, 3.7855177e-08, -1.3845024, 8.8, 6.2695313)
+exit_portal = NodePath("../../bridgesRoom/Portal14")
 
 [node name="Portal11" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(0.8660253, 0.49999997, 2.1855694e-08, 0, -4.3711385e-08, 1, 0.49999997, -0.8660253, -3.7855173e-08, -1.3845024, -0.92505074, 6.2695313)
-exit_portal = NodePath("../Portal7")
+transform = Transform3D(0.8660253, 0.49999997, 2.1855694e-08, 0, -4.3711385e-08, 1, 0.49999997, -0.8660253, -3.7855173e-08, -1.3845024, -1.2765446, 6.2695313)
+exit_portal = NodePath("../../chainsRoom/Portal30")
 
 [node name="chainsRoom" parent="." instance=ExtResource("22_ndnlp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -120.43587, 74.10199, 1747.9874)
 
-[node name="KEY1" parent="." instance=ExtResource("23_ndnlp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -139.11641, 0, 1341.8204)
+[node name="Portal29" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.099998474, 0.25, -14.643616)
+exit_portal = NodePath("../../bridgesRoom/Portal13")
 
-[node name="key2" parent="." instance=ExtResource("11_vs7cs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140.632, 0, 1343.4894)
+[node name="PortalDoor" parent="chainsRoom/Portal29" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+portal_connections = [NodePath("../../../bridgesRoom/Portal13"), null, NodePath("../../../triangleRoom/Portal12")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
-[node name="key4" parent="." instance=ExtResource("15_bl1yo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -144.3111, 0, 1339.1976)
+[node name="Portal32" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0.099998474, 85.072624, -14.643982)
+exit_portal = NodePath("../../triangleRoom/Portal8")
+
+[node name="PortalDoor" parent="chainsRoom/Portal32" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+portal_connections = [NodePath("../../../bridgesRoom/Portal27"), NodePath("../../Portal31"), NodePath("../../../triangleRoom/Portal8")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal33" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, 3.821371e-15, -1, 8.742278e-08, -1, 0, -1, -8.742278e-08, -4.371139e-08, 14.567364, 85.072624, 0.06793213)
+exit_portal = NodePath("../../bridgesRoom/Portal16")
+
+[node name="Portal34" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(4.371139e-08, -3.821371e-15, 1, -8.742278e-08, -1, 0, 1, -8.742278e-08, -4.371139e-08, -14.56044, 85.072624, -0.068603516)
+exit_portal = NodePath("../../LRoom/Portal5")
+
+[node name="PortalDoor" parent="chainsRoom/Portal34" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+portal_connections = [NodePath("../../../LRoom/Portal5"), null, NodePath("../../../triangleRoom/Portal7")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal35" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(0.99999994, 8.742278e-08, -8.742277e-08, 8.742277e-08, -1, 0, -8.742277e-08, -7.642742e-15, -0.99999994, -0.073589325, 85.07263, 14.64502)
+exit_portal = NodePath("../../ground/HutPortalA")
+
+[node name="Portal30" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.611053, 0.25, 0.047546387)
+exit_portal = NodePath("../../triangleRoom/Portal11")
+
+[node name="PortalDoor" parent="chainsRoom/Portal30" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+portal_connections = [NodePath("../../../LRoom/Portal36"), null, NodePath("../../../triangleRoom/Portal11")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
+[node name="Portal31" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.097797394, 0.25, 14.6484375)
+exit_portal = NodePath("../../bridgesRoom/Portal14")
+
+[node name="PortalDoor" parent="chainsRoom/Portal31" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+portal_connections = [NodePath("../../../bridgesRoom/Portal14"), NodePath("../../Portal32"), NodePath("../../../triangleRoom/Portal9")]
+connections = {
+0: null,
+1: null,
+2: null
+}
