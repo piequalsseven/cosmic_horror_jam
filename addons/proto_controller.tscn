@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dncmgippnngs6"]
+[gd_scene load_steps=8 format=3 uid="uid://dncmgippnngs6"]
 
 [ext_resource type="Script" uid="uid://dtsarabnbmk61" path="res://addons/proto_controller.gd" id="1_mfgp6"]
 [ext_resource type="Script" uid="uid://kl5h4pstbah5" path="res://scripts/door_opener.gd" id="2_hjrt5"]
+[ext_resource type="AudioStream" uid="uid://bf5wyfh3x1l54" path="res://resources/step.mp3" id="3_42ka2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -46,3 +47,9 @@ metadata/teleportable_root = NodePath("..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("SphereShape3D_mfgp6")
+
+[node name="StepsPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_42ka2")
+volume_db = -3.0
+
+[connection signal="finished" from="StepsPlayer" to="." method="_on_steps_player_finished"]

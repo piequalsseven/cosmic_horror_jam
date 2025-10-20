@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dssb3ubr61anl"]
+
+[ext_resource type="Script" uid="uid://p3ttbocrrla5" path="res://addons/portal/scripts/audio_manager.gd" id="1_v6v0x"]
+[ext_resource type="AudioStream" uid="uid://b666nlh0o3y4h" path="res://resources/CosmicHorror Edit 1 Export 1.mp3" id="2_v6v0x"]
+[ext_resource type="AudioStream" uid="uid://cyh2mapkqfat3" path="res://resources/opendoor.mp3" id="3_3dgps"]
+[ext_resource type="AudioStream" uid="uid://3l5oaovny8ly" path="res://resources/closingdoor.mp3" id="4_151wy"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_v6v0x")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_v6v0x")
+volume_db = -3.0
+autoplay = true
+
+[node name="OpenDoor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3dgps")
+
+[node name="CloseDoor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_151wy")
+
+[connection signal="finished" from="MusicPlayer" to="." method="_on_music_player_finished"]

@@ -52,6 +52,7 @@ var freeflying : bool = false
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
+@onready var steps_player: AudioStreamPlayer3D = $StepsPlayer
 
 ###custom
 @onready var look_angle : float = 0
@@ -115,6 +116,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 		velocity.y = 0
 		# Apply gravity to velocity
+	if velocity.length() > 0 and !steps_player.playing:
+		play_step()
+		
 	if has_gravity:
 		if not is_on_floor():
 			velocity += get_gravity() * delta
@@ -178,3 +182,12 @@ func check_input_mappings():
 	if can_freefly and not InputMap.has_action(input_freefly):
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
+		
+func play_step() -> void:
+	steps_player.pitch_scale = randf_range(.9, 1.1)
+	steps_player.volume_db = randf_range(-4,-2)
+	steps_player.play()
+	
+func _on_steps_player_finished() -> void:
+	if velocity.length() > 0:
+		steps_player.play()

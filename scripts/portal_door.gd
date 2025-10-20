@@ -2,6 +2,7 @@ extends StaticBody3D
 class_name PortalDoor
 
 const ANIMATION_TIME : float = 1.0
+const OPEN_DELAY : float = 0.5
 
 @onready var _parent_portal : Portal = get_parent() :
 	set(pp):
@@ -44,14 +45,18 @@ func change_state() -> void:
 		close_door()
 	else:
 		open_door()
-
+		
 func open_door() -> void:
 	if RoomManager.get_current_key_id() <= 0:
 		_parent_portal.exit_portal = get_tree().get_first_node_in_group("CorridorEntrance")
+		AudioManager.play_open_door()
+		await get_tree().create_timer(OPEN_DELAY).timeout
 		anim_player.play(&"Open")
 		open = true
 		return
 	_parent_portal.exit_portal = connections[RoomManager.get_current_key_id()]
+	AudioManager.play_open_door()
+	await get_tree().create_timer(OPEN_DELAY).timeout
 	anim_player.play(&"Open")
 	open = true
 	var exit_door : PortalDoor = _parent_portal.exit_portal._portal_door
@@ -66,5 +71,6 @@ func open_door_with_portal() -> void:
 		open = true
 		
 func close_door() -> void:
+		AudioManager.play_close_door()
 		anim_player.play(&"Close")
 		open = false
