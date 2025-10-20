@@ -46,15 +46,20 @@ func change_state() -> void:
 		open_door()
 
 func open_door() -> void:
-		_parent_portal.exit_portal = connections[RoomManager.get_current_key_id()]
+	if RoomManager.get_current_key_id() <= 0:
+		_parent_portal.exit_portal = get_tree().get_first_node_in_group("CorridorEntrance")
 		anim_player.play(&"Open")
 		open = true
-		var exit_door : PortalDoor = _parent_portal.exit_portal._portal_door
-		if !exit_door:
-			return
-		exit_door.open_door_with_portal()
-		if exit_door.portal_connections.has(_parent_portal):
-			_parent_portal.exit_portal.exit_portal = _parent_portal
+		return
+	_parent_portal.exit_portal = connections[RoomManager.get_current_key_id()]
+	anim_player.play(&"Open")
+	open = true
+	var exit_door : PortalDoor = _parent_portal.exit_portal._portal_door
+	if !exit_door:
+		return
+	exit_door.open_door_with_portal()
+	if exit_door.portal_connections.has(_parent_portal):
+		_parent_portal.exit_portal.exit_portal = _parent_portal
 
 func open_door_with_portal() -> void:
 		anim_player.play(&"Open")

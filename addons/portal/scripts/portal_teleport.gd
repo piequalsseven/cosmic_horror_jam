@@ -30,4 +30,6 @@ func _on_area_entered(area:Area3D):
 			root.look_rotation.y = root.rotation.y
 		if _parent_portal.change_enviroment_on_teleport:
 			get_viewport().get_camera_3d().environment = _parent_portal.exit_environment
+		if _parent_portal.exit_portal.is_in_group("CorridorEntrance"):
+			_parent_portal.exit_portal.exit_portal = _parent_portal
 	
