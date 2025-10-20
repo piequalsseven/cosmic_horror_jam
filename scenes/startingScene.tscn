@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ul4ca6hsjsod" path="res://scenes/collectible_key.tscn" id="15_b3rqr"]
 [ext_resource type="PackedScene" uid="uid://basqshsn2sh0c" path="res://models/key3.blend" id="15_bl1yo"]
 [ext_resource type="PackedScene" uid="uid://svxys31tiwyu" path="res://models/rooms/final(probably)entrance.blend" id="15_drejw"]
-[ext_resource type="Script" uid="uid://dlbu3t0bx25jo" path="res://scripts/game_ui.gd" id="16_drejw"]
+[ext_resource type="Script" path="res://scripts/game_ui.gd" id="16_drejw"]
 [ext_resource type="Resource" uid="uid://b0fpogay87ko3" path="res://resources/First.tres" id="17_d1305"]
 [ext_resource type="PackedScene" uid="uid://bbxrg5h5sy518" path="res://models/rooms/infinit corridor.blend" id="17_h53cn"]
 [ext_resource type="PackedScene" uid="uid://dmo3lxmuk25k2" path="res://models/rooms/noFloorRoom.blend" id="18_52452"]
@@ -3086,6 +3086,793 @@ connections = {
 2: null
 }
 
+[node name="BridgeRoomsLight" type="Node3D" parent="bridgesRoom"]
+transform = Transform3D(-0.49734783, 1.5935698e-16, 0.05143102, -2.3269056e-18, 0.5, -1.5717319e-15, -0.05143102, -1.5636341e-15, -0.49734783, 72.42622, 112.643524, 109.3407)
+
+[node name="OmniLight3D495" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 7.676236e-22, 0, -7.940934e-22, 1, 2.1175824e-22, 0, 0, 1, 161.48112, -218.1323, 186.28357)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D496" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 9.264423e-22, 0, -9.529121e-22, 1, 2.1175824e-22, 0, 0, 1, 163.67519, -218.32454, 186.02429)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D497" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1117307e-21, 0, -1.1382005e-21, 1, -4.2351647e-22, 0, 6.352747e-22, 1, 165.4593, -216.86543, 185.84033)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D498" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1911401e-21, 0, -1.2176099e-21, 1, -8.4703295e-22, 0, 1.2705494e-21, 1, 165.68547, -214.61417, 185.81702)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D499" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.323489e-21, 0, -1.3499588e-21, 1, -2.1175824e-21, 0, 2.3293406e-21, 1, 164.22055, -212.86308, 185.96912)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D500" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.4558379e-21, 0, -1.4823077e-21, 1, -2.3293406e-21, 0, 2.5410988e-21, 1, 161.91026, -212.66785, 186.20862)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D501" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.6146566e-21, 0, -1.6411263e-21, 1, -2.3293406e-21, 0, 2.5410988e-21, 1, 160.21835, -214.10855, 186.41504)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D502" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.6940659e-21, 0, -1.7470055e-21, 1, -2.3293406e-21, 0, 2.5410988e-21, 1, 160.02612, -216.3713, 186.43494)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D503" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 2.038173e-21, 0, -2.0646428e-21, 1, -2.3293406e-21, 0, 2.5410988e-21, 1, 161.44643, -217.08388, 187.8761)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D504" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 2.1440521e-21, 0, -2.170522e-21, 1, -2.3293406e-21, 0, 2.5410988e-21, 1, 163.0179, -217.74709, 187.71399)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D505" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 2.276401e-21, 0, -2.3028708e-21, 1, -2.3293406e-21, 0, 2.5410988e-21, 1, 164.60832, -217.10437, 187.55005)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D506" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 2.6205082e-21, 0, -2.646978e-21, 1, -2.3293406e-21, 0, 2.5410988e-21, 1, 165.28246, -215.51184, 187.47998)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D507" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 2.752857e-21, 0, -2.7793269e-21, 1, -2.3293406e-21, 0, 2.5410988e-21, 1, 164.62378, -213.90898, 187.54858)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D508" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 2.885206e-21, 0, -2.9116758e-21, 1, -2.3293406e-21, 0, 2.5410988e-21, 1, 163.03656, -213.24948, 187.71326)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D509" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 3.0175549e-21, 0, -3.0440247e-21, 1, -2.3293406e-21, 0, 2.5410988e-21, 1, 161.4465, -213.88657, 187.87793)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D510" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 3.1499038e-21, 0, -3.1763736e-21, 1, -2.752857e-21, 0, 2.9646153e-21, 1, 160.77544, -215.48273, 187.94788)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D511" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 3.59989e-21, 0, -3.62636e-21, 1, -6.352747e-21, 0, 6.5645053e-21, 1, 164.39926, -214.6164, 228.18372)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D512" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 3.705769e-21, 0, -3.732239e-21, 1, -7.19978e-21, 0, 7.411538e-21, 1, 165.81871, -212.88939, 228.05212)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D513" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 3.838118e-21, 0, -3.864588e-21, 1, -8.258571e-21, 0, 8.4703295e-21, 1, 168.07579, -212.65541, 227.81934)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D514" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 3.970467e-21, 0, -3.9969367e-21, 1, -9.3173624e-21, 0, 9.529121e-21, 1, 169.83109, -214.11475, 227.63806)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D515" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 4.102816e-21, 0, -4.1292856e-21, 1, -1.0376154e-20, 0, 1.0587912e-20, 1, 170.02507, -216.36153, 227.61865)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D516" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 4.2351647e-21, 0, -4.2616345e-21, 1, -1.1434945e-20, 0, 1.1646703e-20, 1, 168.56276, -218.12862, 227.77026)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D517" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 4.3675136e-21, 0, -4.3939834e-21, 1, -1.2493736e-20, 0, 1.2705494e-20, 1, 166.3157, -218.32884, 228.00269)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D518" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 4.4998625e-21, 0, -4.5263323e-21, 1, -1.3552527e-20, 0, 1.3764285e-20, 1, 164.58167, -216.88191, 228.182)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D519" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 4.7380905e-21, 0, -4.7645603e-21, 1, -1.3976044e-20, 0, 1.4187802e-20, 1, 165.44604, -217.09036, 226.47473)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D520" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 4.8969092e-21, 0, -4.923379e-21, 1, -1.3976044e-20, 0, 1.4187802e-20, 1, 167.0434, -217.7467, 226.30933)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D521" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 5.029258e-21, 0, -5.055728e-21, 1, -1.3976044e-20, 0, 1.4187802e-20, 1, 168.61858, -217.07793, 226.14636)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D522" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 5.161607e-21, 0, -5.188077e-21, 1, -1.3976044e-20, 0, 1.4187802e-20, 1, 169.2547, -215.47917, 226.08032)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D523" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 5.267486e-21, 0, -5.293956e-21, 1, -1.4823077e-20, 0, 1.5034835e-20, 1, 168.59715, -213.8908, 226.14832)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D524" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 5.3468955e-21, 0, -5.3733653e-21, 1, -1.5458351e-20, 0, 1.567011e-20, 1, 167.00371, -213.25287, 226.31311)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D525" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 5.5586537e-21, 0, -5.5851235e-21, 1, -1.7152417e-20, 0, 1.7364175e-20, 1, 165.42662, -213.92163, 226.47607)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D526" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 5.664533e-21, 0, -5.6910026e-21, 1, -1.799945e-20, 0, 1.8211208e-20, 1, 164.78305, -215.50972, 226.5426)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D527" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 6.0351097e-21, 0, -6.0615795e-21, 1, -1.8846483e-20, 0, 1.9058241e-20, 1, 143.62875, -214.6196, 206.60352)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D528" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 6.1939284e-21, 0, -6.2203982e-21, 1, -1.8846483e-20, 0, 1.9058241e-20, 1, 143.65082, -216.88629, 206.8169)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D529" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 6.3262773e-21, 0, -6.352747e-21, 1, -1.8846483e-20, 0, 1.9058241e-20, 1, 143.82913, -218.34201, 208.54138)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D530" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 6.4321564e-21, 0, -6.4586262e-21, 1, -1.8846483e-20, 0, 1.9058241e-20, 1, 144.06296, -218.12914, 210.80225)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D531" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 6.5380356e-21, 0, -6.5645053e-21, 1, -1.8846483e-20, 0, 1.9058241e-20, 1, 144.21286, -216.38686, 212.25171)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D532" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 6.6439147e-21, 0, -6.6703845e-21, 1, -1.8846483e-20, 0, 1.9058241e-20, 1, 144.1912, -214.10759, 212.04224)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D533" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 6.7762636e-21, 0, -6.802733e-21, 1, -1.8846483e-20, 0, 1.9058241e-20, 1, 144.01157, -212.68857, 210.30518)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D534" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 6.855673e-21, 0, -6.882143e-21, 1, -1.8846483e-20, 0, 1.9058241e-20, 1, 143.77695, -212.87155, 208.03625)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D535" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 7.17331e-21, 0, -7.19978e-21, 1, -1.8634725e-20, 0, 1.9058241e-20, 1, 145.33627, -213.91785, 207.66809)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D536" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 7.332129e-21, 0, -7.358599e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 145.2693, -215.502, 207.02014)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D537" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 7.490948e-21, 0, -7.5174174e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 145.3383, -217.09813, 207.68701)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D538" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 7.7556454e-21, 0, -7.782115e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 145.50256, -217.75264, 209.27563)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D539" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 7.914464e-21, 0, -7.940934e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 145.66495, -217.0761, 210.8457)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D540" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 8.046813e-21, 0, -8.073283e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 145.73215, -215.48427, 211.49548)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D541" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 8.179162e-21, 0, -8.205632e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 145.66287, -213.903, 210.8252)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D542" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 8.311511e-21, 0, -8.3379806e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 145.49957, -213.25429, 209.24622)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D543" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 8.602678e-21, 0, -8.629148e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 186.07565, -212.67264, 204.172)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D544" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 8.761497e-21, 0, -8.787967e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 186.3086, -212.86507, 206.42468)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D545" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 8.920316e-21, 0, -8.9467855e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 186.45929, -214.61938, 207.8584)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D546" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 9.052665e-21, 0, -9.079134e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 186.4378, -216.8809, 207.65027)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D547" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 9.264423e-21, 0, -9.290893e-21, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 186.25807, -218.33626, 205.91199)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D548" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 9.1850135e-21, 0, -9.211483e-21, 1, -1.8634725e-20, 0, 1.8846483e-20, 1, 186.02469, -218.14134, 203.65527)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D549" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 9.343832e-21, 0, -9.370302e-21, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 185.87631, -216.37482, 202.22058)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D550" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 9.476181e-21, 0, -9.502651e-21, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 185.89897, -214.12895, 202.4397)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D551" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 9.740879e-21, 0, -9.767349e-21, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 184.38844, -213.90276, 203.63025)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D552" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 9.8996976e-21, 0, -9.926167e-21, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 184.55217, -213.25269, 205.21326)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D553" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.00320465e-20, 0, -1.0058516e-20, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 184.71565, -213.9216, 206.79407)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D554" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.0164395e-20, 0, -1.0190865e-20, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 184.78299, -215.5123, 207.44519)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D555" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.0349684e-20, 0, -1.0376154e-20, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 184.71327, -217.09949, 206.771)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D556" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.0534972e-20, 0, -1.0561442e-20, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 184.54996, -217.7453, 205.19153)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D557" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.0693791e-20, 0, -1.0720261e-20, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 184.3865, -217.08377, 203.61072)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D558" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.082614e-20, 0, -1.085261e-20, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 184.32036, -215.49052, 202.97034)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D559" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1196717e-20, 0, -1.12231866e-20, 1, -1.8422967e-20, 0, 1.8634725e-20, 1, 170.0529, -208.15332, 198.03076)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D560" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1434945e-20, 0, -1.14614146e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 171.00299, -208.15332, 198.7987)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D561" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1646703e-20, 0, -1.1673173e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 171.77505, -208.15332, 197.84924)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D562" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.18319915e-20, 0, -1.1858461e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 170.82947, -208.15332, 197.09082)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D563" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.13555354e-20, 0, -1.1382005e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 171.79933, -208.15332, 214.91882)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D564" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.15937635e-20, 0, -1.1620233e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 172.74942, -208.15332, 215.68689)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D565" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1805522e-20, 0, -1.18319915e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 173.5215, -208.15332, 214.73682)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D566" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.199081e-20, 0, -1.201728e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 172.57591, -208.15332, 213.97864)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D567" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1434945e-20, 0, -1.14614146e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 173.06589, -208.15332, 227.16687)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D568" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1673173e-20, 0, -1.16996426e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 174.01599, -208.15332, 227.9347)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D569" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1884931e-20, 0, -1.1911401e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 174.78809, -208.15332, 226.98462)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D570" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.20702195e-20, 0, -1.2096689e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 173.84251, -208.15332, 226.22644)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D571" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1487884e-20, 0, -1.1514354e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 160.19218, -208.15332, 228.49805)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D572" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1726112e-20, 0, -1.1752582e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 161.14229, -208.15332, 229.26599)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D573" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1937871e-20, 0, -1.196434e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 161.91437, -208.15332, 228.31592)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D574" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2123159e-20, 0, -1.2149629e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 160.96883, -208.15332, 227.55774)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D575" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1646703e-20, 0, -1.1673173e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 158.92683, -208.15332, 216.26135)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D576" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1884931e-20, 0, -1.1911401e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 159.87697, -208.15332, 217.03003)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D577" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2096689e-20, 0, -1.2123159e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 160.64899, -208.15332, 216.0791)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D578" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2281978e-20, 0, -1.23084475e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 159.70348, -208.15332, 215.32117)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D579" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1805522e-20, 0, -1.18319915e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 157.17941, -208.15332, 199.36292)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D580" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.204375e-20, 0, -1.20702195e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 158.12956, -208.15332, 200.13196)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D581" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2255508e-20, 0, -1.2281978e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 158.90157, -208.15332, 199.18066)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D582" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.24407964e-20, 0, -1.2467266e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 157.95607, -208.15332, 198.42285)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D583" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.1911401e-20, 0, -1.1937871e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 155.91324, -208.15332, 187.11829)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D584" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2149629e-20, 0, -1.2176099e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 156.8634, -208.15332, 187.8877)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D585" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2361387e-20, 0, -1.2387857e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 157.63536, -208.15332, 186.93604)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D586" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.25466755e-20, 0, -1.2573145e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 156.68988, -208.15332, 186.17847)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D587" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.204375e-20, 0, -1.20702195e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 168.79016, -208.15332, 185.79663)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D588" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2281978e-20, 0, -1.23084475e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 169.74022, -208.15332, 186.56592)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D589" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2493736e-20, 0, -1.2520206e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 170.51222, -208.15332, 185.61401)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D590" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.26790244e-20, 0, -1.2705494e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 169.56673, -208.15332, 184.85645)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D591" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2334917e-20, 0, -1.2361387e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 182.46074, -208.15332, 196.74976)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D592" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2573145e-20, 0, -1.2599615e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 183.41078, -208.15332, 197.5188)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D593" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.27849035e-20, 0, -1.2811373e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 184.18282, -208.15332, 196.56628)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D594" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2970192e-20, 0, -1.2996662e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 183.23724, -208.15332, 195.80896)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D595" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.24407964e-20, 0, -1.2467266e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 184.20723, -208.15332, 213.63843)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D596" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.26790244e-20, 0, -1.2705494e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 185.15729, -208.15332, 214.4076)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D597" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2890783e-20, 0, -1.29172524e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 185.92932, -208.15332, 213.45496)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D598" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.3076071e-20, 0, -1.3102541e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 184.98376, -208.15332, 212.69763)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D599" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2493736e-20, 0, -1.2520206e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 146.19359, -208.15332, 217.56946)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D600" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2731964e-20, 0, -1.2758434e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 147.14365, -208.15332, 218.33875)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D601" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2943722e-20, 0, -1.2970192e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 147.91566, -208.15332, 217.38611)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D602" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.3129011e-20, 0, -1.31554805e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 146.97011, -208.15332, 216.62878)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D603" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2731964e-20, 0, -1.2758434e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 143.86983, -208.15332, 200.72803)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D604" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.2970192e-20, 0, -1.2996662e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 144.81985, -208.15332, 201.4967)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D605" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.318195e-20, 0, -1.320842e-20, 1, -1.8211208e-20, 0, 1.8422967e-20, 1, 145.59186, -208.15332, 200.54395)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D606" type="OmniLight3D" parent="bridgesRoom/BridgeRoomsLight"]
+transform = Transform3D(1, 1.3340769e-20, 0, -1.33937085e-20, 1, -1.799945e-20, 0, 1.8211208e-20, 1, 144.64633, -208.15332, 199.78674)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
 [node name="LRoom" parent="." instance=ExtResource("20_vieln")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 511.54782, 24.77005, 1435.0135)
 
@@ -3560,6 +4347,184 @@ mesh = SubResource("PlaneMesh_d1305")
 transform = Transform3D(-0.0017420648, 3.1135584e-15, 0.12321645, 1.492819, 6.525974e-08, 0.021105625, 3.423919e-09, -0.078337975, 4.8407896e-11, -330.129, 146.74, 6.58)
 multimesh = SubResource("MultiMesh_vfp0b")
 
+[node name="TriangleRoomLights" type="Node3D" parent="triangleRoom"]
+transform = Transform3D(0.49999997, 0, 4.656613e-10, -1.7763568e-15, 0.5, 0, 1.3504369e-17, 0, 0.49999997, 312.93866, -12.252791, -222.95544)
+
+[node name="OmniLight3D99" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(1, 0, -9.313227e-10, 3.5527137e-15, 1, -3.308723e-24, -2.700878e-17, 0, 1, -627.61035, 24.77841, 447.2306)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D100" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(1, 0, -9.313227e-10, 3.5527137e-15, 1, -3.308723e-24, -2.7008785e-17, 0, 1, -627.29755, 24.77841, 446.05078)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D101" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(1, 0, -9.313227e-10, 3.5527137e-15, 1, -3.308723e-24, -2.700879e-17, 0, 1, -628.4962, 24.77841, 445.70593)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D102" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(1, 0, -9.313227e-10, 3.5527137e-15, 1, -3.308723e-24, -2.7008799e-17, 0, 1, -628.8081, 24.77841, 446.89307)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D103" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8584322, -9.826351e-16, -0.51292706, 3.0497633e-15, 1, -3.738024e-15, 0.51292706, 1.6445342e-15, 0.8584322, -619.0241, 24.77841, 442.67017)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D104" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8584322, -9.826351e-16, -0.51292706, 3.0497633e-15, 1, -3.738024e-15, 0.51292706, 1.6445342e-15, 0.8584322, -618.15045, 24.77841, 441.81775)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D105" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8584322, -9.826351e-16, -0.51292706, 3.0497633e-15, 1, -3.738024e-15, 0.51292706, 1.6445342e-15, 0.8584322, -619.0025, 24.77841, 440.90698)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D106" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8584322, -9.826351e-16, -0.51292706, 3.0497633e-15, 1, -3.738024e-15, 0.51292706, 1.6445342e-15, 0.8584322, -619.8793, 24.77841, 441.7661)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D107" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.50131446, -2.5357962e-15, -0.86526513, 1.781026e-15, 1, -5.997283e-15, 0.86526513, 1.252043e-15, 0.50131446, -619.9658, 24.77841, 452.72546)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D108" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.50131446, -2.5357962e-15, -0.86526513, 1.781026e-15, 1, -5.997283e-15, 0.86526513, 1.252043e-15, 0.50131446, -618.7881, 24.77841, 452.40454)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D109" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.50131446, -2.5357962e-15, -0.86526513, 1.781026e-15, 1, -5.997283e-15, 0.86526513, 1.252043e-15, 0.50131446, -619.0906, 24.77841, 451.1947)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D110" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.50131446, -2.5357962e-15, -0.86526513, 1.781026e-15, 1, -5.997283e-15, 0.86526513, 1.252043e-15, 0.50131446, -620.27423, 24.77841, 451.51978)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D111" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8796569, -8.18935e-16, 0.47560886, 3.1251691e-15, 1, 3.4115688e-15, -0.47560886, -1.5146518e-15, 0.8796569, -627.32996, 39.019936, 447.40942)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D112" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8796569, -8.18935e-16, 0.47560886, 3.1251691e-15, 1, 3.4115688e-15, -0.47560886, -1.5146518e-15, 0.8796569, -627.6159, 39.019936, 446.22278)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D113" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8796569, -8.1893496e-16, 0.47560886, 3.1251691e-15, 1, 3.4115688e-15, -0.47560886, -1.5146517e-15, 0.8796569, -628.79944, 39.019936, 446.51514)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D114" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8796569, -8.18935e-16, 0.47560886, 3.1251691e-15, 1, 3.4115688e-15, -0.47560886, -1.5146518e-15, 0.8796569, -628.5441, 39.019936, 447.68213)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D115" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(-0.05582148, -3.3139038e-15, -0.9984408, -1.9831837e-16, 1, -6.866253e-15, 0.9984408, -1.8527525e-16, -0.05582148, -620.16656, 39.022278, 441.97412)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D116" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(-0.05582148, -3.3139038e-15, -0.9984408, -1.9831837e-16, 1, -6.866253e-15, 0.9984408, -1.8527525e-16, -0.05582148, -618.9921, 39.02854, 442.31396)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D117" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(-0.05582148, -3.313904e-15, -0.9984408, -1.9831837e-16, 1, -6.866253e-15, 0.9984408, -1.8527526e-16, -0.05582148, -618.65674, 39.027977, 441.1444)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D118" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(-0.05582148, -3.313904e-15, -0.9984408, -1.9831837e-16, 1, -6.866253e-15, 0.9984408, -1.8527526e-16, -0.05582148, -619.8407, 39.040657, 440.80408)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D119" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8667314, -8.073376e-16, -0.49877518, 3.0792475e-15, 1, -3.3906475e-15, 0.49877518, 1.4029284e-15, 0.8667314, -619.0729, 39.007423, 452.59314)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D123" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8667314, -8.0733707e-16, -0.49877518, 3.0792475e-15, 1, -3.3906466e-15, 0.49877518, 1.4029275e-15, 0.8667314, -621.99005, 31.890913, 446.46838)
+light_color = Color(0.8436847, 0.55076575, 0, 1)
+light_energy = 10.304
+light_size = 0.235
+omni_range = 39.320652
+
+[node name="OmniLight3D120" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8667314, -8.0733765e-16, -0.49877518, 3.0792475e-15, 1, -3.3906475e-15, 0.49877518, 1.4029285e-15, 0.8667314, -618.19635, 39.01072, 451.73926)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D121" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8667314, -8.0733765e-16, -0.49877518, 3.0792475e-15, 1, -3.3906475e-15, 0.49877518, 1.4029285e-15, 0.8667314, -619.0593, 39.021812, 450.86475)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D122" type="OmniLight3D" parent="triangleRoom/TriangleRoomLights"]
+transform = Transform3D(0.8667314, -8.073375e-16, -0.49877518, 3.0792475e-15, 1, -3.3906475e-15, 0.49877518, 1.4029283e-15, 0.8667314, -619.92566, 39.032623, 451.72668)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
 [node name="chainsRoom" parent="." instance=ExtResource("22_ndnlp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -120.43587, 74.10199, 1747.9874)
 
@@ -3630,3 +4595,2627 @@ connections = {
 1: null,
 2: null
 }
+
+[node name="ChainsRoomLights" type="Node3D" parent="chainsRoom"]
+transform = Transform3D(-0.02791074, -1.6569519e-15, -0.4992204, -3.1763738e-22, 0.5, -1.6595395e-15, 0.4992204, -9.2637624e-17, -0.02791074, 5.9216537, -4.0747795, 68.87671)
+
+[node name="OmniLight3D124" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 3.4410713e-22, 0, -3.5734202e-22, 1, -2.6875098e-21, 0, 2.3822802e-21, 0.99999994, -110.40735, 15.519455, 16.939072)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D125" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 3.7057691e-22, 0, -3.838118e-22, 1, -2.6875098e-21, 0, 2.3806258e-21, 0.99999994, -110.32324, 15.542442, 18.626793)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D126" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.029258e-22, 0, -5.161607e-22, 1, -2.6875098e-21, 0, 2.3731812e-21, 0.99999994, -110.37097, 16.382843, 17.802414)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D127" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.5586537e-22, 0, -5.6910026e-22, 1, -2.6875098e-21, 0, 2.3706996e-21, 0.99999994, -110.37244, 14.6768875, 17.779366)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D132" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 3.970467e-22, 0, -4.1028158e-22, 1, -2.6875098e-21, 0, 2.3789714e-21, 0.99999994, -111.0863, 15.519455, 4.795746)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D133" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 4.2351647e-22, 0, -4.3675136e-22, 1, -2.6875098e-21, 0, 2.377317e-21, 0.99999994, -111.0022, 15.542442, 6.4834824)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D134" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.5586537e-22, 0, -5.6910026e-22, 1, -2.6875098e-21, 0, 2.3706996e-21, 0.99999994, -111.05005, 16.382843, 5.6591187)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D135" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 6.0880493e-22, 0, -6.220398e-22, 1, -2.6875098e-21, 0, 2.367391e-21, 0.99999994, -111.05127, 14.6768875, 5.636055)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D128" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 3.838118e-22, 0, -3.970467e-22, 1, -2.6875098e-21, 0, 2.3797986e-21, 0.99999994, -109.772705, 15.519455, 28.290253)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D129" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 4.1028158e-22, 0, -4.2351647e-22, 1, -2.6875098e-21, 0, 2.3781443e-21, 0.99999994, -109.6886, 15.542442, 29.977974)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D130" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.426305e-22, 0, -5.5586537e-22, 1, -2.6875098e-21, 0, 2.3706996e-21, 0.99999994, -109.737305, 16.382843, 29.140388)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D131" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.9557004e-22, 0, -6.0880493e-22, 1, -2.6875098e-21, 0, 2.368218e-21, 0.99999994, -109.73779, 14.6768875, 29.13057)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D136" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 4.7645603e-22, 0, -4.896909e-22, 1, -2.6875098e-21, 0, 2.3748355e-21, 0.99999994, -110.52258, 42.174675, 17.003723)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D137" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.029258e-22, 0, -5.161607e-22, 1, -2.6875098e-21, 0, 2.3731812e-21, 0.99999994, -110.43823, 42.197662, 18.691444)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D138" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 6.352747e-22, 0, -6.485096e-22, 1, -2.6875098e-21, 0, 2.3657366e-21, 0.99999994, -110.48572, 43.038063, 17.867058)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D139" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 6.8821427e-22, 0, -7.0144916e-22, 1, -2.6875098e-21, 0, 2.363255e-21, 0.99999994, -110.487305, 41.332108, 17.844017)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D140" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.8233515e-22, 0, -5.9557004e-22, 1, -2.6875098e-21, 0, 2.3690453e-21, 0.99999994, -111.13147, 42.16188, 5.6840515)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D141" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 6.0880493e-22, 0, -6.220398e-22, 1, -2.6875098e-21, 0, 2.367391e-21, 0.99999994, -111.048096, 42.184868, 7.3718643)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D142" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.4115383e-22, 0, -7.543887e-22, 1, -2.6875098e-21, 0, 2.3599463e-21, 0.99999994, -111.095215, 43.02527, 6.5474854)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D143" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.940934e-22, 0, -8.073283e-22, 1, -2.6875098e-21, 0, 2.3566376e-21, 0.99999994, -111.09668, 41.319313, 6.524437)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D144" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.9557004e-22, 0, -6.0880493e-22, 1, -2.6875098e-21, 0, 2.368218e-21, 0.99999994, -109.831665, 42.165466, 29.173508)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D145" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.9557004e-22, 0, -6.0880493e-22, 1, -2.6875098e-21, 0, 2.368218e-21, 0.99999994, -109.74768, 42.161385, 30.861244)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D146" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.2791894e-22, 0, -7.4115383e-22, 1, -2.6875098e-21, 0, 2.3607735e-21, 0.99999994, -109.796265, 43.001785, 30.023727)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D147" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.808585e-22, 0, -7.940934e-22, 1, -2.6875098e-21, 0, 2.3574647e-21, 0.99999994, -109.79675, 41.29583, 30.013893)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D148" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.426305e-22, 0, -5.5586537e-22, 1, -2.6875098e-21, 0, 2.3706996e-21, 0.99999994, -110.52319, 67.96952, 17.003693)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D149" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.6910026e-22, 0, -5.8233515e-22, 1, -2.6875098e-21, 0, 2.3698725e-21, 0.99999994, -110.43823, 67.9925, 18.691406)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D150" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.0144916e-22, 0, -7.1468405e-22, 1, -2.6875098e-21, 0, 2.3624278e-21, 0.99999994, -110.48511, 68.83291, 17.86702)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D151" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.543887e-22, 0, -7.676236e-22, 1, -2.6875098e-21, 0, 2.3591191e-21, 0.99999994, -110.487305, 67.12696, 17.843979)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D152" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 6.485096e-22, 0, -6.617445e-22, 1, -2.6875098e-21, 0, 2.3649094e-21, 0.99999994, -111.13147, 67.95673, 5.6840134)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D153" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 6.749794e-22, 0, -6.8821427e-22, 1, -2.6875098e-21, 0, 2.3640822e-21, 0.99999994, -111.048706, 67.97971, 7.371834)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D154" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.073283e-22, 0, -8.2056317e-22, 1, -2.6875098e-21, 0, 2.3566376e-21, 0.99999994, -111.095215, 68.82011, 6.547447)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D155" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.602678e-22, 0, -8.735027e-22, 1, -2.6875098e-21, 0, 2.3533288e-21, 0.99999994, -111.0968, 67.11416, 6.5244064)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D156" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 6.617445e-22, 0, -6.749794e-22, 1, -2.6875098e-21, 0, 2.3640822e-21, 0.99999994, -109.831665, 67.960304, 29.173508)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D157" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 6.617445e-22, 0, -6.749794e-22, 1, -2.6875098e-21, 0, 2.3640822e-21, 0.99999994, -109.74829, 67.95623, 30.861198)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D158" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.940934e-22, 0, -8.073283e-22, 1, -2.6875098e-21, 0, 2.3566376e-21, 0.99999994, -109.796265, 68.79664, 30.023727)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D159" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.4703295e-22, 0, -8.602678e-22, 1, -2.6875098e-21, 0, 2.354156e-21, 0.99999994, -109.79736, 67.090675, 30.013885)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D160" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 5.9557004e-22, 0, -6.0880493e-22, 1, -2.6875098e-21, 0, 2.368218e-21, 0.99999994, -110.52368, 93.824715, 17.003677)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D161" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 6.220398e-22, 0, -6.352747e-22, 1, -2.6875098e-21, 0, 2.3665637e-21, 0.99999994, -110.43823, 93.847694, 18.691376)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D162" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.543887e-22, 0, -7.676236e-22, 1, -2.6875098e-21, 0, 2.3591191e-21, 0.99999994, -110.48462, 94.6881, 17.866974)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D163" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.073283e-22, 0, -8.2056317e-22, 1, -2.6875098e-21, 0, 2.3566376e-21, 0.99999994, -110.487305, 92.982155, 17.843948)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D164" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.0144916e-22, 0, -7.1468405e-22, 1, -2.6875098e-21, 0, 2.3624278e-21, 0.99999994, -111.13147, 93.81193, 5.683983)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D165" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.2791894e-22, 0, -7.4115383e-22, 1, -2.6875098e-21, 0, 2.3607735e-21, 0.99999994, -111.049194, 93.83491, 7.3718033)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D166" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.602678e-22, 0, -8.735027e-22, 1, -2.6875098e-21, 0, 2.3533288e-21, 0.99999994, -111.095215, 94.6753, 6.5474167)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D167" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 9.132074e-22, 0, -9.264423e-22, 1, -2.6875098e-21, 0, 2.3500201e-21, 0.99999994, -111.0968, 92.96935, 6.524376)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D168" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.1468405e-22, 0, -7.2791894e-22, 1, -2.6875098e-21, 0, 2.3616006e-21, 0.99999994, -109.831665, 93.8155, 29.173508)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D169" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.1468405e-22, 0, -7.2791894e-22, 1, -2.6875098e-21, 0, 2.3616006e-21, 0.99999994, -109.74878, 93.811424, 30.861168)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D170" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.4703295e-22, 0, -8.602678e-22, 1, -2.6875098e-21, 0, 2.354156e-21, 0.99999994, -109.796265, 94.65183, 30.023727)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D171" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.999725e-22, 0, -9.132074e-22, 1, -2.6875098e-21, 0, 2.3508473e-21, 0.99999994, -109.79785, 92.94587, 30.013878)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D172" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 6.749794e-22, 0, -6.8821427e-22, 1, -2.6875098e-21, 0, 2.3640822e-21, 0.99999994, -110.524414, 119.66976, 17.00364)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D173" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.0144916e-22, 0, -7.1468405e-22, 1, -2.6875098e-21, 0, 2.3624278e-21, 0.99999994, -110.43823, 119.69274, 18.69133)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D174" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.3379806e-22, 0, -8.4703295e-22, 1, -2.6875098e-21, 0, 2.3549832e-21, 0.99999994, -110.48389, 120.53315, 17.86692)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D175" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.867376e-22, 0, -8.999725e-22, 1, -2.6875098e-21, 0, 2.3516745e-21, 0.99999994, -110.487305, 118.8272, 17.843903)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D176" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.808585e-22, 0, -7.940934e-22, 1, -2.6875098e-21, 0, 2.3574647e-21, 0.99999994, -111.13147, 119.656975, 5.683937)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D177" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.073283e-22, 0, -8.2056317e-22, 1, -2.6875098e-21, 0, 2.3566376e-21, 0.99999994, -111.04993, 119.679955, 7.371765)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D178" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 9.396772e-22, 0, -9.529121e-22, 1, -2.6875098e-21, 0, 2.349193e-21, 0.99999994, -111.095215, 120.52035, 6.547371)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D179" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 9.926167e-22, 0, -1.0058516e-21, 1, -2.6875098e-21, 0, 2.3458842e-21, 0.99999994, -111.0968, 118.8144, 6.52433)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D180" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.940934e-22, 0, -8.073283e-22, 1, -2.6875098e-21, 0, 2.3566376e-21, 0.99999994, -109.831665, 119.660545, 29.173508)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D181" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.940934e-22, 0, -8.073283e-22, 1, -2.6875098e-21, 0, 2.3566376e-21, 0.99999994, -109.74951, 119.65647, 30.861115)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D182" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 9.264423e-22, 0, -9.396772e-22, 1, -2.6875098e-21, 0, 2.3500201e-21, 0.99999994, -109.796265, 120.49688, 30.023727)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D183" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 9.793818e-22, 0, -9.926167e-22, 1, -2.6875098e-21, 0, 2.3467114e-21, 0.99999994, -109.798584, 118.79092, 30.013893)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D184" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.2791894e-22, 0, -7.4115383e-22, 1, -2.6875098e-21, 0, 2.3607735e-21, 0.99999994, -110.5249, 145.48694, 17.003632)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D185" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.543887e-22, 0, -7.676236e-22, 1, -2.6875098e-21, 0, 2.3591191e-21, 0.99999994, -110.43823, 145.50992, 18.6913)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D186" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.867376e-22, 0, -8.999725e-22, 1, -2.6875098e-21, 0, 2.3516745e-21, 0.99999994, -110.4834, 146.35031, 17.866875)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D187" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 9.396772e-22, 0, -9.529121e-22, 1, -2.6875098e-21, 0, 2.349193e-21, 0.99999994, -110.487305, 144.64438, 17.843872)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D188" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.3379806e-22, 0, -8.4703295e-22, 1, -2.6875098e-21, 0, 2.3549832e-21, 0.99999994, -111.13147, 145.47415, 5.6839066)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D189" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.602678e-22, 0, -8.735027e-22, 1, -2.6875098e-21, 0, 2.3533288e-21, 0.99999994, -111.050415, 145.49713, 7.3717346)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D190" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 9.926167e-22, 0, -1.0058516e-21, 1, -2.6875098e-21, 0, 2.3458842e-21, 0.99999994, -111.095215, 146.33752, 6.5473404)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D191" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 1.0455563e-21, 0, -1.0587912e-21, 1, -2.6875098e-21, 0, 2.3434027e-21, 0.99999994, -111.0968, 144.63156, 6.5242996)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D192" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.4703295e-22, 0, -8.602678e-22, 1, -2.6875098e-21, 0, 2.354156e-21, 0.99999994, -109.831665, 145.47772, 29.173508)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D193" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.4703295e-22, 0, -8.602678e-22, 1, -2.6875098e-21, 0, 2.354156e-21, 0.99999994, -109.75, 145.47363, 30.861084)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D194" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 9.793818e-22, 0, -9.926167e-22, 1, -2.6875098e-21, 0, 2.3467114e-21, 0.99999994, -109.796265, 146.31406, 30.023727)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D195" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 1.0323214e-21, 0, -1.0455563e-21, 1, -2.6875098e-21, 0, 2.3434027e-21, 0.99999994, -109.79907, 144.6081, 30.013885)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D196" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 7.808585e-22, 0, -7.940934e-22, 1, -2.6875098e-21, 0, 2.3574647e-21, 0.99999994, -110.52539, 171.39215, 17.003601)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D197" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.073283e-22, 0, -8.2056317e-22, 1, -2.6875098e-21, 0, 2.3566376e-21, 0.99999994, -110.43823, 171.41513, 18.691269)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D198" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 9.396772e-22, 0, -9.529121e-22, 1, -2.6875098e-21, 0, 2.349193e-21, 0.99999994, -110.48291, 172.25552, 17.866844)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D199" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 9.926167e-22, 0, -1.0058516e-21, 1, -2.6875098e-21, 0, 2.3458842e-21, 0.99999994, -110.487305, 170.54959, 17.843842)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D200" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.867376e-22, 0, -8.999725e-22, 1, -2.6875098e-21, 0, 2.3516745e-21, 0.99999994, -111.13147, 171.37936, 5.683876)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D201" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 9.132074e-22, 0, -9.264423e-22, 1, -2.6875098e-21, 0, 2.3500201e-21, 0.99999994, -111.0509, 171.40234, 7.3717117)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D202" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 1.0455563e-21, 0, -1.0587912e-21, 1, -2.6875098e-21, 0, 2.3434027e-21, 0.99999994, -111.095215, 172.24274, 6.54731)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D203" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 1.0984959e-21, 0, -1.1117307e-21, 1, -2.6875098e-21, 0, 2.340094e-21, 0.99999994, -111.0968, 170.53677, 6.524269)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D204" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.999725e-22, 0, -9.132074e-22, 1, -2.6875098e-21, 0, 2.3508473e-21, 0.99999994, -109.831665, 171.38293, 29.173508)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D205" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 8.999725e-22, 0, -9.132074e-22, 1, -2.6875098e-21, 0, 2.3508473e-21, 0.99999994, -109.75049, 171.37885, 30.861046)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D206" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 1.0323214e-21, 0, -1.0455563e-21, 1, -2.6875098e-21, 0, 2.3434027e-21, 0.99999994, -109.796265, 172.21927, 30.023727)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D207" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99999994, 1.085261e-21, 0, -1.0984959e-21, 1, -2.6875098e-21, 0, 2.3409211e-21, 0.99999994, -109.79956, 170.5133, 30.013885)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D376" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060958e-17, -0.021273967, 7.0609514e-17, 1, -7.539371e-19, 0.021273967, -7.488582e-19, 0.99977374, -163.12244, 15.519455, 19.888687)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D377" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060955e-17, -0.021273967, 7.0609514e-17, 1, -7.539371e-19, 0.021273967, -7.4885984e-19, 0.99977374, -163.07422, 15.542442, 21.57782)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D378" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.0609394e-17, -0.021273967, 7.060938e-17, 1, -7.5414884e-19, 0.021273967, -7.4865636e-19, 0.99977374, -163.10425, 16.382843, 20.752602)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D379" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060934e-17, -0.021273967, 7.06093e-17, 1, -7.539371e-19, 0.021273967, -7.488714e-19, 0.99977374, -163.10547, 14.6768875, 20.729523)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D380" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060949e-17, -0.021273967, 7.0609434e-17, 1, -7.541505e-19, 0.021273967, -7.4843964e-19, 0.9997736, -163.88867, 15.519455, 8.674812)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D381" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060949e-17, -0.021273967, 7.0609434e-17, 1, -7.541505e-19, 0.021273967, -7.4843964e-19, 0.9997736, -163.84021, 15.542442, 10.363983)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D382" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060933e-17, -0.021273967, 7.0609275e-17, 1, -7.541505e-19, 0.021273967, -7.484479e-19, 0.9997736, -163.87085, 16.382843, 9.53878)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D383" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609275e-17, -0.021273967, 7.060922e-17, 1, -7.541505e-19, 0.021273967, -7.484512e-19, 0.9997736, -163.87146, 14.6768875, 9.515678)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D384" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609514e-17, -0.021273974, 7.0609434e-17, 1, -7.5457235e-19, 0.021273974, -7.480128e-19, 0.9997736, -162.5968, 15.494713, 32.12079)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D385" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609514e-17, -0.021273974, 7.0609434e-17, 1, -7.5457235e-19, 0.021273974, -7.480128e-19, 0.9997736, -162.54846, 15.5177, 33.80999)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D386" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609355e-17, -0.021273974, 7.0609275e-17, 1, -7.5457235e-19, 0.021273974, -7.480211e-19, 0.9997736, -162.57935, 16.3581, 32.97151)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D387" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.06093e-17, -0.021273974, 7.060922e-17, 1, -7.5457235e-19, 0.021273974, -7.480244e-19, 0.9997736, -162.57971, 14.652145, 32.96173)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D388" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060945e-17, -0.021273967, 7.060941e-17, 1, -7.539371e-19, 0.021273967, -7.4886646e-19, 0.99977374, -163.23926, 42.174675, 19.950867)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D389" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.0609394e-17, -0.021273967, 7.060938e-17, 1, -7.5414884e-19, 0.021273967, -7.4865636e-19, 0.99977374, -163.19104, 42.197662, 21.64)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D390" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060929e-17, -0.021273967, 7.060925e-17, 1, -7.539371e-19, 0.021273967, -7.4887473e-19, 0.99977374, -163.22058, 43.038063, 20.814774)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D391" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.0609236e-17, -0.021273967, 7.0609196e-17, 1, -7.539371e-19, 0.021273967, -7.4887804e-19, 0.99977374, -163.22168, 41.332108, 20.791718)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D392" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.060934e-17, -0.021273963, 7.060926e-17, 1, -7.5393873e-19, 0.021273963, -7.4865967e-19, 0.9997737, -163.65381, 42.16188, 7.788864)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D393" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.060929e-17, -0.021273963, 7.060921e-17, 1, -7.5393873e-19, 0.021273963, -7.48663e-19, 0.9997737, -163.60632, 42.184868, 9.47805)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D394" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.060918e-17, -0.021273963, 7.06091e-17, 1, -7.5393873e-19, 0.021273963, -7.486696e-19, 0.9997737, -163.63538, 43.02527, 8.652855)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D395" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.060913e-17, -0.021273963, 7.060905e-17, 1, -7.5393873e-19, 0.021273963, -7.4867125e-19, 0.9997737, -163.63672, 41.319313, 8.629799)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D396" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.060929e-17, -0.021273963, 7.060921e-17, 1, -7.5393873e-19, 0.021273963, -7.48663e-19, 0.9997737, -162.85107, 42.165466, 31.346169)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D397" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.060929e-17, -0.021273963, 7.060921e-17, 1, -7.5393873e-19, 0.021273963, -7.48663e-19, 0.9997737, -162.8031, 42.161385, 33.03528)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D398" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.060918e-17, -0.021273963, 7.06091e-17, 1, -7.5393873e-19, 0.021273963, -7.486696e-19, 0.9997737, -162.83386, 43.001785, 32.196953)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D399" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.060913e-17, -0.021273963, 7.060905e-17, 1, -7.5393873e-19, 0.021273963, -7.4867125e-19, 0.9997737, -162.83447, 41.29583, 32.187103)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D400" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060934e-17, -0.021273967, 7.06093e-17, 1, -7.539371e-19, 0.021273967, -7.488714e-19, 0.99977374, -163.23999, 67.96952, 19.950829)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D401" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060934e-17, -0.021273967, 7.06093e-17, 1, -7.539371e-19, 0.021273967, -7.488714e-19, 0.99977374, -163.19104, 67.9925, 21.639961)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D402" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060918e-17, -0.021273967, 7.060914e-17, 1, -7.539371e-19, 0.021273967, -7.4888135e-19, 0.99977374, -163.2201, 68.83291, 20.814781)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D403" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060913e-17, -0.021273967, 7.060909e-17, 1, -7.539371e-19, 0.021273967, -7.48883e-19, 0.99977374, -163.22168, 67.12696, 20.791672)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D404" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.0609236e-17, -0.021273963, 7.0609156e-17, 1, -7.5393873e-19, 0.021273963, -7.486663e-19, 0.9997737, -163.65088, 67.95673, 7.8419647)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D405" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.0609236e-17, -0.021273963, 7.0609156e-17, 1, -7.5393873e-19, 0.021273963, -7.486663e-19, 0.9997737, -163.604, 67.97971, 9.531143)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D406" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.060908e-17, -0.021273963, 7.0609e-17, 1, -7.5393873e-19, 0.021273963, -7.4867455e-19, 0.9997737, -163.63245, 68.82011, 8.705963)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D407" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997737, -7.0609024e-17, -0.021273963, 7.0608944e-17, 1, -7.5393873e-19, 0.021273963, -7.4867786e-19, 0.9997737, -163.63367, 67.11416, 8.682907)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D408" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060922e-17, -0.021273967, 7.060917e-17, 1, -7.541505e-19, 0.021273967, -7.484545e-19, 0.9997736, -162.85388, 67.960304, 31.295708)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D409" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060922e-17, -0.021273967, 7.060917e-17, 1, -7.541505e-19, 0.021273967, -7.484545e-19, 0.9997736, -162.8064, 67.95623, 32.984695)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D410" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609116e-17, -0.021273967, 7.0609064e-17, 1, -7.541505e-19, 0.021273967, -7.484595e-19, 0.9997736, -162.83667, 68.79664, 32.146477)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D411" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609064e-17, -0.021273967, 7.060901e-17, 1, -7.541505e-19, 0.021273967, -7.484628e-19, 0.9997736, -162.83801, 67.090675, 32.13658)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D412" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060929e-17, -0.021273967, 7.060925e-17, 1, -7.539371e-19, 0.021273967, -7.4887473e-19, 0.99977374, -163.24036, 93.824715, 19.950806)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D413" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060929e-17, -0.021273967, 7.060925e-17, 1, -7.539371e-19, 0.021273967, -7.4887473e-19, 0.99977374, -163.1908, 93.847694, 21.639923)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D414" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060913e-17, -0.021273967, 7.060909e-17, 1, -7.539371e-19, 0.021273967, -7.48883e-19, 0.99977374, -163.21948, 94.6881, 20.814713)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D415" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.06091e-17, -0.021273967, 7.060904e-17, 1, -7.539371e-19, 0.021273967, -7.4888466e-19, 0.99977374, -163.22168, 92.982155, 20.791641)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D416" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060921e-17, -0.021273974, 7.0609116e-17, 1, -7.5563114e-19, 0.021273974, -7.4696725e-19, 0.9997736, -164.10144, 93.824104, 7.7817764)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D417" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060921e-17, -0.021273974, 7.0609116e-17, 1, -7.5563114e-19, 0.021273974, -7.4696725e-19, 0.9997736, -164.05457, 93.847084, 9.470963)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D418" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060905e-17, -0.021273974, 7.060896e-17, 1, -7.5563114e-19, 0.021273974, -7.4697553e-19, 0.9997736, -164.08289, 94.68748, 8.645775)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D419" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609e-17, -0.021273974, 7.0608905e-17, 1, -7.5563114e-19, 0.021273974, -7.4697883e-19, 0.9997736, -164.08386, 92.98153, 8.622719)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D420" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609196e-17, -0.021273974, 7.0609116e-17, 1, -7.5457235e-19, 0.021273974, -7.48031e-19, 0.9997736, -162.71704, 93.823555, 31.263649)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D421" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609196e-17, -0.021273974, 7.0609116e-17, 1, -7.5457235e-19, 0.021273974, -7.48031e-19, 0.9997736, -162.66992, 93.81948, 32.95262)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D422" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060909e-17, -0.021273974, 7.060901e-17, 1, -7.5457235e-19, 0.021273974, -7.4803597e-19, 0.9997736, -162.69983, 94.65989, 32.114418)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D423" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060904e-17, -0.021273974, 7.060896e-17, 1, -7.5457235e-19, 0.021273974, -7.480393e-19, 0.9997736, -162.70154, 92.953926, 32.104515)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D424" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.0609236e-17, -0.021273967, 7.0609196e-17, 1, -7.539371e-19, 0.021273967, -7.4887804e-19, 0.99977374, -163.24109, 119.66976, 19.950752)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D425" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060918e-17, -0.021273967, 7.060914e-17, 1, -7.539371e-19, 0.021273967, -7.4888135e-19, 0.99977374, -163.1908, 119.69274, 21.639885)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D426" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.06091e-17, -0.021273967, 7.060904e-17, 1, -7.539371e-19, 0.021273967, -7.4888466e-19, 0.99977374, -163.21887, 120.53315, 20.814705)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D427" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060905e-17, -0.021273967, 7.0608984e-17, 1, -7.539371e-19, 0.021273967, -7.4888797e-19, 0.99977374, -163.2218, 118.8272, 20.79161)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D428" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060913e-17, -0.021273974, 7.0609064e-17, 1, -7.5520763e-19, 0.021273974, -7.473974e-19, 0.9997736, -164.07495, 119.637856, 7.7687454)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D429" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060908e-17, -0.021273974, 7.060901e-17, 1, -7.5520763e-19, 0.021273974, -7.4739904e-19, 0.9997736, -164.02966, 119.660835, 9.457947)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D430" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060897e-17, -0.021273974, 7.0608905e-17, 1, -7.5520763e-19, 0.021273974, -7.4740566e-19, 0.9997736, -164.0564, 120.50123, 8.632782)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D431" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060892e-17, -0.021273974, 7.060885e-17, 1, -7.5520763e-19, 0.021273974, -7.4740897e-19, 0.9997736, -164.0575, 118.79528, 8.60968)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D432" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060914e-17, -0.021273974, 7.0609064e-17, 1, -7.5457235e-19, 0.021273974, -7.480343e-19, 0.9997736, -162.8147, 119.660545, 31.284828)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D433" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060914e-17, -0.021273974, 7.0609064e-17, 1, -7.5457235e-19, 0.021273974, -7.480343e-19, 0.9997736, -162.76831, 119.65647, 32.973747)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D434" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0608984e-17, -0.021273974, 7.0608905e-17, 1, -7.5457235e-19, 0.021273974, -7.480426e-19, 0.9997736, -162.7976, 120.49688, 32.13562)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D435" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060893e-17, -0.021273974, 7.060885e-17, 1, -7.5457235e-19, 0.021273974, -7.480459e-19, 0.9997736, -162.7998, 118.79092, 32.12571)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D436" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060918e-17, -0.021273967, 7.060914e-17, 1, -7.539371e-19, 0.021273967, -7.4888135e-19, 0.99977374, -163.24158, 145.48694, 19.950737)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D437" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060913e-17, -0.021273967, 7.060909e-17, 1, -7.539371e-19, 0.021273967, -7.48883e-19, 0.99977374, -163.1908, 145.50992, 21.639854)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D438" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060905e-17, -0.021273967, 7.0608984e-17, 1, -7.539371e-19, 0.021273967, -7.4888797e-19, 0.99977374, -163.21838, 146.35031, 20.814644)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D439" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.0609e-17, -0.021273967, 7.060893e-17, 1, -7.539371e-19, 0.021273967, -7.488913e-19, 0.99977374, -163.2218, 144.64438, 20.79158)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D440" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609064e-17, -0.021273967, 7.060901e-17, 1, -7.541505e-19, 0.021273967, -7.484628e-19, 0.9997736, -163.99097, 145.47415, 7.7056274)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D441" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060901e-17, -0.021273967, 7.060896e-17, 1, -7.541505e-19, 0.021273967, -7.484661e-19, 0.9997736, -163.94592, 145.49713, 9.394806)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D442" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0608905e-17, -0.021273967, 7.060885e-17, 1, -7.541505e-19, 0.021273967, -7.484727e-19, 0.9997736, -163.97266, 146.33752, 8.5696335)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D443" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060885e-17, -0.021273967, 7.06088e-17, 1, -7.541505e-19, 0.021273967, -7.484744e-19, 0.9997736, -163.97375, 144.63156, 8.546562)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D444" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609064e-17, -0.021273967, 7.060901e-17, 1, -7.541505e-19, 0.021273967, -7.484628e-19, 0.9997736, -162.82776, 145.47772, 31.26712)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D445" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609064e-17, -0.021273967, 7.060901e-17, 1, -7.541505e-19, 0.021273967, -7.484628e-19, 0.9997736, -162.7821, 145.47363, 32.956017)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D446" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0608905e-17, -0.021273967, 7.060885e-17, 1, -7.541505e-19, 0.021273967, -7.484727e-19, 0.9997736, -162.81055, 146.31406, 32.11788)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D447" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060885e-17, -0.021273967, 7.06088e-17, 1, -7.541505e-19, 0.021273967, -7.484744e-19, 0.9997736, -162.81348, 144.6081, 32.10794)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D448" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.060913e-17, -0.021273967, 7.060909e-17, 1, -7.539371e-19, 0.021273967, -7.48883e-19, 0.99977374, -163.24207, 171.39215, 19.950691)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D449" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.06091e-17, -0.021273967, 7.060904e-17, 1, -7.539371e-19, 0.021273967, -7.4888466e-19, 0.99977374, -163.1908, 171.41513, 21.639824)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D450" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.0609e-17, -0.021273967, 7.060893e-17, 1, -7.539371e-19, 0.021273967, -7.488913e-19, 0.99977374, -163.2179, 172.25552, 20.814636)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D451" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.99977374, -7.0608944e-17, -0.021273967, 7.060888e-17, 1, -7.539371e-19, 0.021273967, -7.488946e-19, 0.99977374, -163.2218, 170.54959, 20.79155)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D452" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609024e-17, -0.021273974, 7.060896e-17, 1, -7.547841e-19, 0.021273974, -7.478275e-19, 0.9997736, -164.047, 171.35608, 7.7423706)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D453" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060897e-17, -0.021273974, 7.0608905e-17, 1, -7.547841e-19, 0.021273974, -7.4783083e-19, 0.9997736, -164.00195, 171.37906, 9.431511)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D454" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0608865e-17, -0.021273974, 7.06088e-17, 1, -7.547841e-19, 0.021273974, -7.4783745e-19, 0.9997736, -164.0282, 172.21945, 8.606392)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D455" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060888e-17, -0.021273974, 7.06088e-17, 1, -7.5499587e-19, 0.021273974, -7.4762404e-19, 0.9997736, -164.02954, 170.51349, 8.583321)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D456" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609024e-17, -0.021273974, 7.060896e-17, 1, -7.547841e-19, 0.021273974, -7.478275e-19, 0.9997736, -162.781, 171.32019, 31.255249)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D457" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0609024e-17, -0.021273974, 7.060896e-17, 1, -7.547841e-19, 0.021273974, -7.478275e-19, 0.9997736, -162.73547, 171.3161, 32.944016)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D458" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.0608865e-17, -0.021273974, 7.06088e-17, 1, -7.547841e-19, 0.021273974, -7.4783745e-19, 0.9997736, -162.76392, 172.15652, 32.106026)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D459" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.9997736, -7.060888e-17, -0.021273974, 7.06088e-17, 1, -7.5499587e-19, 0.021273974, -7.4762404e-19, 0.9997736, -162.76685, 170.45056, 32.09606)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D208" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401828e-15, -0.9988865, 3.31073e-15, 1, -3.3000452e-15, 0.9988865, -3.4627272e-15, -0.047176268, -134.80127, 15.500542, 45.9647)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D209" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401828e-15, -0.9988865, 3.31073e-15, 1, -3.3000452e-15, 0.9988865, -3.4627272e-15, -0.047176268, -136.4884, 15.523529, 46.05851)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D210" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401828e-15, -0.9988865, 3.31073e-15, 1, -3.3000452e-15, 0.9988865, -3.4627272e-15, -0.047176268, -135.66443, 16.36393, 46.00598)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D211" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.3107297e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -135.64185, 14.657974, 46.004456)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D212" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401828e-15, -0.9988865, 3.31073e-15, 1, -3.3000452e-15, 0.9988865, -3.4627272e-15, -0.047176268, -122.66199, 15.500542, 45.216003)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D213" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401828e-15, -0.9988865, 3.31073e-15, 1, -3.3000452e-15, 0.9988865, -3.4627272e-15, -0.047176268, -124.35034, 15.523529, 45.309753)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D214" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.3107297e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -123.52539, 16.36393, 45.257248)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D215" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.3107297e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -123.502686, 14.657974, 45.25585)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D216" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401828e-15, -0.9988865, 3.31073e-15, 1, -3.3000452e-15, 0.9988865, -3.4627272e-15, -0.047176268, -146.14941, 15.500542, 46.664413)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D217" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401828e-15, -0.9988865, 3.31073e-15, 1, -3.3000452e-15, 0.9988865, -3.4627272e-15, -0.047176268, -147.8357, 15.523529, 46.75821)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D218" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.3107297e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -146.99878, 16.36393, 46.704803)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D219" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.3107297e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -146.98901, 14.657974, 46.7043)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D220" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401828e-15, -0.9988865, 3.3107312e-15, 1, -3.3000454e-15, 0.9988865, -3.4627285e-15, -0.04717626, -134.25879, 42.174675, 45.955788)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D221" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401828e-15, -0.9988865, 3.3107312e-15, 1, -3.3000454e-15, 0.9988865, -3.4627285e-15, -0.04717626, -135.94604, 42.197662, 46.049736)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D222" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -135.12207, 43.038063, 45.997627)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D223" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -135.09863, 41.332108, 45.995842)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D224" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -122.94287, 42.16188, 45.281868)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D225" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -124.62976, 42.184868, 45.37491)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D226" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -123.80652, 43.02527, 45.323112)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D227" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -123.78284, 41.319313, 45.32148)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D228" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -146.42468, 42.165466, 46.716537)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D229" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -148.11157, 42.161385, 46.81021)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D230" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -147.27454, 43.001785, 46.756813)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D231" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -147.2644, 41.29583, 46.756218)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D232" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -134.25879, 67.96952, 45.955147)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D233" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -135.94604, 67.9925, 46.049736)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D234" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -135.12183, 68.83291, 45.998245)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D235" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -135.09863, 67.12696, 45.995842)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D236" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -122.94263, 67.95673, 45.281845)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D237" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -124.62976, 67.97971, 45.374283)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D238" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -123.806274, 68.82011, 45.323143)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D239" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -123.78284, 67.11416, 45.32148)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D240" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -146.42468, 67.960304, 46.716537)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D241" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -148.11194, 67.95623, 46.809624)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D242" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -147.27454, 68.79664, 46.756813)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D243" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -147.26465, 67.090675, 46.75564)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D244" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -134.25854, 93.824715, 45.954742)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D245" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -135.94604, 93.847694, 46.049736)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D246" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -135.12146, 94.6881, 45.99874)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D247" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -135.09851, 92.982155, 45.995834)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D248" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -122.94263, 93.81193, 45.281845)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D249" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -124.630005, 93.83491, 45.373856)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D250" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -123.806274, 94.6753, 45.323143)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D251" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -123.78259, 92.96935, 45.32148)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D252" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -146.42468, 93.8155, 46.716537)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D253" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -148.1117, 93.811424, 46.809128)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D254" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -147.27454, 94.65183, 46.756813)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D255" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -147.26465, 92.94587, 46.75508)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D256" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -134.25842, 119.66976, 45.953987)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D257" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -135.94592, 119.69274, 46.04976)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D258" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -135.12183, 120.53315, 45.999496)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D259" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -135.09851, 118.8272, 45.995804)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D260" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -122.94263, 119.656975, 45.281845)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D261" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -124.62988, 119.679955, 45.373093)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D262" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -123.806274, 120.52035, 45.323143)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D263" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -123.78259, 118.8144, 45.32148)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D264" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -146.42468, 119.660545, 46.716537)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D265" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -148.11157, 119.65647, 46.80842)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D266" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -147.27454, 120.49688, 46.756813)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D267" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -147.26453, 118.79092, 46.75434)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D268" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401832e-15, -0.9988865, 3.310731e-15, 1, -3.3000459e-15, 0.9988865, -3.4627285e-15, -0.04717626, -134.25891, 145.48694, 45.953514)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D269" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -135.94592, 145.50992, 46.04976)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D270" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -135.1217, 146.35031, 45.999954)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D271" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -135.09851, 144.64438, 45.995804)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D272" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -122.94263, 145.47415, 45.28186)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D273" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -124.62964, 145.49713, 45.372597)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D274" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -123.806274, 146.33752, 45.323143)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D275" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -123.78259, 144.63156, 45.32148)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D276" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -146.42468, 145.47772, 46.716537)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D277" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -148.1117, 145.47363, 46.807953)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D278" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -147.27454, 146.31406, 46.756813)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D279" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -147.2644, 144.6081, 46.753906)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D280" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -134.25879, 171.39215, 45.952927)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D281" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -135.94592, 171.41513, 46.04976)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D282" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -135.12158, 172.25552, 46.000435)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D283" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -135.09851, 170.54959, 45.995804)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D284" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -122.94263, 171.37936, 45.28186)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D285" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -124.62952, 171.40234, 45.37216)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D286" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -123.806274, 172.24274, 45.323143)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D287" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -123.78259, 170.53677, 45.321465)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D288" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -146.42468, 171.38293, 46.716537)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D289" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401839e-15, -0.9988865, 3.3107308e-15, 1, -3.3000465e-15, 0.9988865, -3.4627283e-15, -0.04717626, -148.11157, 171.37885, 46.80741)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D290" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -147.27454, 172.21927, 46.756813)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D291" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.04717626, -3.1401836e-15, -0.9988865, 3.3107306e-15, 1, -3.3000463e-15, 0.9988865, -3.462728e-15, -0.04717626, -147.26453, 170.5133, 46.75341)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D292" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.140183e-15, -0.9988865, 3.3107289e-15, 1, -3.3000454e-15, 0.9988865, -3.4627264e-15, -0.047176268, -137.29822, 15.500542, -7.012207)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D293" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.140183e-15, -0.9988865, 3.3107289e-15, 1, -3.3000454e-15, 0.9988865, -3.4627264e-15, -0.047176268, -138.98572, 15.523529, -6.9184036)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D294" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.140183e-15, -0.9988865, 3.3107289e-15, 1, -3.3000454e-15, 0.9988865, -3.4627264e-15, -0.047176268, -138.16138, 16.36393, -6.9709473)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D295" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401834e-15, -0.9988865, 3.3107286e-15, 1, -3.3000459e-15, 0.9988865, -3.4627264e-15, -0.047176268, -138.13904, 14.657974, -6.9724655)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D296" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107267e-15, 1, -3.300046e-15, 0.9988865, -3.462724e-15, -0.047176268, -125.97058, 15.500412, -7.5799484)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D297" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107267e-15, 1, -3.300046e-15, 0.9988865, -3.462724e-15, -0.047176268, -127.65869, 15.523399, -7.486191)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D298" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107265e-15, 1, -3.300046e-15, 0.9988865, -3.462724e-15, -0.047176268, -126.83435, 16.3638, -7.538643)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D299" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107265e-15, 1, -3.300046e-15, 0.9988865, -3.462724e-15, -0.047176268, -126.81067, 14.657845, -7.5400467)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D300" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.140183e-15, -0.9988865, 3.3107286e-15, 1, -3.3000454e-15, 0.9988865, -3.462726e-15, -0.047176268, -149.46204, 15.500542, -6.2668915)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D301" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.140183e-15, -0.9988865, 3.3107286e-15, 1, -3.3000454e-15, 0.9988865, -3.462726e-15, -0.047176268, -151.14905, 15.523529, -6.173073)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D302" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401834e-15, -0.9988865, 3.3107284e-15, 1, -3.3000459e-15, 0.9988865, -3.462726e-15, -0.047176268, -150.31213, 16.36393, -6.2264786)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D303" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401834e-15, -0.9988865, 3.3107284e-15, 1, -3.3000459e-15, 0.9988865, -3.462726e-15, -0.047176268, -150.30237, 14.657974, -6.227028)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D304" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401828e-15, -0.9988865, 3.3107301e-15, 1, -3.3000452e-15, 0.9988865, -3.4627277e-15, -0.047176268, -136.75574, 42.174675, -7.0211105)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D305" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401828e-15, -0.9988865, 3.3107301e-15, 1, -3.3000452e-15, 0.9988865, -3.4627277e-15, -0.047176268, -138.44373, 42.197662, -6.927162)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D306" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -137.61902, 43.038063, -6.979286)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D307" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -137.59595, 41.332108, -6.981064)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D308" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -125.43982, 42.16188, -7.6950455)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D309" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -127.12695, 42.184868, -7.6020126)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D310" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.303345, 43.02527, -7.653801)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D311" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.28027, 41.319313, -7.655426)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D312" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -148.922, 42.165466, -6.2603607)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D313" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -150.60876, 42.161385, -6.16671)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D314" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.77173, 43.001785, -6.2201004)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D315" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.7616, 41.29583, -6.220688)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D316" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -136.75623, 67.96952, -7.021744)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D317" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -138.44373, 67.9925, -6.927162)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D318" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -137.61902, 68.83291, -6.978653)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D319" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -137.59595, 67.12696, -6.981064)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D320" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -125.439575, 67.95673, -7.6950607)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D321" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -127.12659, 67.97971, -7.6026306)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D322" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.3031, 68.82011, -7.6537704)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D323" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.28027, 67.11416, -7.655426)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D324" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -148.922, 67.960304, -6.2603607)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D325" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -150.60913, 67.95623, -6.1672745)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D326" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.77173, 68.79664, -6.2201004)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D327" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.76184, 67.090675, -6.22126)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D328" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -136.75598, 93.824715, -7.022148)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D329" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -138.44373, 93.847694, -6.927162)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D330" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -137.6189, 94.6881, -6.978157)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D331" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -137.59583, 92.982155, -6.9810944)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D332" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -125.439575, 93.81193, -7.6950607)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D333" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -127.12695, 93.83491, -7.6030807)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D334" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.3031, 94.6753, -7.6537704)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D335" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.28003, 92.96935, -7.655426)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D336" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -148.922, 93.8155, -6.2603607)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D337" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -150.60864, 93.811424, -6.1678085)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D338" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.77173, 94.65183, -6.2201004)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D339" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.76172, 92.94587, -6.2218246)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D340" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -136.75537, 119.66976, -7.0229187)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D341" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -138.44348, 119.69274, -6.927147)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D342" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -137.61877, 120.53315, -6.977417)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D343" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -137.59583, 118.8272, -6.981125)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D344" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -125.439575, 119.656975, -7.6950607)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D345" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -127.12732, 119.679955, -7.6038055)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D346" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.3031, 120.52035, -7.6537704)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D347" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.28003, 118.8144, -7.655426)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D348" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -148.922, 119.660545, -6.2603607)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D349" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -150.60876, 119.65647, -6.168503)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D350" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.77173, 120.49688, -6.2201004)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D351" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.76172, 118.79092, -6.2225876)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D352" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401832e-15, -0.9988865, 3.31073e-15, 1, -3.3000457e-15, 0.9988865, -3.4627272e-15, -0.047176268, -136.75586, 145.48694, -7.0234146)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D353" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -138.44348, 145.50992, -6.927147)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D354" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -137.61877, 146.35031, -6.9769745)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D355" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -137.59583, 144.64438, -6.981125)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D356" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -125.439575, 145.47415, -7.6950455)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D357" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -127.12683, 145.49713, -7.604294)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D493" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401839e-15, -0.9988865, 3.310728e-15, 1, -3.300046e-15, 0.9988865, -3.4627253e-15, -0.047176268, -137.27649, 169.07031, 19.545395)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 3.835
+light_size = 0.235
+omni_range = 60.35065
+
+[node name="OmniLight3D494" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107272e-15, 1, -3.300046e-15, 0.9988865, -3.4627245e-15, -0.047176268, -137.27649, 21.283508, 19.545334)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 3.835
+light_size = 0.235
+omni_range = 60.35065
+
+[node name="OmniLight3D358" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.3031, 146.33752, -7.6537704)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D359" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.28003, 144.63156, -7.655426)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D360" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -148.922, 145.47772, -6.2603607)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D361" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -150.60889, 145.47363, -6.1689453)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D362" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.77173, 146.31406, -6.2201004)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D363" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.7616, 144.6081, -6.223015)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D364" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107289e-15, 1, -3.300046e-15, 0.9988865, -3.4627264e-15, -0.047176268, -137.65552, 171.30786, -6.9737854)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D365" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107289e-15, 1, -3.300046e-15, 0.9988865, -3.4627264e-15, -0.047176268, -139.34314, 171.33084, -6.8768845)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D366" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401839e-15, -0.9988865, 3.3107286e-15, 1, -3.3000463e-15, 0.9988865, -3.4627262e-15, -0.047176268, -138.51794, 172.17123, -6.9262543)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D367" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401839e-15, -0.9988865, 3.3107286e-15, 1, -3.3000463e-15, 0.9988865, -3.4627262e-15, -0.047176268, -138.49512, 170.4653, -6.930908)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D368" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -125.439575, 171.37936, -7.6950455)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D369" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -127.126465, 171.40234, -7.6047363)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D370" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.3031, 172.24274, -7.6537704)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D371" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -126.28003, 170.53677, -7.6554565)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D372" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -148.922, 171.38293, -6.2603607)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D373" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107297e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -150.60876, 171.37885, -6.1695023)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D374" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.77173, 172.21927, -6.2201004)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D375" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107295e-15, 1, -3.300046e-15, 0.9988865, -3.4627272e-15, -0.047176268, -149.76172, 170.5133, -6.2235107)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D460" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107272e-15, 1, -3.300046e-15, 0.9988865, -3.4627245e-15, -0.047176268, -139.70825, 174.83212, 18.787605)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D461" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107267e-15, 1, -3.300046e-15, 0.9988865, -3.462724e-15, -0.047176268, -139.42932, 174.83212, 21.194008)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D462" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107255e-15, 1, -3.3000459e-15, 0.9988865, -3.4627228e-15, -0.047176268, -137.557, 174.83212, 22.387154)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D463" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401839e-15, -0.9988865, 3.3107242e-15, 1, -3.300046e-15, 0.9988865, -3.4627215e-15, -0.047176268, -135.29395, 174.83212, 22.043877)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D464" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107236e-15, 1, -3.3000459e-15, 0.9988865, -3.462721e-15, -0.047176268, -133.9491, 174.83212, 20.23214)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D465" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107231e-15, 1, -3.3000459e-15, 0.9988865, -3.4627207e-15, -0.047176268, -134.30151, 174.83212, 17.970093)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D466" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107223e-15, 1, -3.3000459e-15, 0.9988865, -3.4627198e-15, -0.047176268, -136.11035, 174.83212, 16.61287)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D467" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107214e-15, 1, -3.3000457e-15, 0.9988865, -3.462719e-15, -0.047176268, -138.36548, 174.83212, 16.964355)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D468" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107198e-15, 1, -3.3000457e-15, 0.9988865, -3.4627173e-15, -0.047176268, -138.58643, 173.1979, 18.021835)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D469" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.310718e-15, 1, -3.3000457e-15, 0.9988865, -3.4627156e-15, -0.047176268, -139.11206, 173.1979, 19.664986)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D470" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401839e-15, -0.9988865, 3.310717e-15, 1, -3.3000457e-15, 0.9988865, -3.4627143e-15, -0.047176268, -138.35437, 173.1979, 21.197227)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D471" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401839e-15, -0.9988865, 3.3107162e-15, 1, -3.3000457e-15, 0.9988865, -3.4627135e-15, -0.047176268, -136.72498, 173.1979, 21.829376)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D472" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107155e-15, 1, -3.3000454e-15, 0.9988865, -3.462713e-15, -0.047176268, -135.15564, 173.1979, 21.002747)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D473" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401836e-15, -0.9988865, 3.3107142e-15, 1, -3.3000454e-15, 0.9988865, -3.4627118e-15, -0.047176268, -134.58167, 173.1979, 19.368813)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D474" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401839e-15, -0.9988865, 3.3107134e-15, 1, -3.3000454e-15, 0.9988865, -3.462711e-15, -0.047176268, -135.34521, 173.1979, 17.8219)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D475" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.047176268, -3.1401839e-15, -0.9988865, 3.3107126e-15, 1, -3.3000454e-15, 0.9988865, -3.46271e-15, -0.047176268, -136.99878, 173.1979, 17.250824)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D476" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.007668699, 0.9995468, -0.029109186, -0.96549594, 0.00017652893, 0.2604177, -134.17542, 12.023651, 20.688042)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D477" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.0076686977, 0.9995468, -0.029109187, -0.96549594, 0.0001765308, 0.2604177, -134.12634, 11.969368, 18.431183)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D478" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.007668698, 0.9995468, -0.029109186, -0.96549594, 0.00017652987, 0.2604177, -135.6549, 12.050537, 16.792068)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D479" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.0076686977, 0.9995468, -0.029109187, -0.96549594, 0.0001765308, 0.2604177, -137.93579, 12.01284, 16.713081)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D480" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.0076686973, 0.9995468, -0.029109187, -0.96549594, 0.0001765308, 0.2604177, -139.61511, 12.06382, 18.26979)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D481" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.007668698, 0.9995468, -0.029109186, -0.96549594, 0.00017652987, 0.2604177, -139.71704, 12.067665, 20.510193)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D482" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.007668697, 0.9995468, -0.029109187, -0.96549594, 0.00017653173, 0.26041767, -138.11682, 12.022949, 22.201912)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D483" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.0076686987, 0.9995468, -0.029109186, -0.96549594, 0.00017652987, 0.2604177, -135.8324, 12.023804, 22.296059)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D484" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.965057, -0.0076686963, 0.9995468, -0.029109187, -0.96549594, 0.00017653266, 0.26041773, -135.49841, 10.307724, 21.359657)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D485" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.0076687, 0.9995468, -0.029109186, -0.96549594, 0.000176528, 0.2604177, -134.62231, 13.639305, 19.406425)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D486" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.0076687015, 0.9995468, -0.029109186, -0.96549594, 0.00017652707, 0.2604177, -135.23083, 13.639305, 21.000175)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D487" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.007668704, 0.9995468, -0.029109184, -0.96549594, 0.00017652428, 0.2604177, -136.7594, 13.639305, 21.759583)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D488" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.0076687066, 0.9995468, -0.029109184, -0.96549594, 0.00017652148, 0.2604177, -138.39063, 13.639305, 21.1781)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D489" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101867, 0.9650571, -0.0076687085, 0.9995468, -0.029109184, -0.96549594, 0.00017651962, 0.2604177, -139.13269, 13.639305, 19.621315)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D490" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101864, 0.9650571, -0.0076687112, 0.9995468, -0.02910918, -0.96549594, 0.0001765159, 0.2604177, -138.57068, 13.639305, 17.997833)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D491" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.030101856, 0.9650571, -0.007668713, 0.9995468, -0.029109173, -0.96549594, 0.0001765124, 0.2604177, -136.97034, 13.639305, 17.222427)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="OmniLight3D492" type="OmniLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.2603048, 0.03010184, 0.9650571, -0.0076687173, 0.9995468, -0.029109154, -0.96549594, 0.00017650262, 0.2604177, -135.35303, 13.639305, 17.847229)
+light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
+light_energy = 1.89
+light_size = 0.235
+omni_range = 9.693588
+
+[node name="SpotLight3D" type="SpotLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(-0.05582147, 0.99414146, 0.09255625, -3.3139033e-15, 0.0927008, -0.99569404, -0.9984407, -0.055581108, -0.005174695, -135.56128, -5.838974, 43.05767)
+light_color = Color(0.430926, 0.002087912, 0.94670445, 1)
+light_energy = 16.0
+spot_range = 24.738485
+spot_angle = 42.342976
+spot_angle_attenuation = 0.0028595466
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.055749744, 0.9938793, 0.09537218, -0.050662696, -0.0925818, 0.9944154, 0.9971585, -0.06027022, 0.04519119, -138.62134, 211.3948, 15.361832)
+light_color = Color(0.430926, 0.002087912, 0.94670445, 1)
+light_energy = 19.005
+spot_range = 50.63279
+spot_angle = 54.506752
+spot_angle_attenuation = 0.008373241
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="chainsRoom/ChainsRoomLights"]
+transform = Transform3D(0.055749726, 0.9938793, 0.09537218, -0.050662715, -0.0925818, 0.9944154, 0.9971585, -0.0602702, 0.04519121, -120.13501, 212.67517, 35.926613)
+light_color = Color(0.430926, 0.002087912, 0.94670445, 1)
+light_energy = 19.005
+spot_range = 52.51582
+spot_angle = 54.506752
+spot_angle_attenuation = 0.008373241
