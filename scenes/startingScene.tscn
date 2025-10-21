@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ul4ca6hsjsod" path="res://scenes/collectible_key.tscn" id="15_b3rqr"]
 [ext_resource type="PackedScene" uid="uid://basqshsn2sh0c" path="res://models/key3.blend" id="15_bl1yo"]
 [ext_resource type="PackedScene" uid="uid://svxys31tiwyu" path="res://models/rooms/final(probably)entrance.blend" id="15_drejw"]
-[ext_resource type="Script" path="res://scripts/game_ui.gd" id="16_drejw"]
+[ext_resource type="Script" uid="uid://dlbu3t0bx25jo" path="res://scripts/game_ui.gd" id="16_drejw"]
 [ext_resource type="Resource" uid="uid://b0fpogay87ko3" path="res://resources/First.tres" id="17_d1305"]
 [ext_resource type="PackedScene" uid="uid://bbxrg5h5sy518" path="res://models/rooms/infinit corridor.blend" id="17_h53cn"]
 [ext_resource type="PackedScene" uid="uid://dmo3lxmuk25k2" path="res://models/rooms/noFloorRoom.blend" id="18_52452"]
@@ -1588,6 +1588,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4310913, -3.6408691, -3.350
 shape = SubResource("BoxShape3D_oom5t")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="3rdKeyRoom"]
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1001892, -2.7529411, 7.1970825)
@@ -1604,6 +1605,39 @@ operation = 2
 size = Vector3(19.075378, 9.933273, 11.114166)
 
 [node name="PortalCutOut" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2468262, 8.49533, 23.430481)
+operation = 2
+size = Vector3(1.6548462, 2.4630127, 1.7924194)
+
+[node name="PortalCutOut4" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2468262, 0.89275575, 23.430481)
+operation = 2
+size = Vector3(1.6548462, 2.4630127, 1.7924194)
+
+[node name="PortalCutOut6" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2468262, 0.89275575, 11.431824)
+operation = 2
+size = Vector3(1.6548462, 2.4630127, 1.7924194)
+
+[node name="PortalCutOut7" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2468262, -2.7355747, -8.543518)
+operation = 2
+size = Vector3(1.6548462, 2.4630127, 1.7924194)
+
+[node name="PortalCutOut2" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
+transform = Transform3D(-4.3711392e-08, 1.0000001, 0, -1.0000001, -4.3711392e-08, 0, 0, 0, 1, -5.5191193, 4.516278, 11.497864)
+operation = 2
+size = Vector3(1.6548462, 2.4630127, 1.7924194)
+
+[node name="PortalCutOut5" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
+transform = Transform3D(-4.3711392e-08, 1.0000001, 0, -1.0000001, -4.3711392e-08, 0, 0, 0, 1, -5.2305984, 4.7389264, -8.621277)
+operation = 2
+size = Vector3(1.6548462, 2.4630127, 1.7924194)
+
+[node name="PortalCutOut3" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
+transform = Transform3D(-4.3711392e-08, 1.0000001, 0, -1.0000001, -4.3711392e-08, 0, 0, 0, 1, -5.5191193, 4.516278, 23.430481)
+operation = 2
+size = Vector3(1.6548462, 2.4630127, 1.7924194)
 
 [node name="final(probably)entrance" parent="." instance=ExtResource("15_drejw")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 1.471, 3.955, 1064.629)
