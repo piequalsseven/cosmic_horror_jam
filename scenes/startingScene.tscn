@@ -1577,18 +1577,6 @@ key = ExtResource("20_s5m1i")
 [node name="key3" parent="3rdKeyRoom/CollectibleKey3" instance=ExtResource("15_bl1yo")]
 transform = Transform3D(-2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, 0, 0, 0, 0.05, 0, 0.101317644, 0)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="3rdKeyRoom"]
-transform = Transform3D(1, 0, 0, 0, 0.7835199, 0.6213666, 0, -0.6213666, 0.7835199, 3.406189, -2.38802, 8.771118)
-visible = false
-use_collision = true
-size = Vector3(20.137817, 1, 6.3488884)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="3rdKeyRoom"]
-transform = Transform3D(1, 0, 0, 0, 0.7835199, 0.6213666, 0, -0.6213666, 0.7835199, 3.406189, 0.49040353, 8.21344)
-visible = false
-use_collision = true
-size = Vector3(20.137817, 1, 7.7724667)
-
 [node name="TiltedArea" type="Area3D" parent="3rdKeyRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0142593, 0, 11.101379)
 gravity_space_override = 3
@@ -1598,6 +1586,24 @@ metadata/_custom_type_script = "uid://brdm6ajo3tm5u"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="3rdKeyRoom/TiltedArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4310913, -3.6408691, -3.3503418)
 shape = SubResource("BoxShape3D_oom5t")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="3rdKeyRoom"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1001892, -2.7529411, 7.1970825)
+size = Vector3(34.819275, 28.715706, 36.053253)
+
+[node name="Negativ" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2828064, 2.8570404, 1.361084)
+operation = 2
+size = Vector3(19.075378, 13.628265, 19.256348)
+
+[node name="Negativ2" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2828064, 4.7045364, 17.243896)
+operation = 2
+size = Vector3(19.075378, 9.933273, 11.114166)
+
+[node name="PortalCutOut" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
 
 [node name="final(probably)entrance" parent="." instance=ExtResource("15_drejw")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 1.471, 3.955, 1064.629)
