@@ -68,3 +68,7 @@ open_door={
 [layer_names]
 
 3d_physics/layer_4="Doors"
+
+[rendering]
+
+limits/cluster_builder/max_clustered_elements=2010.0
