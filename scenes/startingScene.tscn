@@ -7561,9 +7561,6 @@ visible = false
 use_collision = true
 size = Vector3(48.797276, 0.99658203, 42.22212)
 
-[node name="SecondIslandEntrance" parent="endingSection/CSGBox3D6" instance=ExtResource("7_tpkjk")]
-transform = Transform3D(0.18382718, 0.029549748, -0.75745296, -0.008876443, 0.7794274, 0.028252661, 0.7579771, 0.001961261, 0.18403101, 18.489227, 1.644043, 0.09429932)
-
 [node name="CSGBox3D21" type="CSGBox3D" parent="endingSection"]
 transform = Transform3D(-0.7593684, -0.6033762, 0.24352668, 0.53208965, -0.36044455, 0.7661352, -0.37448472, 0.7113669, 0.5947526, 50.457397, 64.01282, -20.611328)
 visible = false
@@ -7726,6 +7723,9 @@ exit_portal = NodePath("../thirdIslandEntrance")
 
 [node name="StartEndingSectionPortal" parent="endingSection" instance=ExtResource("7_tpkjk")]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.1642456, 1.2298279, -4.1690674)
+
+[node name="StartSecondIsland" parent="endingSection" instance=ExtResource("7_tpkjk")]
+transform = Transform3D(0.13028121, -0.52889776, 0.83862615, 0.8740062, -0.3380956, -0.3490048, 0.4681237, 0.7784333, 0.41821244, 29.30603, 61.05359, -39.85376)
 
 [node name="endingSectionLights" type="Node3D" parent="endingSection"]
 
@@ -8627,7 +8627,7 @@ omni_range = 9.693588
 
 [node name="firstIslandExit" parent="endingSection" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(-0.78, 0, -1.1777672e-07, 0, 0.78, 0, 1.1777672e-07, 0, -0.78, 0.14953613, 5.2641907, 6.364624)
-exit_portal = NodePath("../CSGBox3D6/SecondIslandEntrance")
+exit_portal = NodePath("../StartSecondIsland")
 
 [node name="thirdIslandExteriorExit" parent="endingSection" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(0.6378777, -0.4467143, -0.044253103, 0.3405521, 0.5316565, -0.4580017, 0.29246587, 0.35522893, 0.62982225, 5.352539, 78.36447, 26.083862)
