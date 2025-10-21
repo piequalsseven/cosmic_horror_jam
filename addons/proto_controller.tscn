@@ -45,7 +45,7 @@ script = ExtResource("2_hjrt5")
 metadata/teleportable_root = NodePath("..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -0.18168437)
 shape = SubResource("SphereShape3D_mfgp6")
 
 [node name="StepsPlayer" type="AudioStreamPlayer3D" parent="."]

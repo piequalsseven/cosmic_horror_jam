@@ -56,3 +56,9 @@ script = ExtResource("2_p3bba")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="Teleport"]
 shape = SubResource("BoxShape3D_7ddre")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014541626, 0.00038146973, 0)
+visible = false
+operation = 2
+size = Vector3(2.1386414, 2.5888367, 1)

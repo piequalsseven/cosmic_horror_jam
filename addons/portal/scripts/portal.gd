@@ -108,16 +108,6 @@ func _ready() -> void:
 
 	get_viewport().connect("size_changed", _handle_resize)
 	
-	###custom###
-	RoomManager.KeyChanged.connect(set_exit_portal_matching_key)
-	
-func set_exit_portal_matching_key(key : RoomManager.KEYS) -> void:
-	print('not implemented yet')
-	pass
-	#if !possible_exit_portals or possible_exit_portals.size() <= key as int:
-		#return
-	#exit_portal = possible_exit_portals[key as int]
-	
 func _handle_resize() -> void:
 	_seconds_until_resize = _RESIZE_THROTTLE_SECONDS
 
