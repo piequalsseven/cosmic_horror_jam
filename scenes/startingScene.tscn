@@ -3081,6 +3081,65 @@ connections = {
 2: null
 }
 
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="noFloorRoom"]
+visible = false
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="noFloorRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3997955, 7.932953, -0.68499756)
+visible = false
+size = Vector3(76.62656, 42.218323, 55.16516)
+
+[node name="negativ" type="CSGBox3D" parent="noFloorRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0125427, 10.562225, -1.8049316)
+operation = 2
+size = Vector3(46.6651, 22.12445, 47.521133)
+
+[node name="PortalCutout" type="CSGBox3D" parent="noFloorRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.94540405, 1.0860119, -26.059875)
+operation = 2
+size = Vector3(2.1503906, 2.4404297, 1.5087891)
+
+[node name="PortalCutout7" type="CSGBox3D" parent="noFloorRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.94540405, 20.562366, -26.059875)
+operation = 2
+size = Vector3(2.1503906, 2.3526611, 1.5087891)
+
+[node name="PortalCutout2" type="CSGBox3D" parent="noFloorRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.94540405, 1.0860119, 21.844788)
+operation = 2
+size = Vector3(2.1503906, 2.4404297, 1.5087891)
+
+[node name="PortalCutout3" type="CSGBox3D" parent="noFloorRoom/CSGCombiner3D"]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, 28.468216, 12.615913, 20.70282)
+operation = 2
+size = Vector3(2.1503906, 2.4448242, 1.769165)
+
+[node name="PortalCutout4" type="CSGBox3D" parent="noFloorRoom/CSGCombiner3D"]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -18.40525, 12.615913, 20.70282)
+operation = 2
+size = Vector3(2.1503906, 2.4448242, 1.769165)
+
+[node name="PortalCutout5" type="CSGBox3D" parent="noFloorRoom/CSGCombiner3D"]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -19.003975, 12.615913, -24.565857)
+operation = 2
+size = Vector3(2.1503906, 2.7242432, 2.9666138)
+
+[node name="PortalCutout6" type="CSGBox3D" parent="noFloorRoom/CSGCombiner3D"]
+transform = Transform3D(-4.3695742e-08, 0.9996421, 0.026752736, -1, -4.371139e-08, 0, 1.1693992e-09, -0.026752736, 0.9996421, -0.9077759, 20.198277, 22.130249)
+operation = 2
+size = Vector3(2.794464, 1.5098419, 2.142044)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="noFloorRoom/CSGCombiner3D"]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 22.091782, 1.5402145, -0.94610596)
+polygon = PackedVector2Array(-13.978897, 41.8219, 20.853088, 42.128662, 12.125778, -3.1435547, 4.7622986, -5.819458, 6.269989, -14.129517, 1.8878021, -18.820557, 3.0029755, -21.083496, 4.835144, -19.363525, 7.9889374, -22.040161, 4.491226, -34.607544, -1.2548218, -40.141235, -12.619675, -38.979492, -21.501343, -36.10681, -26.320908, -39.226196, -35.738007, -40.484985, -39.78006, -33.25708, -46.019302, -32.33069, -51.402985, -37.60681, -61.153885, -39.125244, -63.87616, -43.667847, -76.631714, -43.50769, -78.466446, -0.96606445, -74.21388, 50.81775, -64.78528, 44.426758, -55.2993, 45.571533, -40.76909, 37.611816, -29.384018, 43.986084, -22.158997, 39.4187)
+depth = 3.0
+
+[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="noFloorRoom/CSGCombiner3D"]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, 0.5, 0, -0.5, -2.1855694e-08, 17.233482, 21.328058, -1.4014893)
+polygon = PackedVector2Array(12.42717, 53.28882, 20.853088, 42.128662, 17.286606, 3.1815186, 15.045898, -4.793335, 16.476135, -7.9207764, 17.862076, -14.702515, 18.526855, -19.641846, 19.877716, -27.661743, 21.047653, -47.264282, 6.204132, -47.812622, 3.9127655, -42.612305, -12.619675, -38.979492, -20.319473, -36.940918, -24.87149, -41.437256, -35.738007, -40.484985, -39.53424, -37.125122, -43.47, -37.6073, -50.396988, -40.207275, -62.16411, -40.182617, -65.16466, -29.561035, -62.956604, -3.4022217, -71.651215, 0.08666992, -79.517624, 41.98108, -69.71202, 42.105225, -57.07364, 42.22168, -31.720825, 40.391357, -17.634079, 37.320557, 9.376862, 40.984985)
+depth = 3.0
+
 [node name="bridgesRoom" parent="." instance=ExtResource("19_w8mes")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -142.83571, -13.860473, 1542.245)
 
