@@ -441,7 +441,8 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 9.736088, 0, 14.150794)
 visible = false
 
 [node name="ProtoController" parent="." instance=ExtResource("5_ltmdr")]
-transform = Transform3D(-1.4990193, 0, -0.054233044, 0, 1.5, 0, 0.054233044, 0, -1.4990193, 2.2493744, 0, -27.447067)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.2493744, 0, -27.447067)
+rotation_edit_mode = 2
 wall_min_slide_angle = 0.0
 floor_block_on_wall = false
 has_gravity = false
@@ -4615,32 +4616,136 @@ light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
 
+[node name="Collisions" type="CSGCombiner3D" parent="LRoom"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="LRoom/Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6320038, 5.0553284, -5.8919067)
+size = Vector3(25.056091, 12.22699, 23.570587)
+
+[node name="Negativ" type="CSGBox3D" parent="LRoom/Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2102509, 4.678299, -4.6968384)
+operation = 2
+size = Vector3(11.117996, 10.356598, 19.67987)
+
+[node name="Negativ2" type="CSGBox3D" parent="LRoom/Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.188126, 4.678299, -9.765259)
+operation = 2
+size = Vector3(11.117996, 10.356598, 9.634817)
+
+[node name="PortalCutOut" type="CSGBox3D" parent="LRoom/Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2473907, 0.9424591, 5.1192627)
+operation = 2
+size = Vector3(1.460846, 1.7487488, 1)
+
+[node name="PortalCutOut2" type="CSGBox3D" parent="LRoom/Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1370392, 0.9424591, -14.392639)
+operation = 2
+size = Vector3(1.460846, 1.7487488, 1)
+
+[node name="PortalCutOut7" type="CSGBox3D" parent="LRoom/Collisions"]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -3.4636688, 5.4768066, -14.53772)
+operation = 2
+size = Vector3(1.460846, 1.7487488, 1)
+
+[node name="PortalCutOut8" type="CSGBox3D" parent="LRoom/Collisions"]
+transform = Transform3D(-4.371139e-08, 1, 0, 4.371139e-08, 1.9106855e-15, -1, -1, -4.371139e-08, -4.371139e-08, -3.4636688, 9.641781, -12.639343)
+operation = 2
+size = Vector3(1.460846, 1.7487488, 1)
+
+[node name="PortalCutOut3" type="CSGBox3D" parent="LRoom/Collisions"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.568802, 0.9424591, -10.777222)
+operation = 2
+size = Vector3(1.460846, 1.7487488, 1)
+
+[node name="PortalCutOut4" type="CSGBox3D" parent="LRoom/Collisions"]
+transform = Transform3D(-4.371139e-08, 0, -1, 1, -4.371139e-08, -4.371139e-08, -4.371139e-08, -1, 1.9106855e-15, 14.760422, 4.8543587, -6.0198364)
+operation = 2
+size = Vector3(1.460846, 1.9301605, 1)
+
+[node name="PortalCutOut5" type="CSGBox3D" parent="LRoom/Collisions"]
+transform = Transform3D(-1, 8.742278e-08, 4.3711385e-08, -8.742278e-08, -1, 4.3711395e-08, 4.3711392e-08, 4.371139e-08, 1, 9.055649, 8.92281, -14.407043)
+operation = 2
+size = Vector3(1.460846, 1.9301605, 1)
+
+[node name="PortalCutOut6" type="CSGBox3D" parent="LRoom/Collisions"]
+transform = Transform3D(-1, 8.742278e-08, 4.3711385e-08, -8.742278e-08, -1, 4.3711395e-08, 4.3711392e-08, 4.371139e-08, 1, 1.1699677, 8.911268, 5.065857)
+operation = 2
+size = Vector3(1.460846, 1.9301605, 1)
+
 [node name="triangleRoom" parent="." instance=ExtResource("21_m43nb")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -114.629234, 51.41736, 1890.8477)
 
 [node name="Portal7" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-4.3711385e-08, -0.9999999, -4.371139e-08, 0, -4.3711385e-08, 1, -0.9999999, 4.3711385e-08, 1.9106855e-15, 8.369999, -1.2143974, 0.38000488)
+transform = Transform3D(-4.3711385e-08, -0.9999999, -4.371139e-08, 0, -4.3711385e-08, 1, -0.9999999, 4.3711385e-08, 1.9106855e-15, 8.583649, -1.2143974, 0.4416504)
 exit_portal = NodePath("../../LRoom/Portal2")
 
+[node name="PortalDoor" parent="triangleRoom/Portal7" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+portal_connections = [NodePath("../../../LRoom/Portal2"), NodePath("../../../LRoom/Portal2"), NodePath("../../../LRoom/Portal2")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
 [node name="Portal8" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-4.3711385e-08, -0.99999994, 4.371139e-08, 0, -4.3711385e-08, -1, 0.99999994, -4.3711385e-08, 1.9106855e-15, 8.370487, 8.8, 0.39154053)
+transform = Transform3D(1.3113414e-07, -0.9999999, 3.821371e-15, 4.3711385e-08, 1.9106853e-15, -1, 0.9999999, 1.3113414e-07, 4.371139e-08, 8.583649, 8.799999, 0.45318604)
 exit_portal = NodePath("../../chainsRoom/Portal32")
+
+[node name="PortalDoor" parent="triangleRoom/Portal8" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+portal_connections = [NodePath("../../../chainsRoom/Portal32"), NodePath("../../../chainsRoom/Portal32"), NodePath("../../../chainsRoom/Portal32")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
 [node name="Portal9" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(-0.86602527, 0.5, 2.1855696e-08, 0, -4.3711385e-08, 1, 0.5, 0.86602527, 3.7855173e-08, -1.5274467, -1.2099342, -5.651428)
 exit_portal = NodePath("../../bridgesRoom/Portal28")
 
+[node name="PortalDoor" parent="triangleRoom/Portal9" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+portal_connections = [NodePath("../../../bridgesRoom/Portal28"), NodePath("../../../bridgesRoom/Portal28"), NodePath("../../../bridgesRoom/Portal28")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
 [node name="Portal10" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(0.8660252, 0.49999994, 2.1855692e-08, 3.7855166e-08, -2.185569e-08, -0.99999994, -0.4999999, 0.86602527, -3.785517e-08, -1.527, 8.8, -5.651)
 exit_portal = NodePath("../../bridgesRoom/Portal19")
 
+[node name="PortalDoor" parent="triangleRoom/Portal10" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+portal_connections = [NodePath("../../../bridgesRoom/Portal19"), NodePath("../../../bridgesRoom/Portal19"), NodePath("../../../bridgesRoom/Portal19")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
 [node name="Portal12" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-0.86602557, 0.5000002, -2.1855698e-08, 0, -4.37114e-08, -1.0000001, -0.5000002, -0.86602557, 3.7855177e-08, -1.3845024, 8.8, 6.2695313)
+transform = Transform3D(-0.86602557, 0.5000002, -2.1855698e-08, 0, -4.37114e-08, -1.0000001, -0.5000002, -0.86602557, 3.7855177e-08, -1.5328407, 8.799999, 6.3685303)
 exit_portal = NodePath("../../bridgesRoom/Portal14")
 
+[node name="PortalDoor" parent="triangleRoom/Portal12" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+portal_connections = [NodePath("../../../bridgesRoom/Portal14"), NodePath("../../../bridgesRoom/Portal14"), NodePath("../../../bridgesRoom/Portal14")]
+connections = {
+0: null,
+1: null,
+2: null
+}
+
 [node name="Portal11" parent="triangleRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(0.8660253, 0.49999997, 2.1855694e-08, 0, -4.3711385e-08, 1, 0.49999997, -0.8660253, -3.7855173e-08, -1.3845024, -1.2765446, 6.2695313)
+transform = Transform3D(0.8660253, 0.49999997, 2.1855694e-08, 0, -4.3711385e-08, 1, 0.49999997, -0.8660253, -3.7855173e-08, -1.5328407, -1.2765446, 6.3685303)
 exit_portal = NodePath("../../chainsRoom/Portal30")
+
+[node name="PortalDoor" parent="triangleRoom/Portal11" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
+portal_connections = [NodePath("../../../chainsRoom/Portal30"), NodePath("../../../chainsRoom/Portal30"), NodePath("../../../chainsRoom/Portal30")]
+connections = {
+0: null,
+1: null,
+2: null
+}
 
 [node name="yellowTriangleRightgarden2" type="MeshInstance3D" parent="triangleRoom"]
 transform = Transform3D(-2.4054284, -0.12465673, -1.03845736e-07, -1.3974296e-14, 1.0247362e-08, -4.4678216, -1.5102686, 0.19854271, 1.6539676e-07, -9.317886, 3.7119446, 2.6751099)
@@ -4867,6 +4972,54 @@ light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="triangleRoom"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="triangleRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5427017, 3.703785, 0.28814697)
+size = Vector3(35.69005, 9.714867, 39.201218)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="triangleRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.1160965, -0.89829445, -0.34124756)
+operation = 2
+polygon = PackedVector2Array(11, -12.643, -12.51511, 0.50177, 11, 14.494)
+depth = 9.0
+
+[node name="PortalCutout" type="CSGBox3D" parent="triangleRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.491169, -0.98363495, 0.46606445)
+operation = 2
+size = Vector3(1.9750977, 1.3544922, 1.5856628)
+
+[node name="PortalCutout2" type="CSGBox3D" parent="triangleRoom/CSGCombiner3D"]
+transform = Transform3D(-0.52249837, 0, -0.8526402, 0, 1, 0, 0.8526402, 0, -0.52249837, -1.4320297, -1.0668926, 6.2730103)
+operation = 2
+size = Vector3(1.9750977, 1.3544922, 1.5856628)
+
+[node name="PortalCutout3" type="CSGBox3D" parent="triangleRoom/CSGCombiner3D"]
+transform = Transform3D(0.477159, 0, -0.87881696, 0, 1, 0, 0.87881696, 0, 0.477159, -1.4605064, -1.0668926, -5.6377563)
+operation = 2
+size = Vector3(1.9750977, 1.3544922, 1.5856628)
+
+[node name="PortalCutout4" type="CSGBox3D" parent="triangleRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.491169, 8.746872, 0.46606445)
+operation = 2
+size = Vector3(1.9750977, 1.3544922, 1.5856628)
+
+[node name="PortalCutout5" type="CSGBox3D" parent="triangleRoom/CSGCombiner3D"]
+transform = Transform3D(-0.52249837, 0, -0.8526402, 0, 1, 0, 0.8526402, 0, -0.52249837, -1.4320297, 8.663612, 6.2730103)
+operation = 2
+size = Vector3(1.9750977, 1.3544922, 1.5856628)
+
+[node name="PortalCutout6" type="CSGBox3D" parent="triangleRoom/CSGCombiner3D"]
+transform = Transform3D(0.477159, 0, -0.87881696, 0, 1, 0, 0.87881696, 0, 0.477159, -1.4605064, 8.663612, -5.6377563)
+operation = 2
+size = Vector3(1.9750977, 1.3544922, 1.5856628)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="triangleRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8271561, -0.81328773, 0.4050293)
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="triangleRoom/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8271561, 8.008244, 0.4050293)
 
 [node name="chainsRoom" parent="." instance=ExtResource("22_ndnlp")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -120.43587, 74.10199, 1747.9874)
