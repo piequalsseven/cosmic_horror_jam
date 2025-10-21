@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://ymlroa6fqlts"]
+[gd_scene load_steps=55 format=3 uid="uid://ymlroa6fqlts"]
 
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_rnknb"]
 [ext_resource type="PackedScene" uid="uid://bne17l1a7p1l5" path="res://models/main_house_exterior/cosmic horror hut.blend" id="2_muuda"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ul4ca6hsjsod" path="res://scenes/collectible_key.tscn" id="15_b3rqr"]
 [ext_resource type="PackedScene" uid="uid://basqshsn2sh0c" path="res://models/key3.blend" id="15_bl1yo"]
 [ext_resource type="PackedScene" uid="uid://svxys31tiwyu" path="res://models/rooms/final(probably)entrance.blend" id="15_drejw"]
-[ext_resource type="Script" uid="uid://dlbu3t0bx25jo" path="res://scripts/game_ui.gd" id="16_drejw"]
+[ext_resource type="Script" path="res://scripts/game_ui.gd" id="16_drejw"]
 [ext_resource type="Resource" uid="uid://b0fpogay87ko3" path="res://resources/First.tres" id="17_d1305"]
 [ext_resource type="PackedScene" uid="uid://bbxrg5h5sy518" path="res://models/rooms/infinit corridor.blend" id="17_h53cn"]
 [ext_resource type="PackedScene" uid="uid://dmo3lxmuk25k2" path="res://models/rooms/noFloorRoom.blend" id="18_52452"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://cs1mliu8m7oea" path="res://models/KEY1.blend" id="23_ndnlp"]
 [ext_resource type="PackedScene" uid="uid://c33yfhyre4f8c" path="res://models/rooms/endingSection.blend" id="29_oom5t"]
 [ext_resource type="Texture2D" uid="uid://hqws3ymwffrr" path="res://models/rooms/textures/space.jpg" id="30_s5m1i"]
+[ext_resource type="PackedScene" uid="uid://cq5h0osa251uf" path="res://models/rooms/eyes.blend" id="31_2ntl1"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_46lpw"]
 transform_format = 1
@@ -8819,3 +8820,6 @@ size = Vector3(4.390276, 1.4997559, 1.5154017)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="endingSection"]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
 mesh = SubResource("SphereMesh_iwbg7")
+
+[node name="eyes2" parent="." instance=ExtResource("31_2ntl1")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1099.8323, 586.2503, 2114.0686)
