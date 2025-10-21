@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://ymlroa6fqlts"]
+[gd_scene load_steps=47 format=3 uid="uid://ymlroa6fqlts"]
 
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_rnknb"]
 [ext_resource type="PackedScene" uid="uid://bne17l1a7p1l5" path="res://models/main_house_exterior/cosmic horror hut.blend" id="2_muuda"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://tw2xrxkgppem" path="res://models/rooms/chainsRoom.blend" id="22_ndnlp"]
 [ext_resource type="PackedScene" uid="uid://kv3xcbcdw3wq" path="res://scenes/portal_door.tscn" id="22_vdlgm"]
 [ext_resource type="PackedScene" uid="uid://cs1mliu8m7oea" path="res://models/KEY1.blend" id="23_ndnlp"]
+[ext_resource type="PackedScene" uid="uid://c33yfhyre4f8c" path="res://models/rooms/endingSection.blend" id="29_oom5t"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_46lpw"]
 transform_format = 1
@@ -1955,6 +1956,10 @@ transform = Transform3D(-2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, 0, 0, 0,
 [node name="DebugPortal" parent="final(probably)entrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(-0.8174366, 0, 0.5760187, 0, 1, 0, -0.5760187, 0, -0.8174366, 8.680725, 1.1593466, 7.5755625)
 exit_portal = NodePath("../../LRoom/PortalStartSection2")
+
+[node name="DebugPortal2" parent="final(probably)entrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(0.19796534, 0, 0.980209, 0, 1, 0, -0.980209, 0, 0.19796534, 2.9296875, 1.1593466, 0.36751318)
+exit_portal = NodePath("../../endingSection/StartEndingSectionPortal")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="final(probably)entrance"]
 transform = Transform3D(0.8244423, 0.5659459, -7.673865e-09, -0.5659459, 0.8244423, -2.473828e-08, -7.673865e-09, 2.4738284e-08, 1, -1.5059204, 2.9320168, 9.9459305)
@@ -7219,3 +7224,53 @@ light_energy = 19.005
 spot_range = 52.51582
 spot_angle = 54.506752
 spot_angle_attenuation = 0.008373241
+
+[node name="endingSection" parent="." instance=ExtResource("29_oom5t")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1099.8323, 586.2503, 2173.1917)
+
+[node name="StartEndingSectionPortal" parent="endingSection" instance=ExtResource("7_tpkjk")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.1642456, 1.2892761, -4.2321777)
+
+[node name="endingSectionLights" type="Node3D" parent="endingSection"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="endingSection/endingSectionLights"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 41.652832, 0)
+light_color = Color(0.5785288, 0.29565233, 1, 1)
+light_energy = 16.0
+omni_range = 782.0307
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="endingSection/endingSectionLights"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 41.652832, 138.3175)
+light_color = Color(0.5785288, 0.29565233, 1, 1)
+light_energy = 16.0
+omni_range = 782.0307
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="endingSection/endingSectionLights"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 41.652832, -179.19006)
+light_color = Color(0.5785288, 0.29565233, 1, 1)
+light_energy = 16.0
+omni_range = 782.0307
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="endingSection/endingSectionLights"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 223.2128, 41.652832, 0)
+light_color = Color(0.5785288, 0.29565233, 1, 1)
+light_energy = 16.0
+omni_range = 782.0307
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="endingSection/endingSectionLights"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -170.9964, 41.652832, 0)
+light_color = Color(0.5785288, 0.29565233, 1, 1)
+light_energy = 16.0
+omni_range = 782.0307
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="endingSection/endingSectionLights"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -133.8209, 0)
+light_color = Color(0.5785288, 0.29565233, 1, 1)
+light_energy = 16.0
+omni_range = 782.0307
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="endingSection/endingSectionLights"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 194.57336, 0)
+light_color = Color(0.5785288, 0.29565233, 1, 1)
+light_energy = 16.0
+omni_range = 782.0307
