@@ -958,7 +958,7 @@ connections = {
 }
 
 [node name="3RdKeyFloor" parent="3rdKeyRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(1, -8.742278e-08, 8.742278e-08, -8.742278e-08, -1, 0, 8.742278e-08, -7.642742e-15, -1, 3.28273, 0.87998986, 23.042725)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.3403244, 0.87998986, 23.042725)
 exit_portal = NodePath("../../library/libraryFloor")
 
 [node name="PortalDoor" parent="3rdKeyRoom/3RdKeyFloor" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
@@ -1001,7 +1001,7 @@ transform = Transform3D(4.371139e-08, 1, 8.742278e-08, 1, -4.371139e-08, 0, 3.82
 exit_portal = NodePath("../../noFloorRoom/noFloorEntranceLeftWall")
 
 [node name="PortalDoor" parent="3rdKeyRoom/3RdKeywall" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
+transform = Transform3D(1, 3.3407487e-22, 0, 3.3407487e-22, 1, 0, 0, 0, 1, -0.009200573, -0.04712677, -0.0078125)
 portal_connections = [NodePath("../../../noFloorRoom/noFloorEntranceLeftWall"), NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../3RdKeyFloor")]
 connections = {
 0: null,
