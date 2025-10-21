@@ -105,13 +105,20 @@ func _physics_process(delta: float) -> void:
 	if can_move:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
 		var move_dir := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
+		var normal_plane := (transform.basis * Vector3(0, 1, 0)).normalized()
 		if move_dir:
-			velocity = move_dir * move_speed
+			velocity = velocity.move_toward(normal_plane * velocity, move_speed)
+			velocity += move_dir * move_speed
 		else:
-			velocity.x = move_toward(velocity.x, 0, move_speed)
-			velocity.z = move_toward(velocity.z, 0, move_speed)
-			velocity.y = move_toward(velocity.y, 0, move_speed)
+			if has_gravity:
+				velocity = velocity.move_toward(normal_plane * velocity, move_speed)
+			else:
+				velocity = velocity.move_toward(Vector3.ZERO, move_speed)
+				
+			#velocity.x = move_toward(velocity.x, normal_plane.x, move_speed)
+			#velocity.z = move_toward(velocity.z, normal_plane.z, move_speed)
+			#velocity.y = move_toward(velocity.y, normal_plane.y, move_speed)
+			print(velocity)
 	else:
 		velocity.x = 0
 		velocity.y = 0
@@ -120,6 +127,7 @@ func _physics_process(delta: float) -> void:
 		play_step()
 		
 	if has_gravity:
+		print(get_gravity())
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 			print(velocity)
