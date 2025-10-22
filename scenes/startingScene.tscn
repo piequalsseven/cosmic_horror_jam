@@ -3228,7 +3228,7 @@ exit_portal = NodePath("../../LRoom/PortalStartSection2")
 
 [node name="PortalDoor" parent="noFloorRoom/NoFloorRightWall" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
-portal_connections = [NodePath("../../../LRoom/Portal4"), NodePath("../../NoFloorExitLeftWall"), NodePath("../../NoFloorRightCeiling")]
+portal_connections = [NodePath("../../../LRoom/PortalStartSection2"), NodePath("../../NoFloorExitLeftWall"), NodePath("../../NoFloorRightCeiling")]
 connections = {
 0: null,
 1: null,
