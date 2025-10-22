@@ -352,6 +352,19 @@ mesh = SubResource("CylinderMesh_46lpw")
 [node name="cosmic horror hut" parent="." instance=ExtResource("2_muuda")]
 transform = Transform3D(0.23, 0, 0, 0, 0.238, 0, 0, 0, 0.23, 0.17985916, 3.095871, 13.004955)
 
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="cosmic horror hut"]
+visible = false
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="cosmic horror hut/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41392606, 5.143098, -1.1619759)
+size = Vector3(31.744965, 36.48932, 36.681396)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="cosmic horror hut/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23208708, -5.4018545, -16.103836)
+operation = 2
+size = Vector3(9.78714, 13.67865, 17.429077)
+
 [node name="trees" type="Node" parent="."]
 
 [node name="tree" parent="trees" instance=ExtResource("3_vg3eq")]
@@ -452,7 +465,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 128.14812, 0)
 size = Vector3(600, 1, 600)
 
 [node name="library" parent="." instance=ExtResource("12_46lpw")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -146.28186, -13.196793, 1285.2677)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -146.28214, -13.271643, 1285.2971)
 
 [node name="libraryFloor" parent="library" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.55513, 0.058795452, -12.161316)
@@ -960,9 +973,14 @@ operation = 2
 size = Vector3(9.567028, 5.157028, 11.004625)
 
 [node name="Negativ2" type="CSGBox3D" parent="library/Collisions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5290756, 4.0221405, 12.393555)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5290756, 4.0221405, 6.8668823)
 operation = 2
-size = Vector3(27.414017, 10.047821, 21.16352)
+size = Vector3(27.414017, 10.047821, 10.110223)
+
+[node name="Negativ6" type="CSGBox3D" parent="library/Collisions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2788239, 4.0221405, 16.822021)
+operation = 2
+size = Vector3(25.914528, 10.047821, 12.328823)
 
 [node name="PortalCutOut" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.578667, 0.40581512, -12.585632)
@@ -1003,12 +1021,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.681553, 3.9879093, 22.8541
 size = Vector3(8.21286, 10.0214615, 0.64328)
 
 [node name="CollectibleKey2" parent="library" node_paths=PackedStringArray("key_mesh") instance=ExtResource("15_b3rqr")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.25781447, -0.26531982, -2.605713)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.25781447, 0.15758514, -2.605713)
 key_mesh = NodePath("key2")
 key = ExtResource("19_oom5t")
 
 [node name="key2" parent="library/CollectibleKey2" instance=ExtResource("11_vs7cs")]
 transform = Transform3D(-2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, 0, 0, 0, 0.05, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="library/CollectibleKey2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04345703, -0.09337139, 0)
+omni_range = 2.0056536
 
 [node name="3rdKeyRoom" parent="." instance=ExtResource("14_r1rbk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 157.36255, 2.723381, 1238.3961)
@@ -1711,6 +1733,10 @@ key = ExtResource("20_s5m1i")
 [node name="key3" parent="3rdKeyRoom/CollectibleKey3" instance=ExtResource("15_bl1yo")]
 transform = Transform3D(-2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, 0, 0, 0, 0.05, 0, 0.101317644, 0)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="3rdKeyRoom/CollectibleKey3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008666992, -0.0034823418, 0)
+omni_range = 1.2250102
+
 [node name="final(probably)entrance" parent="." instance=ExtResource("15_drejw")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 1.471, 3.955, 1064.629)
 
@@ -2118,6 +2144,11 @@ key = ExtResource("17_d1305")
 
 [node name="KEY1" parent="final(probably)entrance/CollectibleKey" instance=ExtResource("23_ndnlp")]
 transform = Transform3D(-2.1855695e-09, 0.05, 0, -0.05, -2.1855695e-09, 0, 0, 0, 0.05, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="final(probably)entrance/CollectibleKey"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07849121, -0.13898897, 0)
+light_energy = 0.782
+omni_range = 0.0
 
 [node name="stairs" type="Node3D" parent="final(probably)entrance"]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999976, -3.3478394, -1.2057514, 9.40188)
