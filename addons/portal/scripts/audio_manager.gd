@@ -6,6 +6,7 @@ extends Node
 
 @onready var transition: AudioStreamPlayer = $Transition
 @onready var ending_layer: AudioStreamPlayer = $EndingLayer
+@onready var end_sound: AudioStreamPlayer = $EndSound
 
 var is_ending : bool
 func _ready() -> void:
@@ -39,7 +40,10 @@ func transition_to_endingarea() -> void:
 func leaving_endingarea() -> void:
 	if is_ending:
 		is_ending = false
-		music_player.pitch_scale = 1.0
+		music_player.stop()
 		ending_layer.stop()
+		end_sound.play()
 		
 		
+func _on_end_sound_finished() -> void:
+	get_tree().quit()
