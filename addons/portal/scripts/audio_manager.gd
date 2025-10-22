@@ -41,3 +41,5 @@ func leaving_endingarea() -> void:
 		is_ending = false
 		music_player.pitch_scale = 1.0
 		ending_layer.stop()
+		
+		

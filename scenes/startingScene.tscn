@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://ymlroa6fqlts"]
+[gd_scene load_steps=57 format=3 uid="uid://ymlroa6fqlts"]
 
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_rnknb"]
 [ext_resource type="Environment" uid="uid://bythca13xs6it" path="res://scenes/startingScene_env.tres" id="1_vfp0b"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://ul4ca6hsjsod" path="res://scenes/collectible_key.tscn" id="15_b3rqr"]
 [ext_resource type="PackedScene" uid="uid://basqshsn2sh0c" path="res://models/key3.blend" id="15_bl1yo"]
 [ext_resource type="PackedScene" uid="uid://svxys31tiwyu" path="res://models/rooms/final(probably)entrance.blend" id="15_drejw"]
-[ext_resource type="Script" path="res://scripts/game_ui.gd" id="16_drejw"]
+[ext_resource type="Script" uid="uid://dlbu3t0bx25jo" path="res://scripts/game_ui.gd" id="16_drejw"]
 [ext_resource type="Resource" uid="uid://b0fpogay87ko3" path="res://resources/First.tres" id="17_d1305"]
 [ext_resource type="PackedScene" uid="uid://bbxrg5h5sy518" path="res://models/rooms/infinit corridor.blend" id="17_h53cn"]
 [ext_resource type="PackedScene" uid="uid://dmo3lxmuk25k2" path="res://models/rooms/noFloorRoom.blend" id="18_52452"]
@@ -178,7 +178,7 @@ disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 5.0
 exit_environment = SubResource("Environment_ltmdr")
-exit_portal = NodePath("../../final(probably)entrance/EntranceFloorCenterPortalA4")
+exit_portal = NodePath("../../endingSection/StartEndingSectionPortal")
 change_enviroment_on_teleport = true
 
 [node name="TransitionArea" type="Area3D" parent="ground/HutPortalA"]
@@ -8299,8 +8299,6 @@ exit_portal = NodePath("../thirdIslandEntrance")
 [node name="StartEndingSectionPortal" parent="endingSection" instance=ExtResource("7_tpkjk")]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0.1642456, 1.2298279, -4.1690674)
 
-[node name="StartSecondIsland" parent="endingSection" instance=ExtResource("7_tpkjk")]
-transform = Transform3D(0.13028121, -0.52889776, 0.83862615, 0.8740062, -0.3380956, -0.3490048, 0.4681237, 0.7784333, 0.41821244, 29.30603, 61.05359, -39.85376)
 [node name="TransitionArea" type="Area3D" parent="endingSection/StartEndingSectionPortal"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.0491943)
 script = ExtResource("30_iwbg7")
@@ -8309,6 +8307,9 @@ metadata/_custom_type_script = "uid://b2d7nww81l0et"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="endingSection/StartEndingSectionPortal/TransitionArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04724121, -0.50024414, -0.5476074)
 shape = SubResource("BoxShape3D_otwjx")
+
+[node name="StartSecondIsland" parent="endingSection" instance=ExtResource("7_tpkjk")]
+transform = Transform3D(0.13028121, -0.52889776, 0.83862615, 0.8740062, -0.3380956, -0.3490048, 0.4681237, 0.7784333, 0.41821244, 29.30603, 61.05359, -39.85376)
 
 [node name="endingSectionLights" type="Node3D" parent="endingSection"]
 

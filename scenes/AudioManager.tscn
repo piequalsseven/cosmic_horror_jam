@@ -12,7 +12,7 @@ script = ExtResource("1_v6v0x")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_3dgps")
-volume_db = -2.0
+volume_db = -15.0
 autoplay = true
 
 [node name="OpenDoor" type="AudioStreamPlayer" parent="."]
@@ -25,11 +25,11 @@ volume_db = -2.0
 
 [node name="Transition" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_151wy")
-volume_db = -2.0
+volume_db = -10.0
 
 [node name="EndingLayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_qb6qo")
-volume_db = -4.0
+volume_db = -15.0
 
 [connection signal="finished" from="MusicPlayer" to="." method="_on_music_player_finished"]
 [connection signal="finished" from="EndingLayer" to="." method="_on_ending_layer_finished"]
