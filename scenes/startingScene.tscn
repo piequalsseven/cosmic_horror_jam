@@ -1706,6 +1706,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4310913, -3.6408691, -3.350
 shape = SubResource("BoxShape3D_oom5t")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="3rdKeyRoom"]
+visible = false
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
