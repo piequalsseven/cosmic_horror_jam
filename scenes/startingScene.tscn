@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://ymlroa6fqlts"]
+[gd_scene load_steps=56 format=3 uid="uid://ymlroa6fqlts"]
 
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_rnknb"]
 [ext_resource type="PackedScene" uid="uid://bne17l1a7p1l5" path="res://models/main_house_exterior/cosmic horror hut.blend" id="2_muuda"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://tw2xrxkgppem" path="res://models/rooms/chainsRoom.blend" id="22_ndnlp"]
 [ext_resource type="PackedScene" uid="uid://kv3xcbcdw3wq" path="res://scenes/portal_door.tscn" id="22_vdlgm"]
 [ext_resource type="PackedScene" uid="uid://cs1mliu8m7oea" path="res://models/KEY1.blend" id="23_ndnlp"]
+[ext_resource type="Texture2D" uid="uid://bfnftx21qsymw" path="res://images/pointer.png" id="26_iwbg7"]
 [ext_resource type="PackedScene" uid="uid://c33yfhyre4f8c" path="res://models/rooms/endingSection.blend" id="29_oom5t"]
 [ext_resource type="Texture2D" uid="uid://hqws3ymwffrr" path="res://models/rooms/textures/space.jpg" id="30_s5m1i"]
 [ext_resource type="PackedScene" uid="uid://cq5h0osa251uf" path="res://models/rooms/eyes.blend" id="31_2ntl1"]
@@ -940,64 +941,65 @@ light_energy = 1.89
 light_size = 0.553
 omni_range = 9.693588
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="library"]
+[node name="Collisions" type="CSGCombiner3D" parent="library"]
 visible = false
+use_collision = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="CSGBox3D" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9128876, 4.201851, 6.144104)
 size = Vector3(48.67148, 15.085739, 38.868378)
 
-[node name="Negativ" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="Negativ" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7388306, 4.2179565, -5.308838)
 operation = 2
 size = Vector3(26.994507, 9.435913, 13.570938)
 
-[node name="Negativ3" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="Negativ3" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1548615, 4.2179565, 1.2443848)
 operation = 2
 size = Vector3(15.207123, 9.435913, 4.8781204)
 
-[node name="Negativ4" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="Negativ4" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.936085, 3.987091, 17.483643)
 operation = 2
 size = Vector3(10.266208, 9.897644, 11.004625)
 
-[node name="Negativ5" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="Negativ5" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.497173, 6.9394836, 17.483643)
 operation = 2
 size = Vector3(9.567028, 3.992859, 11.004625)
 
-[node name="Negativ2" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="Negativ2" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5290756, 4.2179565, 12.393555)
 operation = 2
 size = Vector3(27.414017, 9.435913, 21.16352)
 
-[node name="PortalCutOut" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="PortalCutOut" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.578667, 0.40581512, -11.906067)
 operation = 2
 size = Vector3(1.5142822, 1.8095856, 1.2485352)
 
-[node name="PortalCutOut2" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="PortalCutOut2" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(-8.351872e-23, 1, 0, -1.9106855e-15, 0, -1, -1, 0, 1.9106855e-15, -14.211006, 8.840689, -5.304138)
 operation = 2
 size = Vector3(1.5142822, 1.8095856, 1.2485352)
 
-[node name="PortalCutOut3" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="PortalCutOut3" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(-1, 1.9106855e-15, -4.3711385e-08, 0, 1, 4.371139e-08, 4.3711385e-08, 4.371139e-08, -1, 18.25153, 8.066039, 11.700745)
 operation = 2
 size = Vector3(1.5142822, 1.8095856, 1.2485352)
 
-[node name="PortalCutOut4" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="PortalCutOut4" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(4.3711385e-08, 1, 8.742278e-08, 1, -4.3711392e-08, 8.742278e-08, 8.742278e-08, 8.742278e-08, -1, 22.805271, 4.124544, 22.780762)
 operation = 2
 size = Vector3(1.5142822, 2.4648514, 1.2485352)
 
-[node name="PortalCutOut5" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="PortalCutOut5" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(4.371139e-08, 1, -8.742278e-08, 1, -4.371139e-08, 0, -3.821371e-15, -8.742278e-08, -1, 22.99435, -0.84414434, 14.970581)
 operation = 2
 size = Vector3(1.5142822, 2.1231728, 1.2485352)
 
-[node name="PortalCutOut6" type="CSGBox3D" parent="library/CSGCombiner3D"]
+[node name="PortalCutOut6" type="CSGBox3D" parent="library/Collisions"]
 transform = Transform3D(-8.742277e-08, -1.3113416e-07, 1, -7.1054274e-15, 1, 1.3113416e-07, -1, 3.5527137e-15, -8.742278e-08, -14.8293, 8.044271, 9.564026)
 operation = 2
 size = Vector3(1.5142822, 1.8095856, 1.2485352)
@@ -3321,25 +3323,17 @@ connections = {
 2: null
 }
 
+[node name="Sprite3D" type="Sprite3D" parent="bridgesRoom/Portal28"]
+transform = Transform3D(0.31, 0, 0, 0, 0.31, 0, 0, 0, 0.31, -0.37384033, 1.498949, 0.27623367)
+texture = ExtResource("26_iwbg7")
+
 [node name="Portal17" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(1.9106855e-15, -4.371139e-08, -1, -1, -4.371139e-08, 0, -4.371139e-08, 1, -4.371139e-08, 14.647076, 4.843722, -6.7070923)
 exit_portal = NodePath("../Portal13")
 
 [node name="PortalDoor" parent="bridgesRoom/Portal17" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030186176, -0.25524902, 0)
-portal_connections = [NodePath("../../../triangleRoom/Portal7"), NodePath("../../Portal22"), NodePath("../../Portal13")]
-connections = {
-0: null,
-1: null,
-2: null
-}
-
-[node name="Portal22" parent="bridgesRoom" instance=ExtResource("4_xg6vb")]
-transform = Transform3D(1.9106853e-15, 4.3711385e-08, -1, 0.99999994, -4.3711385e-08, 0, -4.3711385e-08, -0.99999994, -4.371139e-08, 24.122375, 4.8330836, 6.72)
-visible = false
-
-[node name="PortalDoor" parent="bridgesRoom/Portal22" node_paths=PackedStringArray("connections") instance=ExtResource("22_vdlgm")]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+portal_connections = [NodePath("../../../triangleRoom/Portal7"), null, NodePath("../../Portal13")]
 connections = {
 0: null,
 1: null,
@@ -3348,11 +3342,11 @@ connections = {
 
 [node name="Portal14" parent="bridgesRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.478165, 1, -2.4234009)
-exit_portal = NodePath("../Portal22")
+exit_portal = NodePath("../../infinit corridor/firstCorridorEntrance")
 
 [node name="PortalDoor" parent="bridgesRoom/Portal14" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12683105, 0, 0)
-portal_connections = [NodePath("../../../chainsRoom/Portal31"), NodePath("../../Portal26"), NodePath("../../Portal22")]
+portal_connections = [NodePath("../../../chainsRoom/Portal31"), NodePath("../../Portal26"), null]
 connections = {
 0: null,
 1: null,
@@ -3430,7 +3424,7 @@ exit_portal = NodePath("../../LRoom/Portal4")
 
 [node name="PortalDoor" parent="bridgesRoom/Portal19" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.030186176, -0.25524902, 0)
-portal_connections = [NodePath("../../../ground/Portal4"), NodePath("../../Portal23"), NodePath("../../Portal25")]
+portal_connections = [NodePath("../../../LRoom/Portal4"), NodePath("../../Portal23"), NodePath("../../Portal25")]
 connections = {
 0: null,
 1: null,
@@ -4290,6 +4284,8 @@ light_size = 0.235
 omni_range = 9.693588
 
 [node name="Colliders" type="CSGCombiner3D" parent="bridgesRoom"]
+visible = false
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="bridgesRoom/Colliders"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5212555, 6.3988953, -1.0736694)
@@ -4445,12 +4441,11 @@ connections = {
 }
 
 [node name="Portal37" parent="LRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8202362, 1, -14.64624)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1337738, 1, -14.64624)
 exit_portal = NodePath("../Portal6")
 
 [node name="PortalDoor" parent="LRoom/Portal37" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.906189, 0, 0)
-portal_connections = [NodePath("../../../infinit corridor/firstCorridorEntrance"), NodePath("../../Portal6"), NodePath("../../Portal4")]
+portal_connections = [null, NodePath("../../Portal6"), NodePath("../../Portal4")]
 connections = {
 0: null,
 1: null,
@@ -4496,11 +4491,10 @@ connections = {
 }
 
 [node name="Portal6" parent="LRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 9.069382, 8.861172, -16.063171)
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 9.069, 8.95, -14.746)
 exit_portal = NodePath("../Portal37")
 
 [node name="PortalDoor" parent="LRoom/Portal6" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.047130585, 1.4713135)
 portal_connections = [NodePath("../../../bridgesRoom/Portal26"), NodePath("../../Portal37"), NodePath("../../Portal2")]
 connections = {
 0: null,
@@ -4509,7 +4503,7 @@ connections = {
 }
 
 [node name="Portal5" parent="LRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(1, 8.742278e-08, -8.742278e-08, 8.742278e-08, -1, 0, -8.742278e-08, -7.642742e-15, -1, 1.1622772, 8.949133, 5.3080444)
+transform = Transform3D(1, 8.742278e-08, -8.742278e-08, 8.742278e-08, -1, 0, -8.742278e-08, -7.642742e-15, -1, 1.162, 8.95, 5.308)
 exit_portal = NodePath("../Portal3")
 
 [node name="PortalDoor" parent="LRoom/Portal5" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
@@ -4828,6 +4822,8 @@ light_size = 0.235
 omni_range = 9.693588
 
 [node name="Collisions" type="CSGCombiner3D" parent="LRoom"]
+visible = false
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="LRoom/Collisions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6320038, 5.0553284, -5.8919067)
@@ -5262,7 +5258,10 @@ connections = {
 
 [node name="Portal33" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(4.371139e-08, 3.821371e-15, -1, 8.742278e-08, -1, 0, -1, -8.742278e-08, -4.371139e-08, 14.567364, 85.072624, 0.06793213)
-exit_portal = NodePath("../../bridgesRoom/Portal16")
+disable_viewport_distance = 50.0
+fade_out_distance_max = 50.0
+fade_out_distance_min = 40.0
+exit_portal = NodePath("../../bridgesRoom/Portal28")
 
 [node name="Portal34" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(4.371139e-08, -3.821371e-15, 1, -8.742278e-08, -1, 0, 1, -8.742278e-08, -4.371139e-08, -14.56044, 85.072624, -0.068603516)
@@ -5278,7 +5277,10 @@ connections = {
 
 [node name="Portal35" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(0.99999994, 8.742278e-08, -8.742277e-08, 8.742277e-08, -1, 0, -8.742277e-08, -7.642742e-15, -0.99999994, -0.073589325, 85.07263, 14.64502)
-exit_portal = NodePath("../../ground/HutPortalA")
+disable_viewport_distance = 50.0
+fade_out_distance_max = 50.0
+fade_out_distance_min = 40.0
+exit_portal = NodePath("../../endingSection/StartEndingSectionPortal")
 
 [node name="Portal30" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.611053, 0.25, 0.047546387)
@@ -7929,6 +7931,8 @@ spot_angle = 54.506752
 spot_angle_attenuation = 0.008373241
 
 [node name="FloorColliders" type="CSGCombiner3D" parent="chainsRoom"]
+visible = false
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="chainsRoom/FloorColliders"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.698631, 2.6218262, 0.42425537)
@@ -7980,6 +7984,8 @@ size = Vector3(1.5081787, 1.8969727, 1.2285156)
 
 [node name="CeilingColliders" type="CSGCombiner3D" parent="chainsRoom"]
 transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 85.19741, 0)
+visible = false
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="chainsRoom/CeilingColliders"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.698631, 2.6218262, 0.42425537)

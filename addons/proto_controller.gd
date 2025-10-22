@@ -115,11 +115,6 @@ func _physics_process(delta: float) -> void:
 				velocity = velocity.move_toward(normal_plane * velocity, move_speed)
 			else:
 				velocity = velocity.move_toward(Vector3.ZERO, move_speed)
-				
-			#velocity.x = move_toward(velocity.x, normal_plane.x, move_speed)
-			#velocity.z = move_toward(velocity.z, normal_plane.z, move_speed)
-			#velocity.y = move_toward(velocity.y, normal_plane.y, move_speed)
-			print(velocity)
 	else:
 		velocity.x = 0
 		velocity.y = 0
