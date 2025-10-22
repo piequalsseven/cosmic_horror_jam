@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ul4ca6hsjsod" path="res://scenes/collectible_key.tscn" id="15_b3rqr"]
 [ext_resource type="PackedScene" uid="uid://basqshsn2sh0c" path="res://models/key3.blend" id="15_bl1yo"]
 [ext_resource type="PackedScene" uid="uid://svxys31tiwyu" path="res://models/rooms/final(probably)entrance.blend" id="15_drejw"]
-[ext_resource type="Script" path="res://scripts/game_ui.gd" id="16_drejw"]
+[ext_resource type="Script" uid="uid://dlbu3t0bx25jo" path="res://scripts/game_ui.gd" id="16_drejw"]
 [ext_resource type="Resource" uid="uid://b0fpogay87ko3" path="res://resources/First.tres" id="17_d1305"]
 [ext_resource type="PackedScene" uid="uid://bbxrg5h5sy518" path="res://models/rooms/infinit corridor.blend" id="17_h53cn"]
 [ext_resource type="PackedScene" uid="uid://dmo3lxmuk25k2" path="res://models/rooms/noFloorRoom.blend" id="18_52452"]
@@ -4974,6 +4974,7 @@ light_size = 0.235
 omni_range = 9.693588
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="triangleRoom"]
+visible = false
 
 [node name="CSGBox3D" type="CSGBox3D" parent="triangleRoom/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5427017, 3.703785, 0.28814697)
@@ -7715,6 +7716,113 @@ light_energy = 19.005
 spot_range = 52.51582
 spot_angle = 54.506752
 spot_angle_attenuation = 0.008373241
+
+[node name="FloorColliders" type="CSGCombiner3D" parent="chainsRoom"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="chainsRoom/FloorColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.698631, 2.6218262, 0.42425537)
+size = Vector3(2.4074707, 6.2436523, 31.11023)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="chainsRoom/FloorColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07936859, -2.1101913, 0.42425537)
+size = Vector3(29.959656, 2.5466309, 31.11023)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="chainsRoom/FloorColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.658588, 2.6218262, 0.42425537)
+size = Vector3(2.4074707, 6.2436523, 31.11023)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="chainsRoom/FloorColliders"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.1447792, 2.6218262, -15.691956)
+size = Vector3(2.4074707, 6.2436523, 31.11023)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="chainsRoom/FloorColliders"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.1447792, 2.6218262, 15.652344)
+size = Vector3(2.4074707, 6.2436523, 31.11023)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="chainsRoom/FloorColliders"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -11.035431, 1.8141289, 3.5996704)
+polygon = PackedVector2Array(-3.1896515, -1.2160034, -3.9550095, 12.669739, 0.6298294, 7.805786, 2.8215103, 8.418518, 2.2879715, -1.1469116, 0.21710968, -1.262085)
+depth = 3.0
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="chainsRoom/FloorColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.375992, 0, -10.077148)
+radius = 1.359375
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="chainsRoom/FloorColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5526085, 0, 10.868713)
+radius = 1.4326172
+
+[node name="PortalCutOut" type="CSGBox3D" parent="chainsRoom/FloorColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18050003, 0.1457901, 14.459534)
+operation = 2
+size = Vector3(1.5081787, 1.8969727, 1.2285156)
+
+[node name="PortalCutOut2" type="CSGBox3D" parent="chainsRoom/FloorColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18050003, 0.1457901, -14.245789)
+operation = 2
+size = Vector3(1.5081787, 1.8969727, 1.2285156)
+
+[node name="PortalCutOut3" type="CSGBox3D" parent="chainsRoom/FloorColliders"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.263935, 0.1457901, 0.0970459)
+operation = 2
+size = Vector3(1.5081787, 1.8969727, 1.2285156)
+
+[node name="CeilingColliders" type="CSGCombiner3D" parent="chainsRoom"]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0, 85.19741, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.698631, 2.6218262, 0.42425537)
+size = Vector3(2.4074707, 6.2436523, 31.11023)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07936859, -2.1101913, 0.42425537)
+visible = false
+size = Vector3(29.959656, 2.5466309, 31.11023)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.658588, 2.6218262, 0.42425537)
+size = Vector3(2.4074707, 6.2436523, 31.11023)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.1447792, 2.6218262, -15.691956)
+size = Vector3(2.4074707, 6.2436523, 31.11023)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.1447792, 2.6218262, 15.652344)
+size = Vector3(2.4074707, 6.2436523, 31.11023)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.605629, 1.8141327, 3.5996704)
+polygon = PackedVector2Array(-10.209053, 9.306885, -9.872856, 16.071411, -1.3800468, 7.041992, 2.4750748, 7.661377, 18.81097, -7.1584473, 14.51469, -11.491394, 11.90733, -5.277527, 6.304775, -1.6637573, 3.1747093, -0.38946533, -1.4712029, 3.9752197, -6.0335846, 2.5767822)
+depth = 3.0
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.409336, 0, -9.907288)
+radius = 1.2255859
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.58514, 0, 10.868713)
+radius = 1.3476563
+
+[node name="PortalCutOut" type="CSGBox3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05184555, 0.1457901, 14.459534)
+operation = 2
+size = Vector3(1.5081787, 1.8969727, 1.2285156)
+
+[node name="PortalCutOut2" type="CSGBox3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10798645, 0.1457901, -14.245789)
+operation = 2
+size = Vector3(1.5081787, 1.8969727, 1.2285156)
+
+[node name="PortalCutOut3" type="CSGBox3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.263935, 0.1088562, -0.11791992)
+operation = 2
+size = Vector3(1.5081787, 1.8969727, 1.2285156)
+
+[node name="PortalCutOut4" type="CSGBox3D" parent="chainsRoom/CeilingColliders"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.358532, 0.1088562, 0.03967285)
+operation = 2
+size = Vector3(1.5081787, 1.8969727, 1.2285156)
 
 [node name="endingSection" parent="." instance=ExtResource("29_oom5t")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1099.8323, 586.2503, 2114.0686)
