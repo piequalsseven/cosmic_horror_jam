@@ -1,6 +1,7 @@
-[gd_scene load_steps=53 format=3 uid="uid://ymlroa6fqlts"]
+[gd_scene load_steps=54 format=3 uid="uid://ymlroa6fqlts"]
 
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_rnknb"]
+[ext_resource type="Environment" uid="uid://bythca13xs6it" path="res://scenes/startingScene_env.tres" id="1_vfp0b"]
 [ext_resource type="PackedScene" uid="uid://bne17l1a7p1l5" path="res://models/main_house_exterior/cosmic horror hut.blend" id="2_muuda"]
 [ext_resource type="ArrayMesh" uid="uid://wug5ng5k1wsu" path="res://models/meshTextures/treeMeshTexture.res" id="2_xg6vb"]
 [ext_resource type="PackedScene" uid="uid://cy4b0pyfgxas5" path="res://models/house exterior/tree.blend" id="3_vg3eq"]
@@ -141,6 +142,7 @@ height = 100.0
 [node name="StartingScene2" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_vfp0b")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, -0.5006045, 0.86567616, 0, -0.86567616, -0.5006045, -13.521166, 212.40184, -180.00545)
@@ -5247,7 +5249,7 @@ connections = {
 }
 
 [node name="Portal33" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(4.371139e-08, 3.821371e-15, -1, 8.742278e-08, -1, 0, -1, -8.742278e-08, -4.371139e-08, 14.5692215, 84.79559, 0.10565184)
+transform = Transform3D(4.371139e-08, 3.821371e-15, -1, 8.742278e-08, -1, 0, -1, -8.742278e-08, -4.371139e-08, 14.5692215, 84.79559, 0.16107175)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 40.0
@@ -5266,7 +5268,7 @@ connections = {
 }
 
 [node name="Portal35" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(0.99999994, 8.742278e-08, -8.742277e-08, 8.742277e-08, -1, 0, -8.742277e-08, -7.642742e-15, -0.99999994, -0.073589325, 85.07263, 14.64502)
+transform = Transform3D(0.99999994, 8.742278e-08, -8.742277e-08, 8.742277e-08, -1, 0, -8.742277e-08, -7.642742e-15, -0.99999994, -0.0735893, 84.795746, 14.64502)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 40.0
@@ -8064,25 +8066,25 @@ use_collision = true
 size = Vector3(50.136063, 0.99658203, 42.22212)
 
 [node name="CSGBox3D61" type="CSGBox3D" parent="endingSection"]
-transform = Transform3D(-0.7593684, -0.6033762, 0.24352668, 0.53208965, -0.36044455, 0.7661352, -0.37448472, 0.7113669, 0.5947526, 32.011536, 57.903625, -37.0625)
+transform = Transform3D(-0.7593684, -0.6033762, 0.24352668, 0.53208965, -0.36044455, 0.7661352, -0.37448472, 0.7113669, 0.5947526, 32.19208, 58.01148, -37.27536)
 visible = false
 use_collision = true
 size = Vector3(24.047983, 1.7773438, 42.22212)
 
 [node name="CSGBox3D62" type="CSGBox3D" parent="endingSection"]
-transform = Transform3D(-0.7593684, -0.6033762, 0.24352668, 0.53208965, -0.36044455, 0.7661352, -0.37448472, 0.7113669, 0.5947526, 48.72339, 46.193604, -28.820923)
+transform = Transform3D(-0.7593684, -0.6033762, 0.24352668, 0.53208965, -0.36044455, 0.7661352, -0.37448472, 0.7113669, 0.5947526, 48.903934, 46.301456, -29.033783)
 visible = false
 use_collision = true
 size = Vector3(14.384294, 1.7773438, 42.22212)
 
 [node name="CSGBox3D63" type="CSGBox3D" parent="endingSection"]
-transform = Transform3D(-0.7593684, -0.6033762, 0.24352668, 0.53208965, -0.36044455, 0.7661352, -0.37448472, 0.7113669, 0.5947526, 39.06848, 42.38614, -38.93933)
+transform = Transform3D(-0.7593684, -0.6033762, 0.24352668, 0.53208965, -0.36044455, 0.7661352, -0.37448472, 0.7113669, 0.5947526, 39.249027, 42.49399, -39.15219)
 visible = false
 use_collision = true
 size = Vector3(4.370426, 1.7773438, 19.649633)
 
 [node name="CSGBox3D64" type="CSGBox3D" parent="endingSection"]
-transform = Transform3D(-0.7593684, -0.6033762, 0.24352668, 0.53208965, -0.36044455, 0.7661352, -0.37448472, 0.7113669, 0.5947526, 45.72876, 63.339294, -22.673218)
+transform = Transform3D(-0.7593684, -0.6033762, 0.24352668, 0.53208965, -0.36044455, 0.7661352, -0.37448472, 0.7113669, 0.5947526, 45.909306, 63.447147, -22.886078)
 visible = false
 use_collision = true
 size = Vector3(4.370426, 1.7773438, 10.606626)
@@ -9160,7 +9162,7 @@ transform = Transform3D(0.6378777, -0.4467143, -0.044253103, 0.3405521, 0.531656
 exit_portal = NodePath("../thirdInterriorEntrance")
 
 [node name="thirdIslandInteriorExit" parent="endingSection" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-0.63193756, -0.448925, 0.08672513, -0.34159824, 0.561898, 0.4195012, -0.30391702, 0.30188903, -0.6518415, 18.887024, 72.06802, 55.688965)
+transform = Transform3D(-0.63670534, -0.4505149, -0.006524034, -0.39231405, 0.54878026, 0.39157334, -0.22157618, 0.32291844, -0.6745575, 18.827305, 72.02072, 55.773365)
 exit_portal = NodePath("../end_helper/hutEntrance")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="endingSection"]
