@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://ymlroa6fqlts"]
+[gd_scene load_steps=58 format=3 uid="uid://ymlroa6fqlts"]
 
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_rnknb"]
 [ext_resource type="Environment" uid="uid://bythca13xs6it" path="res://scenes/startingScene_env.tres" id="1_vfp0b"]
@@ -34,6 +34,7 @@
 [ext_resource type="Script" uid="uid://b2d7nww81l0et" path="res://scripts/transition_area.gd" id="30_iwbg7"]
 [ext_resource type="Texture2D" uid="uid://hqws3ymwffrr" path="res://models/rooms/textures/space.jpg" id="30_s5m1i"]
 [ext_resource type="PackedScene" uid="uid://cq5h0osa251uf" path="res://models/rooms/eyes.blend" id="31_2ntl1"]
+[ext_resource type="ArrayMesh" uid="uid://hyn42mo4hfed" path="res://models/meshTextures/spaceCrack.res" id="34_h08u6"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_46lpw"]
 transform_format = 1
@@ -178,7 +179,7 @@ disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 5.0
 exit_environment = SubResource("Environment_ltmdr")
-exit_portal = NodePath("../../final(probably)entrance/EntranceFloorCenterPortalA4")
+exit_portal = NodePath("../../endingSection/end_helper/hutEntrance")
 change_enviroment_on_teleport = true
 
 [node name="TransitionArea" type="Area3D" parent="ground/HutPortalA"]
@@ -9483,6 +9484,7 @@ exit_portal = NodePath("../thirdIslandExteriorExit2")
 
 [node name="thirdIslandExteriorExit2" parent="endingSection/end_helper" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(1.0000001, -8.74228e-08, -8.7422784e-08, -8.7422784e-08, -1.0000002, 0, -8.7422784e-08, 7.6427436e-15, -1.0000001, -0.22698975, 6.343567, 9.876404)
+mesh = ExtResource("34_h08u6")
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
