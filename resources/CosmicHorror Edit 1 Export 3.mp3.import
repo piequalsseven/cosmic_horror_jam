@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cu47tagh7trlf"
+path="res://.godot/imported/CosmicHorror Edit 1 Export 3.mp3-6e3718729a580d34de1214a2f6b60ac7.mp3str"
+
+[deps]
+
+source_file="res://resources/CosmicHorror Edit 1 Export 3.mp3"
+dest_files=["res://.godot/imported/CosmicHorror Edit 1 Export 3.mp3-6e3718729a580d34de1214a2f6b60ac7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
