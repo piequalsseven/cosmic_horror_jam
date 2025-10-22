@@ -940,6 +940,68 @@ light_energy = 1.89
 light_size = 0.553
 omni_range = 9.693588
 
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="library"]
+visible = false
+
+[node name="CSGBox3D" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9128876, 4.201851, 6.144104)
+size = Vector3(48.67148, 15.085739, 38.868378)
+
+[node name="Negativ" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7388306, 4.2179565, -5.308838)
+operation = 2
+size = Vector3(26.994507, 9.435913, 13.570938)
+
+[node name="Negativ3" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1548615, 4.2179565, 1.2443848)
+operation = 2
+size = Vector3(15.207123, 9.435913, 4.8781204)
+
+[node name="Negativ4" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.936085, 3.987091, 17.483643)
+operation = 2
+size = Vector3(10.266208, 9.897644, 11.004625)
+
+[node name="Negativ5" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.497173, 6.9394836, 17.483643)
+operation = 2
+size = Vector3(9.567028, 3.992859, 11.004625)
+
+[node name="Negativ2" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5290756, 4.2179565, 12.393555)
+operation = 2
+size = Vector3(27.414017, 9.435913, 21.16352)
+
+[node name="PortalCutOut" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.578667, 0.40581512, -11.906067)
+operation = 2
+size = Vector3(1.5142822, 1.8095856, 1.2485352)
+
+[node name="PortalCutOut2" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(-8.351872e-23, 1, 0, -1.9106855e-15, 0, -1, -1, 0, 1.9106855e-15, -14.211006, 8.840689, -5.304138)
+operation = 2
+size = Vector3(1.5142822, 1.8095856, 1.2485352)
+
+[node name="PortalCutOut3" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(-1, 1.9106855e-15, -4.3711385e-08, 0, 1, 4.371139e-08, 4.3711385e-08, 4.371139e-08, -1, 18.25153, 8.066039, 11.700745)
+operation = 2
+size = Vector3(1.5142822, 1.8095856, 1.2485352)
+
+[node name="PortalCutOut4" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(4.3711385e-08, 1, 8.742278e-08, 1, -4.3711392e-08, 8.742278e-08, 8.742278e-08, 8.742278e-08, -1, 22.805271, 4.124544, 22.780762)
+operation = 2
+size = Vector3(1.5142822, 2.4648514, 1.2485352)
+
+[node name="PortalCutOut5" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(4.371139e-08, 1, -8.742278e-08, 1, -4.371139e-08, 0, -3.821371e-15, -8.742278e-08, -1, 22.99435, -0.84414434, 14.970581)
+operation = 2
+size = Vector3(1.5142822, 2.1231728, 1.2485352)
+
+[node name="PortalCutOut6" type="CSGBox3D" parent="library/CSGCombiner3D"]
+transform = Transform3D(-8.742277e-08, -1.3113416e-07, 1, -7.1054274e-15, 1, 1.3113416e-07, -1, 3.5527137e-15, -8.742278e-08, -14.8293, 8.044271, 9.564026)
+operation = 2
+size = Vector3(1.5142822, 1.8095856, 1.2485352)
+
 [node name="3rdKeyRoom" parent="." instance=ExtResource("14_r1rbk")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 157.36255, 2.723381, 1238.3961)
 
@@ -1589,6 +1651,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4310913, -3.6408691, -3.350
 shape = SubResource("BoxShape3D_oom5t")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="3rdKeyRoom"]
+visible = false
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="3rdKeyRoom/CSGCombiner3D"]
@@ -2180,8 +2243,8 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -18.
 size = Vector3(44.46704, 10.780762, 1)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="final(probably)entrance/CSGCombiner3D"]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 21.339355, 4.890381, 0.017489672)
-size = Vector3(44.46704, 10.780762, 1)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 24.35791, 4.890381, 0.017489672)
+size = Vector3(44.46704, 10.780762, 7.0371094)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="final(probably)entrance/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3754883, 4.890381, 22.103924)
@@ -2196,6 +2259,11 @@ size = Vector3(4.8482056, 10.528648, 4.099365)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.963013, 1.2001953, -21.248625)
 operation = 2
 size = Vector3(1.7435303, 2.4296875, 1)
+
+[node name="PortalCutout5" type="CSGBox3D" parent="final(probably)entrance/CSGCombiner3D"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 25.262451, 1.2001953, -0.10177338)
+operation = 2
+size = Vector3(1.7435303, 2.4296875, 1.8349609)
 
 [node name="PortalCutout4" type="CSGBox3D" parent="final(probably)entrance/CSGCombiner3D"]
 transform = Transform3D(-4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0, 1, 19.60254, 8.967044, 21.66428)
@@ -2259,6 +2327,10 @@ size = Vector3(2.003296, 2.263794, 2.439827)
 [node name="CSGBox3D14" type="CSGBox3D" parent="final(probably)entrance/CSGCombiner3D"]
 transform = Transform3D(0.9529528, 0, 0.30311847, 0, 1, 0, -0.30311847, 0, 0.9529528, -17.212341, 0.631897, 2.833949)
 size = Vector3(3.409546, 2.263794, 1.888443)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="final(probably)entrance/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.070496, 5.133003, -4.327097)
+size = Vector3(18.072144, 1.8400879, 2.3226318)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -4216,6 +4288,145 @@ light_color = Color(0.9999998, 0.41088635, 0.16547537, 1)
 light_energy = 1.89
 light_size = 0.235
 omni_range = 9.693588
+
+[node name="Colliders" type="CSGCombiner3D" parent="bridgesRoom"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5212555, 6.3988953, -1.0736694)
+size = Vector3(38.29184, 16.398743, 35.01477)
+
+[node name="Negativ" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0632706, 4.9155006, -2.1636353)
+operation = 2
+size = Vector3(26.609306, 9.825829, 11.574497)
+
+[node name="Negativ2" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.8113785, 4.9155006, -2.1115723)
+operation = 2
+size = Vector3(26.559502, 9.825829, 11.72443)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9180908, 3.624817, 4.2279053)
+size = Vector3(12.637939, 8.249634, 0.64697266)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9180908, 2.495163, 3.748291)
+size = Vector3(12.637939, 1.1167297, 1.6062012)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -4.577652, 6.105244, -8.674133)
+size = Vector3(12.637939, 1.1167297, 1.6062012)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 6.009987, 3.9118237, -8.674133)
+size = Vector3(8.251099, 1.1167297, 1.6062012)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-1, 4.3711385e-08, -4.371139e-08, -4.3711385e-08, 4.3711392e-08, 1, 4.371139e-08, 1, -4.371139e-08, -4.427475, 0.6453452, -8.516052)
+size = Vector3(6.3027954, 0.80055237, 1.6062012)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-4.3711392e-08, -1, 8.742278e-08, -1, 4.371138e-08, -8.742278e-08, 8.742278e-08, -8.742279e-08, -1, -4.427475, 3.790708, -8.113647)
+size = Vector3(12.593521, 0.80055237, 1.3358154)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.6604385, 7.7732058, -0.2958374)
+size = Vector3(8.226318, 0.5575104, 1.6062012)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(4.3711392e-08, -1, -4.3711385e-08, -1, -4.371139e-08, -4.371139e-08, 4.3711385e-08, 4.371139e-08, -1, -5.035057, 5.353031, 2.9873047)
+size = Vector3(4.6901245, 0.5575104, 1.6062012)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-4.371139e-08, 0, 1, 1, -4.371139e-08, 4.371139e-08, 4.371139e-08, 1, 1.9106855e-15, -4.6604385, 9.887891, -4.17511)
+size = Vector3(4.6707764, 0.5575104, 1.6062012)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.1859818, 6.334321, -1.9002686)
+size = Vector3(12.637939, 8.249634, 0.64697266)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.5955276, 7.8073893, -1.9002686)
+size = Vector3(12.637939, 0.8536682, 1.8278809)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-4.3711385e-08, -1, -4.3711392e-08, 1, -4.371139e-08, 4.371139e-08, -4.3711392e-08, -4.371139e-08, 1, 6.5955276, 2.5032463, -7.9570313)
+size = Vector3(5.5269775, 0.8536682, 1.8278809)
+
+[node name="PortalCutOut" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88111115, 1.0089111, -15.73999)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut2" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -4.050461, 4.835735, -15.73999)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut3" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0.84220123, 8.857512, -15.73999)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut4" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(1.3113416e-07, -1, 0, 1, 1.3113416e-07, 0, 0, 0, 1, 5.6533966, 4.80278, -15.73999)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut5" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88111115, 1.0089111, 11.312988)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut6" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -4.050461, 4.835735, 11.312988)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut7" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-1, -8.742278e-08, 0, 8.742278e-08, -1, 0, 0, 0, 1, 0.84220123, 8.857512, 11.312988)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut8" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(1.3113416e-07, -1, 0, 1, 1.3113416e-07, 0, 0, 0, 1, 5.6533966, 4.80278, 11.312988)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut9" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.5321045, 1.06006, -2.2253418)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut11" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(4.371139e-08, 3.821371e-15, 1, 8.742278e-08, -1, 0, 1, 8.742278e-08, -4.371139e-08, 14.5321045, 8.839244, -2.1864014)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut12" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-5.732056e-15, 4.371139e-08, 1, 1, 1.3113416e-07, 0, -1.3113416e-07, 1, -4.371139e-08, 14.5321045, 4.80278, -6.941223)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut13" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.4627075, 1.06006, -2.2253418)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut14" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(1.9106855e-15, -4.371139e-08, 1, -1, -4.371139e-08, 0, 4.371139e-08, -1, -4.371139e-08, -12.4627075, 4.835735, 2.604065)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut15" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(4.371139e-08, 3.821371e-15, 1, 8.742278e-08, -1, 0, 1, 8.742278e-08, -4.371139e-08, -12.4627075, 8.839244, -2.1864014)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
+
+[node name="PortalCutOut16" type="CSGBox3D" parent="bridgesRoom/Colliders"]
+transform = Transform3D(-5.732056e-15, 4.371139e-08, 1, 1, 1.3113416e-07, 0, -1.3113416e-07, 1, -4.371139e-08, -12.4627075, 4.80278, -6.941223)
+operation = 2
+size = Vector3(1.5322876, 2.0437012, 1.4799805)
 
 [node name="LRoom" parent="." instance=ExtResource("20_vieln")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 511.54782, 24.77005, 1435.0135)
