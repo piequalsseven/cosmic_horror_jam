@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://ymlroa6fqlts"]
+[gd_scene load_steps=61 format=3 uid="uid://ymlroa6fqlts"]
 
 [ext_resource type="ArrayMesh" uid="uid://0po17pdlduqv" path="res://models/meshTextures/grassMeshTexture.res" id="1_rnknb"]
 [ext_resource type="Environment" uid="uid://bythca13xs6it" path="res://scenes/startingScene_env.tres" id="1_vfp0b"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://ul4ca6hsjsod" path="res://scenes/collectible_key.tscn" id="15_b3rqr"]
 [ext_resource type="PackedScene" uid="uid://basqshsn2sh0c" path="res://models/key3.blend" id="15_bl1yo"]
 [ext_resource type="PackedScene" uid="uid://svxys31tiwyu" path="res://models/rooms/final(probably)entrance.blend" id="15_drejw"]
-[ext_resource type="Script" path="res://scripts/game_ui.gd" id="16_drejw"]
+[ext_resource type="Script" uid="uid://dlbu3t0bx25jo" path="res://scripts/game_ui.gd" id="16_drejw"]
 [ext_resource type="Resource" uid="uid://b0fpogay87ko3" path="res://resources/First.tres" id="17_d1305"]
 [ext_resource type="PackedScene" uid="uid://bbxrg5h5sy518" path="res://models/rooms/infinit corridor.blend" id="17_h53cn"]
 [ext_resource type="PackedScene" uid="uid://dmo3lxmuk25k2" path="res://models/rooms/noFloorRoom.blend" id="18_52452"]
@@ -34,6 +34,8 @@
 [ext_resource type="Script" uid="uid://b2d7nww81l0et" path="res://scripts/transition_area.gd" id="30_iwbg7"]
 [ext_resource type="Texture2D" uid="uid://hqws3ymwffrr" path="res://models/rooms/textures/space.jpg" id="30_s5m1i"]
 [ext_resource type="PackedScene" uid="uid://cq5h0osa251uf" path="res://models/rooms/eyes.blend" id="31_2ntl1"]
+[ext_resource type="Script" uid="uid://si3lhqrnsi07" path="res://addons/portal/scripts/portal.gd" id="34_h08u6"]
+[ext_resource type="Script" uid="uid://dti2pifecwdx8" path="res://addons/portal/scripts/portal_teleport.gd" id="35_we4oa"]
 
 [sub_resource type="MultiMesh" id="MultiMesh_46lpw"]
 transform_format = 1
@@ -146,6 +148,13 @@ flip_faces = true
 radius = 50.0
 height = 100.0
 
+[sub_resource type="SphereMesh" id="SphereMesh_we4oa"]
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8wuhc"]
+radius = 1.0
+
 [node name="StartingScene2" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -178,7 +187,7 @@ disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 5.0
 exit_environment = SubResource("Environment_ltmdr")
-exit_portal = NodePath("../../final(probably)entrance/EntranceFloorCenterPortalA4")
+exit_portal = NodePath("../../endingSection/end_helper/hutEntrance")
 change_enviroment_on_teleport = true
 
 [node name="TransitionArea" type="Area3D" parent="ground/HutPortalA"]
@@ -9482,6 +9491,7 @@ exit_portal = NodePath("../thirdIslandExteriorExit2")
 
 [node name="thirdIslandExteriorExit2" parent="endingSection/end_helper" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(1.0000001, -8.74228e-08, -8.7422784e-08, -8.7422784e-08, -1.0000002, 0, -8.7422784e-08, 7.6427436e-15, -1.0000001, -0.22698975, 6.343567, 9.876404)
+visible = false
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
@@ -9489,6 +9499,23 @@ fade_out_color = Color(1, 1, 1, 0)
 exit_environment = ExtResource("1_vfp0b")
 exit_portal = NodePath("../../../ground/HutPortalA")
 change_enviroment_on_teleport = true
+
+[node name="Exit" type="MeshInstance3D" parent="endingSection/end_helper" node_paths=PackedStringArray("exit_portal")]
+transform = Transform3D(1, -1.509958e-07, -1.509958e-07, -1.509958e-07, -1, 0, -1.509958e-07, 2.2799733e-14, -1, -0.22698975, 6.343567, 9.876404)
+mesh = SubResource("SphereMesh_we4oa")
+script = ExtResource("34_h08u6")
+disable_viewport_distance = 50.0
+fade_out_distance_max = 50.0
+fade_out_distance_min = 50.0
+exit_portal = NodePath("../../../ground/HutPortalA")
+metadata/_custom_type_script = "uid://si3lhqrnsi07"
+
+[node name="PortalTeleport" type="Area3D" parent="endingSection/end_helper/Exit"]
+script = ExtResource("35_we4oa")
+metadata/_custom_type_script = "uid://dti2pifecwdx8"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="endingSection/end_helper/Exit/PortalTeleport"]
+shape = SubResource("SphereShape3D_8wuhc")
 
 [node name="eyes2" parent="." instance=ExtResource("31_2ntl1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1099.8323, 586.2503, 2114.0686)
