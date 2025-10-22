@@ -3193,7 +3193,7 @@ exit_portal = NodePath("../../LRoom/PortalStartSection2")
 
 [node name="PortalDoor" parent="noFloorRoom/NoFloorRightCeiling" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
-portal_connections = [NodePath("../../../LRoom/Portal5"), NodePath("../../NoFloorRightFloor"), NodePath("../../NoFloorRightWall")]
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceceilingPortal"), NodePath("../../NoFloorRightFloor"), NodePath("../../NoFloorRightWall")]
 connections = {
 0: null,
 1: null,
@@ -3206,7 +3206,7 @@ exit_portal = NodePath("../../LRoom/Portal36")
 
 [node name="PortalDoor" parent="noFloorRoom/NoFloorRightFloor" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004699707, -0.047130585, -0.0078048706)
-portal_connections = [NodePath("../../../LRoom/Portal36"), NodePath("../../NoFloorRightCeiling"), NodePath("../../NoFloorRightWall")]
+portal_connections = [NodePath("../../../final(probably)entrance/EntranceFloorRight"), NodePath("../../NoFloorRightCeiling"), NodePath("../../NoFloorRightWall")]
 connections = {
 0: null,
 1: null,
@@ -5247,7 +5247,7 @@ connections = {
 }
 
 [node name="Portal33" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(4.371139e-08, 3.821371e-15, -1, 8.742278e-08, -1, 0, -1, -8.742278e-08, -4.371139e-08, 14.567364, 85.072624, 0.06793213)
+transform = Transform3D(4.371139e-08, 3.821371e-15, -1, 8.742278e-08, -1, 0, -1, -8.742278e-08, -4.371139e-08, 14.5692215, 84.79559, 0.10565184)
 disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 40.0
