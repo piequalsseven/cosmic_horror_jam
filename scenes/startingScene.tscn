@@ -178,7 +178,7 @@ disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 5.0
 exit_environment = SubResource("Environment_ltmdr")
-exit_portal = NodePath("../../endingSection/StartEndingSectionPortal")
+exit_portal = NodePath("../../final(probably)entrance/EntranceFloorCenterPortalA4")
 change_enviroment_on_teleport = true
 
 [node name="TransitionArea" type="Area3D" parent="ground/HutPortalA"]
@@ -9482,7 +9482,9 @@ disable_viewport_distance = 50.0
 fade_out_distance_max = 50.0
 fade_out_distance_min = 50.0
 fade_out_color = Color(1, 1, 1, 0)
+exit_environment = ExtResource("1_vfp0b")
 exit_portal = NodePath("../../../ground/HutPortalA")
+change_enviroment_on_teleport = true
 
 [node name="eyes2" parent="." instance=ExtResource("31_2ntl1")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1099.8323, 586.2503, 2114.0686)

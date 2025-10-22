@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dssb3ubr61anl"]
+[gd_scene load_steps=8 format=3 uid="uid://dssb3ubr61anl"]
 
 [ext_resource type="Script" uid="uid://p3ttbocrrla5" path="res://addons/portal/scripts/audio_manager.gd" id="1_v6v0x"]
 [ext_resource type="AudioStream" uid="uid://cu47tagh7trlf" path="res://resources/CosmicHorror Edit 1 Export 3.mp3" id="2_3dgps"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://3l5oaovny8ly" path="res://resources/closingdoor.mp3" id="4_151wy"]
 [ext_resource type="AudioStream" uid="uid://djepp0k5uhj0n" path="res://resources/EndingTransition.mp3" id="5_151wy"]
 [ext_resource type="AudioStream" uid="uid://ddln303hvr53h" path="res://resources/EndingLayer.mp3" id="6_qb6qo"]
+[ext_resource type="AudioStream" uid="uid://bfbdljkcjjqmv" path="res://resources/End.mp3" id="7_v5v75"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_v6v0x")
@@ -31,5 +32,9 @@ volume_db = -10.0
 stream = ExtResource("6_qb6qo")
 volume_db = -15.0
 
+[node name="EndSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_v5v75")
+
 [connection signal="finished" from="MusicPlayer" to="." method="_on_music_player_finished"]
 [connection signal="finished" from="EndingLayer" to="." method="_on_ending_layer_finished"]
+[connection signal="finished" from="EndSound" to="." method="_on_end_sound_finished"]
