@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 RoomManager="*res://scripts/RoomManager.gd"
 AudioManager="*res://scenes/AudioManager.tscn"
 
+[display]
+
+window/size/mode=3
+
 [input]
 
 ui_left={
