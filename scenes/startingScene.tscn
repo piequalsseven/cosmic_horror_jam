@@ -5238,6 +5238,7 @@ omni_range = 9.693588
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="triangleRoom"]
 visible = false
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="triangleRoom/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5427017, 3.703785, 0.28814697)

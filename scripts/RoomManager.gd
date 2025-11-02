@@ -24,6 +24,8 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("change_key"):
 		var new_id : int = keys.find(current_key)
+		if new_id < 0:
+			return
 		current_key = available_keys[(new_id + 1)%available_keys.size()]
 
 func get_current_key_id() -> KEYS:
