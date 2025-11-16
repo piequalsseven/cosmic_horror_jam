@@ -1775,7 +1775,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008666992, -0.0034823418, 
 omni_range = 1.2250102
 
 [node name="final(probably)entrance" parent="." instance=ExtResource("15_drejw")]
-transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 1.471, 3.955, 1064.629)
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 1.4924443, 4.0392857, 1064.6141)
 
 [node name="EntranceFloorCenterPortalA4" parent="final(probably)entrance" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
 transform = Transform3D(-3.005158e-08, 0, -0.6875, 0, 0.9715, 0, 0.6875, 0, -3.005158e-08, 25.14154, 1.3081479, -0.11090994)
@@ -2386,6 +2386,18 @@ size = Vector3(3.409546, 2.263794, 1.888443)
 [node name="CSGBox3D18" type="CSGBox3D" parent="final(probably)entrance/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.070496, 5.133003, -4.327097)
 size = Vector3(18.072144, 1.8400879, 2.3226318)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="final(probably)entrance/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6066284, 5.230581, -9.704969)
+size = Vector3(0.49009705, 1.8400879, 2.3226318)
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="final(probably)entrance/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6066284, 5.230581, 9.949892)
+size = Vector3(0.49009705, 1.8400879, 2.3226318)
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="final(probably)entrance/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6066284, 7.4004135, -0.7134913)
+size = Vector3(0.49009705, 1.8400879, 2.3226318)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -4581,6 +4593,9 @@ connections = {
 [node name="PortalStartSection2" parent="LRoom" instance=ExtResource("7_tpkjk")]
 transform = Transform3D(4.3711385e-08, 0.99999994, -8.742277e-08, 0.99999994, -4.3711385e-08, 0, -3.8213705e-15, -8.742277e-08, -0.99999994, -3.5, 2.739, 0)
 
+[node name="BrokenPortalExit" parent="LRoom" instance=ExtResource("7_tpkjk")]
+transform = Transform3D(1.9106853e-15, 4.3711385e-08, -0.99999994, 0.9999999, -4.3711385e-08, 0, -4.3711385e-08, -0.99999994, -4.3711385e-08, -7.1026, 7.187845, -9.607788)
+
 [node name="LRoomLights" type="Node3D" parent="LRoom"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -252.63605, -7.8174973, 56.17804)
 
@@ -5352,7 +5367,7 @@ connections = {
 }
 
 [node name="Portal31" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.097797394, 0.25, 14.6484375)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.11732483, 0.25, 14.6484375)
 exit_portal = NodePath("../../bridgesRoom/Portal14")
 
 [node name="PortalDoor" parent="chainsRoom/Portal31" node_paths=PackedStringArray("portal_connections", "connections") instance=ExtResource("22_vdlgm")]
@@ -5362,6 +5377,13 @@ connections = {
 1: null,
 2: null
 }
+
+[node name="BrokenPortal" parent="chainsRoom" node_paths=PackedStringArray("exit_portal") instance=ExtResource("4_xg6vb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.913307, 0.16985703, -0.10699463)
+disable_viewport_distance = 30.0
+fade_out_distance_max = 30.0
+fade_out_distance_min = 28.0
+exit_portal = NodePath("../../LRoom/BrokenPortalExit")
 
 [node name="ChainsRoomLights" type="Node3D" parent="chainsRoom"]
 transform = Transform3D(-0.02791074, -1.6569519e-15, -0.4992204, -3.1763738e-22, 0.5, -1.6595395e-15, 0.4992204, -9.2637624e-17, -0.02791074, 5.9216537, -4.0747795, 68.87671)
